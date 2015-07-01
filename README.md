@@ -71,11 +71,32 @@ Learning idiomatic Python:
 
 * [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
 * [Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
+* [Bare try... except..., the most diabolical Python antipattern](https://realpython.com/blog/python/the-most-diabolical-python-antipattern/)
+
+Learning to debug/improve existing code
+---------------------------------------
+
+* General introduction: [Python debugging
+  tools](http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/)
+* A better debugger: [pudb](http://heather.cs.ucdavis.edu/~matloff/pudb.html)
+
+Performance optimization:
+
+* [cProfile module documentation](https://docs.python.org/2/library/profile.html)
+* [Example cProfile session](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
+* [A guide to analyzing Python performance](http://www.huyng.com/posts/python-performance-analysis/)
+* [RunSnakeRun](http://www.vrplumber.com/programming/runsnakerun/) is a small
+  GUI utility that allows you to view (Python) cProfile or Profile profiler
+  dumps in a sortable GUI view.
+* [SnakeViz](http://jiffyclub.github.io/snakeviz/) is a browser based graphical
+  viewer for the output of Python’s cProfile module.
+* [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
 
 Packaging Python code
 ---------------------
 
 * [Read the guide](https://python-packaging-user-guide.readthedocs.org/en/latest/)
+* Important gotcha here: [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/)
 
 Small exercises
 ---------------
@@ -95,9 +116,30 @@ concept and good design patterns, so they're highly recommended:
   video](https://www.youtube.com/watch?v=P141KRbxVKc). It lasts 3 hours but is
   extremely insightful, and introduces to some great object oriented patterns.
 
+Other great SQLAlchemy resources include:
+
+* [Handcoded application with SQLAlchemy](http://pyvideo.org/video/665/hand-coded-applications-with-sqlalchemy)
+
 Other specific libraries that are very often used in professional
 environments:
 
+* [Celery](http://www.celeryproject.org/) is an asynchronous task queue/job
+  queue based on distributed message passing. It is focused on real-time
+  operation, but supports scheduling as well.
+* [Tornado](http://www.tornadoweb.org/en/stable/) is a Python web framework and
+  asynchronous networking library.
+* [Alembic](http://alembic.readthedocs.org/en/latest/) is a lightweight
+  database migration tool for usage with the SQLAlchemy Database Toolkit for
+  Python.
+* [Jinja](http://jinja.pocoo.org/) is a full featured template engine for
+  Python. It has full unicode support, an optional integrated sandboxed
+  execution environment, widely used and BSD licensed.
+* [Doubles](http://doubles.readthedocs.org/en/latest/) is a Python package that
+  provides test doubles for use in automated tests.
+* [Mock](http://www.voidspace.org.uk/python/mock/) is a library for testing in
+  Python. It allows you to replace parts of your system under test with mock
+  objects and make assertions about how they have been used.
+* [pytest](http://pytest.org/latest/) is a test framework.
 
 Keeping up to date
 ------------------
