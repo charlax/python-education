@@ -1,6 +1,10 @@
 Ramping up with professional Python
 ===================================
 
+The goal of this documentation is to introduce you to the world of professional
+Python. It will be providing concrete exercises, because the best way to learn
+is to do.
+
 Beginner
 --------
 
@@ -25,7 +29,7 @@ First things first, let's get code styling out of the way. Make sure you've
 read an memorized [PEP8](https://www.python.org/dev/peps/pep-0008/) (code
 style) and [PEP257](https://www.python.org/dev/peps/pep-0257/) (docstring
 style). Those two code styles are applied by almost all major Python
-applications and libraries.
+applications and libraries. Use flake8.
 
 What is called "idiomatic Python" might feel magical at first, especially if
 you don't know Python. I'd recommend getting your hands dirty with some real
@@ -37,6 +41,9 @@ tutorial with a debugger to follow the flow and understand what's going on.
   Recommended reading. You can even print it.
 * [flask](https://github.com/mitsuhiko/flask): another web framework, one of
   the best. Reading its code is highly recommended as well.
+
+You can find other ideas on [this hacker news
+thread](https://news.ycombinator.com/item?id=9896369).
 
 I feel it's more important to understand the vision behind Python's design,
 than to know specific Python idioms. The Zen of Python will let you understand
@@ -104,9 +111,10 @@ Small exercises
 * Create a virtual environment with virtualenv.
 * Create a virtual environment with virtualenvwrapper tools.
 * Fix a bug in one of the Python packages listed in [the Python guide](http://docs.python-guide.org/en/latest/#scenario-guide).
+* Create a server exposing a Thrift API.
 
-Ramp up with specific library
------------------------------
+Ramping up with specific libraries
+----------------------------------
 
 Regardless of whether you use them, those tutorials introduce you to important
 concept and good design patterns, so they're highly recommended:
@@ -144,7 +152,7 @@ environments:
 Keeping up to date
 ------------------
 
-There are two main newsletter for Python, which mostly cover the same things:
+There are two main newsletters for Python, which mostly cover the same things:
 
 * [Pycoder's Weekly](http://www.pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
