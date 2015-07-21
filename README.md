@@ -80,6 +80,7 @@ Learning idiomatic Python:
 
 * [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
 * [Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
+* [What the heck does “pythonic” mean?](http://halitalptekin.tumblr.com/post/30028271874/pythonic-syntax)
 
 Patterns and anti-patterns
 --------------------------
@@ -92,38 +93,28 @@ Here's a list of good books:
 
 I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on another repo. This is a highly recommended read.
 
-Learning to debug/improve existing code
----------------------------------------
+Exercises
+---------
 
-* General introduction: [Python debugging
-  tools](http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/)
-* A better debugger: [pudb](http://heather.cs.ucdavis.edu/~matloff/pudb.html)
+The best way to learn is to do.
 
-Performance optimization:
-
-* [cProfile module documentation](https://docs.python.org/2/library/profile.html)
-* [Example cProfile session](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
-* [A guide to analyzing Python performance](http://www.huyng.com/posts/python-performance-analysis/)
-* [RunSnakeRun](http://www.vrplumber.com/programming/runsnakerun/) is a small
-  GUI utility that allows you to view (Python) cProfile or Profile profiler
-  dumps in a sortable GUI view.
-* [SnakeViz](http://jiffyclub.github.io/snakeviz/) is a browser based graphical
-  viewer for the output of Python’s cProfile module.
-* [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
-
-Packaging Python code
----------------------
-
-* [Read the guide](https://python-packaging-user-guide.readthedocs.org/en/latest/)
-* Important gotcha here: [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/)
-
-Small exercises
----------------
+Small exercises:
 
 * Create a virtual environment with virtualenv.
 * Create a virtual environment with virtualenvwrapper tools.
 * Fix a bug in one of the Python packages listed in [the Python guide](http://docs.python-guide.org/en/latest/#scenario-guide).
 * Create a server exposing a Thrift API.
+
+Larger projects:
+
+* Build a lock library for redis.
+* Build a cache library for redis.
+* Build an API for next bus departure time.
+* Build an ORM for a SQL database.
+* Build a command line parser.
+* Build a template engine.
+* Build a static site generator.
+* Build an HTTP library.
 
 Ramping up with specific libraries
 ----------------------------------
@@ -161,6 +152,48 @@ environments:
   objects and make assertions about how they have been used.
 * [pytest](http://pytest.org/latest/) is a test framework.
 
+Topics
+------
+
+### Magic methods
+
+* [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
+
+### Quirks and gotchas
+
+* [Python quirks](http://www.lshift.net/blog/2009/10/29/python-quirks/)
+* [Hidden features of Python](http://stackoverflow.com/questions/101268/hidden-features-of-python)
+* [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
+
+### Internals
+
+* [Why Python is Slow: Looking Under the Hood](http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/)
+* [The internals of Python string interning](http://guilload.com/python-string-interning/)
+
+### Debugging
+
+* General introduction: [Python debugging
+  tools](http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/)
+* A better debugger: [pudb](http://heather.cs.ucdavis.edu/~matloff/pudb.html)
+
+### Performance optimization
+
+* [cProfile module documentation](https://docs.python.org/2/library/profile.html)
+* [Example cProfile session](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
+* [A guide to analyzing Python performance](http://www.huyng.com/posts/python-performance-analysis/)
+* [RunSnakeRun](http://www.vrplumber.com/programming/runsnakerun/) is a small
+  GUI utility that allows you to view (Python) cProfile or Profile profiler
+  dumps in a sortable GUI view.
+* [SnakeViz](http://jiffyclub.github.io/snakeviz/) is a browser based graphical
+  viewer for the output of Python’s cProfile module.
+* [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
+
+### Packaging
+
+* [Read the guide](https://python-packaging-user-guide.readthedocs.org/en/latest/)
+* [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
+* [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
+
 Keeping up to date
 ------------------
 
@@ -168,3 +201,10 @@ There are two main newsletters for Python, which mostly cover the same things:
 
 * [Pycoder's Weekly](http://www.pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
+
+Reference
+---------
+
+* [Best Python Resources](http://www.fullstackpython.com/best-python-resources.html)
+* [Awesome Python](https://github.com/vinta/awesome-python)
+* [PyCon 2015](https://www.youtube.com/channel/UCgxzjK6GuOHVKR_08TT4hJQ)
