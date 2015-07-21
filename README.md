@@ -22,6 +22,8 @@ Beginner
 [The Python Guide](http://docs.python-guide.org/en/latest/intro/learning/) has
 some other good resources.
 
+If you're coming from another language, read this article about the [ten myths of enterprise Python](https://www.paypal-engineering.com/2014/12/10/10-myths-of-enterprise-python/).
+
 Learning to write idiomatic Python
 ----------------------------------
 
@@ -78,7 +80,17 @@ Learning idiomatic Python:
 
 * [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
 * [Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
-* [Bare try... except..., the most diabolical Python antipattern](https://realpython.com/blog/python/the-most-diabolical-python-antipattern/)
+
+Patterns and anti-patterns
+--------------------------
+
+Here's a list of good books:
+
+* [Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/dp/0201633612/): dubbed "the gang of four", this is almost a required reading for any developer. A lot of those are a bit overkill for Python (because everything is an object, and dynamic typing), but the main idea (composition is better than inheritance) definitely is a good philosophy.
+* [Patterns of Enterprise Application Architecture](http://www.amazon.com/dp/0321127420/?tag=stackoverfl08-20): learn about how database are used in real world applications. Mike Bayer's SQLAlchemy has been heavily influenced by this book.
+* SourceMaking's [Design Patterns](https://sourcemaking.com/design_patterns) seems to be a good web resource too.
+
+I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on another repo. This is a highly recommended read.
 
 Learning to debug/improve existing code
 ---------------------------------------
