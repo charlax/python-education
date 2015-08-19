@@ -5,6 +5,9 @@ The goal of this documentation is to introduce you to the world of professional
 Python. It will be providing concrete exercises, because the best way to learn
 is to do.
 
+Learning the language
+=====================
+
 Beginner
 --------
 
@@ -23,6 +26,11 @@ Beginner
 some other good resources.
 
 If you're coming from another language, read this article about the [ten myths of enterprise Python](https://www.paypal-engineering.com/2014/12/10/10-myths-of-enterprise-python/).
+
+Intermediate
+------------
+
+* Muhammad Yasoob Ullah Khalid, [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 Learning to write idiomatic Python
 ----------------------------------
