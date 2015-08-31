@@ -31,6 +31,8 @@ Intermediate
 ------------
 
 * Muhammad Yasoob Ullah Khalid, [Intermediate Python](http://book.pythontips.com/en/latest/)
+* Luciano Ramalho, [Fluent
+  Python](http://www.amazon.com/gp/product/1491946008/)
 
 Learning to write idiomatic Python
 ----------------------------------
