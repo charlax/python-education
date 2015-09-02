@@ -11,6 +11,8 @@ Learning the language
 Beginner
 --------
 
+Here are some free books:
+
 * [Learn Python the Hard Way](http://learnpythonthehardway.org/book/): slow
   introduction, suitable for people with limited programming language
   experience.
@@ -27,12 +29,26 @@ some other good resources.
 
 If you're coming from another language, read this article about the [ten myths of enterprise Python](https://www.paypal-engineering.com/2014/12/10/10-myths-of-enterprise-python/).
 
+If you want to review algorithms at the same time, you can use [Problem Solving
+with Algorithms and Data Structures using Python](http://interactivepython.org/runestone/static/pythonds/index.html) by Bradley N. Miller, David L. Ranum.
+
+Other resources include (prefer the one listed above):
+
+* [Automate the boring stuff with Python](https://automatetheboringstuff.com/)
+* [Invent with Python](http://inventwithpython.com/chapters/)
+
+
 Intermediate
 ------------
+
+Books:
 
 * Muhammad Yasoob Ullah Khalid, [Intermediate Python](http://book.pythontips.com/en/latest/)
 * Luciano Ramalho, [Fluent
   Python](http://www.amazon.com/gp/product/1491946008/)
+* Dusty Phillips, [Python 3 Object-Oriented Programming](http://www.amazon.com/gp/product/1784398780/)
+* Brett Slatkin, [Effective Python: 59 Specific Ways to Write Better
+  Python](http://www.amazon.com/gp/product/0134034287/)
 
 Learning to write idiomatic Python
 ----------------------------------
@@ -125,6 +141,13 @@ Larger projects:
 * Build a template engine.
 * Build a static site generator.
 * Build an HTTP library.
+* Clone one of those
+  [games](http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/)
+* Solve some of the [Project Euler
+  problems](https://projecteuler.net/)
+
+Reddit's [dailyprogrammer subreddit](https://www.reddit.com/r/dailyprogrammer)
+has some good exercises as well.
 
 Ramping up with specific libraries
 ----------------------------------
@@ -218,3 +241,4 @@ Reference
 * [Best Python Resources](http://www.fullstackpython.com/best-python-resources.html)
 * [Awesome Python](https://github.com/vinta/awesome-python)
 * [PyCon 2015](https://www.youtube.com/channel/UCgxzjK6GuOHVKR_08TT4hJQ)
+* Invent With Python, [Further Reading: Intermediate Python Resources](http://inventwithpython.com/blog/2015/09/01/further-reading-intermediate-python-resources/)
