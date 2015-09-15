@@ -108,6 +108,16 @@ Learning idiomatic Python:
 * [Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
 * [What the heck does “pythonic” mean?](http://halitalptekin.tumblr.com/post/30028271874/pythonic-syntax)
 
+Non-Python books
+================
+
+* [The Pragmatic Programmer: From Journeyman to
+  Master](http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X)
+* [Code Complete: A Practical Handbook of Software
+  Construction](http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670)
+* [Scalability Rules: 50 Principles for Scaling Web
+  Sites](http://www.amazon.com/Scalability-Rules-Principles-Scaling-Sites/dp/0321753887)
+
 Patterns and anti-patterns
 --------------------------
 
@@ -226,6 +236,11 @@ Topics
 * [Read the guide](https://python-packaging-user-guide.readthedocs.org/en/latest/)
 * [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
 * [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
+
+### Patterns
+
+* [Decorators in 12
+  steps](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
 
 Keeping up to date
 ------------------
