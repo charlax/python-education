@@ -250,6 +250,13 @@ There are two main newsletters for Python, which mostly cover the same things:
 * [Pycoder's Weekly](http://www.pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
 
+Non-Python stuff
+----------------
+
+* [Practical Advice for New Software Engineers](http://product.hubspot.com/blog/practical-advice-for-new-software-engineers)
+* [On Being A Senior Engineer](http://www.kitchensoap.com/2012/10/25/on-being-a-senior-engineer/)
+* [High Scalability](http://highscalability.com/): great blog about system architecture, its weekly review article are packed with numerous insights and interesting technology reviews.
+
 Reference
 ---------
 
