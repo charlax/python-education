@@ -218,6 +218,7 @@ Topics
 * General introduction: [Python debugging
   tools](http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/)
 * A better debugger: [pudb](http://heather.cs.ucdavis.edu/~matloff/pudb.html)
+* [Debugging Python Like a Boss](https://zapier.com/engineering/debugging-python-boss/)
 
 ### Performance optimization
 
