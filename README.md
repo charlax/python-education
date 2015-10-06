@@ -220,6 +220,10 @@ Topics
 * A better debugger: [pudb](http://heather.cs.ucdavis.edu/~matloff/pudb.html)
 * [Debugging Python Like a Boss](https://zapier.com/engineering/debugging-python-boss/)
 
+### Design patterns
+
+* [Design patterns explained](http://www.pysnap.com/design-patterns-explained/)
+
 ### Performance optimization
 
 * [cProfile module documentation](https://docs.python.org/2/library/profile.html)
