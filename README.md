@@ -208,6 +208,10 @@ Topics
 * [Hidden features of Python](http://stackoverflow.com/questions/101268/hidden-features-of-python)
 * [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
 
+### Highly Available Code
+
+* [Lessons learned writing highly available code](https://medium.com/imgur-engineering/lessons-learned-writing-highly-available-code-7eaf3d7aae00)
+
 ### Internals
 
 * [Why Python is Slow: Looking Under the Hood](http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/)
