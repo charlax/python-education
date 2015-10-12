@@ -227,6 +227,7 @@ Topics
 ### Design patterns
 
 * [Design patterns explained](http://www.pysnap.com/design-patterns-explained/)
+* [Python 3 Patterns, Recipes and Idioms](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/index.html)
 
 ### Performance optimization
 
