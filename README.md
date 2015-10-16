@@ -261,6 +261,7 @@ Articles and blogs
 * [Testing Strategies in a Microservices
   Architecture](http://martinfowler.com/articles/microservice-testing/), Martin
   Fowler
+* [6 Rules of thumb to build blazing fast web server applications](http://loige.co/6-rules-of-thumb-to-build-blazing-fast-web-applications/)
 
 Patterns and anti-patterns
 --------------------------
