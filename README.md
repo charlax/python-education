@@ -186,6 +186,7 @@ Topics
 * [Python quirks](http://www.lshift.net/blog/2009/10/29/python-quirks/)
 * [Hidden features of Python](http://stackoverflow.com/questions/101268/hidden-features-of-python)
 * [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
+* [A collection of Python "wat" moments](http://www.b-list.org/weblog/2015/oct/13/wats-doc/)
 
 ### Highly Available Code
 
@@ -231,6 +232,23 @@ Topics
 * [Decorators in 12
   steps](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
 
+### Tests
+
+Half of coding time is usually spent writing tests. Yet how to write tests
+efficiently is very rarely taught at school - even though it came make a huge
+difference in engineering productivity and quality.
+
+First, make sure you're familiar with the different kind of testing strategies
+laid out in [Testing Strategies in a Microservices
+Architecture](http://martinfowler.com/articles/microservice-testing/) (Martin
+Fowler).
+
+Then, read some of those articles:
+
+* [Mock yourself, not your
+  tests](http://hernantz.github.io/mock-yourself-not-your-tests.html): great
+  articles about the danger of mocking, and better unit testing strategies.
+
 Staying up to date
 ==================
 
@@ -258,9 +276,6 @@ Articles and blogs
 * [Practical Advice for New Software Engineers](http://product.hubspot.com/blog/practical-advice-for-new-software-engineers)
 * [On Being A Senior Engineer](http://www.kitchensoap.com/2012/10/25/on-being-a-senior-engineer/)
 * [High Scalability](http://highscalability.com/): great blog about system architecture, its weekly review article are packed with numerous insights and interesting technology reviews.
-* [Testing Strategies in a Microservices
-  Architecture](http://martinfowler.com/articles/microservice-testing/), Martin
-  Fowler
 * [6 Rules of thumb to build blazing fast web server applications](http://loige.co/6-rules-of-thumb-to-build-blazing-fast-web-applications/)
 
 Patterns and anti-patterns
