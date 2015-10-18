@@ -138,6 +138,16 @@ Larger projects:
 Reddit's [dailyprogrammer subreddit](https://www.reddit.com/r/dailyprogrammer)
 has some good exercises as well.
 
+Another great way to learn Python is by contributing to one of the numerous
+open source libraries. Coding is not something that is to be learn in
+isolation, and you'll learn great valuable insights from the code review you'll
+get from those communities. You can look for tickets (e.g. Github issues) for
+Python libraries you're using, or find some in the list below, or pick one of
+the libraries listed in [Awesome
+Python](https://github.com/vinta/awesome-python). Make sure you pick a library
+where the tickets are not too involved, and where the community is still alive
+(i.e. there's recent merged pull requests).
+
 Ramping up with specific libraries
 ==================================
 
@@ -173,6 +183,9 @@ environments:
   Python. It allows you to replace parts of your system under test with mock
   objects and make assertions about how they have been used.
 * [pytest](http://pytest.org/latest/) is a test framework.
+
+[Awesome Python](https://github.com/vinta/awesome-python) provides a great list
+of third party libraries.
 
 Topics
 ------
