@@ -270,6 +270,8 @@ There are two main newsletters for Python, which mostly cover the same things:
 * [Pycoder's Weekly](http://www.pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
 
+You can also checkout the [Python subreddit](https://www.reddit.com/r/Python/).
+
 Non-python professional coding education
 ========================================
 
