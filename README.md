@@ -308,10 +308,11 @@ Python and beyond
 [27 languages to improve your
 Python](http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html)
 
-Reference
----------
+Reference and other lists
+-------------------------
 
 * [Best Python Resources](http://www.fullstackpython.com/best-python-resources.html)
 * [Awesome Python](https://github.com/vinta/awesome-python)
 * [PyCon 2015](https://www.youtube.com/channel/UCgxzjK6GuOHVKR_08TT4hJQ)
 * Invent With Python, [Further Reading: Intermediate Python Resources](http://inventwithpython.com/blog/2015/09/01/further-reading-intermediate-python-resources/)
+* [Good to great Python reads](http://jessenoller.com/good-to-great-python-reads/)
