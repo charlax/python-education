@@ -50,6 +50,10 @@ Books:
 * Brett Slatkin, [Effective Python: 59 Specific Ways to Write Better
   Python](http://www.amazon.com/gp/product/0134034287/)
 
+Videos & presentation:
+
+* [py-must-watch](https://github.com/s16h/py-must-watch)
+
 Learning to write idiomatic Python
 ----------------------------------
 
@@ -190,6 +194,11 @@ of third party libraries.
 Topics
 ------
 
+### Code Architecture
+
+* [The clean
+  architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
+
 ### Magic methods
 
 * [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
@@ -209,6 +218,8 @@ Topics
 
 * [Why Python is Slow: Looking Under the Hood](http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/)
 * [The internals of Python string interning](http://guilload.com/python-string-interning/)
+* [Python Data
+  structures](http://rhodesmill.org/brandon/slides/2014-04-pycon/data-structures/)
 
 ### Debugging
 
