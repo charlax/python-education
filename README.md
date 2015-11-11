@@ -273,6 +273,10 @@ Then, read some of those articles:
   tests](http://hernantz.github.io/mock-yourself-not-your-tests.html): great
   articles about the danger of mocking, and better unit testing strategies.
 
+### Unicode
+
+* [Solving Unicode Problems in Python 2.7](http://www.azavea.com/blogs/labs/2014/03/solving-unicode-problems-in-python-2-7/)
+
 Staying up to date
 ==================
 
