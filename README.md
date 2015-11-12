@@ -199,6 +199,10 @@ Topics
 * [The clean
   architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
 
+### Functional code
+
+* [Python Partials are Fun!](http://www.pydanny.com/python-partials-are-fun.html)
+
 ### Magic methods
 
 * [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
@@ -232,6 +236,8 @@ Topics
 
 * [Design patterns explained](http://www.pysnap.com/design-patterns-explained/)
 * [Python 3 Patterns, Recipes and Idioms](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/index.html)
+* [Decorators in 12
+  steps](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
 
 ### Performance optimization
 
@@ -250,11 +256,6 @@ Topics
 * [Read the guide](https://python-packaging-user-guide.readthedocs.org/en/latest/)
 * [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
 * [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
-
-### Patterns
-
-* [Decorators in 12
-  steps](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
 
 ### Tests
 
