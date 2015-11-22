@@ -11,6 +11,9 @@ Learning the language
 Beginner
 --------
 
+First, [Why Beginners Should Learn
+Python](http://stackabuse.com/why-beginners-should-learn-python/)
+
 Here are some free books:
 
 * [Learn Python the Hard Way](http://learnpythonthehardway.org/book/): slow
@@ -194,6 +197,10 @@ of third party libraries.
 Topics
 ------
 
+### Best Practices
+
+* [The Best of the Best Practices](https://gist.github.com/sloria/7001839)
+
 ### Code Architecture
 
 * [The clean
@@ -241,6 +248,8 @@ Topics
 
 ### Performance optimization
 
+* [Profiling Python using cProfile: a concrete
+  case](https://julien.danjou.info/blog/2015/guide-to-python-profiling-cprofile-concrete-case-carbonara)
 * [cProfile module documentation](https://docs.python.org/2/library/profile.html)
 * [Example cProfile session](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
 * [A guide to analyzing Python performance](http://www.huyng.com/posts/python-performance-analysis/)
@@ -256,6 +265,10 @@ Topics
 * [Read the guide](https://python-packaging-user-guide.readthedocs.org/en/latest/)
 * [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
 * [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
+
+### Static analysis of code
+
+* [Essential python tools - Quality](http://aboumrad.info/essential-python-tools-quality.html)
 
 ### Tests
 
