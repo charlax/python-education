@@ -330,6 +330,8 @@ Here's a list of good books:
 * [Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/dp/0201633612/): dubbed "the gang of four", this is almost a required reading for any developer. A lot of those are a bit overkill for Python (because everything is an object, and dynamic typing), but the main idea (composition is better than inheritance) definitely is a good philosophy.
 * [Patterns of Enterprise Application Architecture](http://www.amazon.com/dp/0321127420/?tag=stackoverfl08-20): learn about how database are used in real world applications. Mike Bayer's SQLAlchemy has been heavily influenced by this book.
 * SourceMaking's [Design Patterns](https://sourcemaking.com/design_patterns) seems to be a good web resource too.
+* O'Reilly's [How to make mistakes in
+  Python](http://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
 
 I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on another repo. This is a highly recommended read.
 
