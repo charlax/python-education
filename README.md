@@ -321,6 +321,7 @@ Articles and blogs
 * [On Being A Senior Engineer](http://www.kitchensoap.com/2012/10/25/on-being-a-senior-engineer/)
 * [High Scalability](http://highscalability.com/): great blog about system architecture, its weekly review article are packed with numerous insights and interesting technology reviews.
 * [6 Rules of thumb to build blazing fast web server applications](http://loige.co/6-rules-of-thumb-to-build-blazing-fast-web-applications/)
+* [Lessons Learned in Software Development](http://henrikwarne.com/2015/04/16/lessons-learned-in-software-development/): one of those article that give you years of hard-earned lessons, all in one short article. Must read.
 
 Patterns and anti-patterns
 --------------------------
