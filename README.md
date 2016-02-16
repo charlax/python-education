@@ -1,3 +1,36 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+# Table of Contents
+
+- [Ramping up with professional Python](#ramping-up-with-professional-python)
+- [Learning the language](#learning-the-language)
+  - [Beginner](#beginner)
+  - [Intermediate](#intermediate)
+  - [Learning to write idiomatic Python](#learning-to-write-idiomatic-python)
+- [Exercises](#exercises)
+- [Ramping up with specific libraries](#ramping-up-with-specific-libraries)
+  - [Topics](#topics)
+    - [Best Practices](#best-practices)
+    - [Code Architecture](#code-architecture)
+    - [Functional code](#functional-code)
+    - [Magic methods](#magic-methods)
+    - [Quirks and gotchas](#quirks-and-gotchas)
+    - [Highly Available Code](#highly-available-code)
+    - [Internals](#internals)
+    - [Debugging](#debugging)
+    - [Design patterns](#design-patterns)
+    - [Performance optimization](#performance-optimization)
+    - [Packaging](#packaging)
+    - [Static analysis of code](#static-analysis-of-code)
+    - [Tests](#tests)
+    - [Unicode](#unicode)
+- [Staying up to date](#staying-up-to-date)
+- [Non-python professional coding education](#non-python-professional-coding-education)
+  - [Python and beyond](#python-and-beyond)
+  - [Reference and other lists](#reference-and-other-lists)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Ramping up with professional Python
 ===================================
 
