@@ -247,6 +247,8 @@ Topics
 * [Python 3 Patterns, Recipes and Idioms](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/index.html)
 * [Decorators in 12
   steps](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
+  
+I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on another repo. This is a highly recommended read.
 
 ### Performance optimization
 
@@ -306,37 +308,7 @@ You can also checkout the [Python subreddit](https://www.reddit.com/r/Python/).
 Non-python professional coding education
 ========================================
 
-Books
------
-
-* [The Pragmatic Programmer: From Journeyman to
-  Master](http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X)
-* [Code Complete: A Practical Handbook of Software
-  Construction](http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670)
-* [Scalability Rules: 50 Principles for Scaling Web
-  Sites](http://www.amazon.com/Scalability-Rules-Principles-Scaling-Sites/dp/0321753887)
-
-Articles and blogs
-------------------
-
-* [Practical Advice for New Software Engineers](http://product.hubspot.com/blog/practical-advice-for-new-software-engineers)
-* [On Being A Senior Engineer](http://www.kitchensoap.com/2012/10/25/on-being-a-senior-engineer/)
-* [High Scalability](http://highscalability.com/): great blog about system architecture, its weekly review article are packed with numerous insights and interesting technology reviews.
-* [6 Rules of thumb to build blazing fast web server applications](http://loige.co/6-rules-of-thumb-to-build-blazing-fast-web-applications/)
-* [Lessons Learned in Software Development](http://henrikwarne.com/2015/04/16/lessons-learned-in-software-development/): one of those article that give you years of hard-earned lessons, all in one short article. Must read.
-
-Patterns and anti-patterns
---------------------------
-
-Here's a list of good books:
-
-* [Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/dp/0201633612/): dubbed "the gang of four", this is almost a required reading for any developer. A lot of those are a bit overkill for Python (because everything is an object, and dynamic typing), but the main idea (composition is better than inheritance) definitely is a good philosophy.
-* [Patterns of Enterprise Application Architecture](http://www.amazon.com/dp/0321127420/?tag=stackoverfl08-20): learn about how database are used in real world applications. Mike Bayer's SQLAlchemy has been heavily influenced by this book.
-* SourceMaking's [Design Patterns](https://sourcemaking.com/design_patterns) seems to be a good web resource too.
-* O'Reilly's [How to make mistakes in
-  Python](http://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
-
-I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on another repo. This is a highly recommended read.
+Read this up on my [professional programming doc](https://github.com/charlax/professional-programming).
 
 Python and beyond
 -----------------
