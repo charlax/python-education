@@ -11,6 +11,7 @@
 - [Ramping up with specific libraries](#ramping-up-with-specific-libraries)
   - [Topics](#topics)
     - [Best Practices](#best-practices)
+    - [Celery](#celery)
     - [Code Architecture](#code-architecture)
     - [Functional code](#functional-code)
     - [Magic methods](#magic-methods)
@@ -235,6 +236,10 @@ Topics
 ### Best Practices
 
 * [The Best of the Best Practices](https://gist.github.com/sloria/7001839)
+
+### Celery
+
+* [Celery best practices](https://blog.balthazar-rouberol.com/celery-best-practices), Balthazar
 
 ### Code Architecture
 
