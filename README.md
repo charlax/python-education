@@ -16,7 +16,6 @@
     - [Functional code](#functional-code)
     - [Magic methods](#magic-methods)
     - [Quirks and gotchas](#quirks-and-gotchas)
-    - [Highly Available Code](#highly-available-code)
     - [Internals](#internals)
     - [Debugging](#debugging)
     - [Design patterns](#design-patterns)
@@ -26,7 +25,7 @@
     - [Tests](#tests)
     - [Unicode](#unicode)
 - [Staying up to date](#staying-up-to-date)
-- [Non-python professional coding education](#non-python-professional-coding-education)
+- [Non-Python professional coding education](#non-python-professional-coding-education)
   - [Python and beyond](#python-and-beyond)
   - [Reference and other lists](#reference-and-other-lists)
 
@@ -35,9 +34,13 @@
 Ramping up with professional Python
 ===================================
 
-The goal of this documentation is to introduce you to the world of professional
-Python. It will be providing concrete exercises, because the best way to learn
-is to do.
+The goal of this documentation is to help you become a productive Python developer. 
+
+It assumes that those skills will be used in a professional environment. It includes concrete exercises, because the best way to learn is by doing. It focuses on real-world, applied documentation that will help your programming on a day-to-day basis.
+
+This doc assumes programming knowledge and experience. 
+
+If you're also interested in generic programming best practices, I've compiled a list of [professional programming](https://github.com/charlax/professional-programming) resources.
 
 Learning the language
 =====================
@@ -235,7 +238,7 @@ Topics
 
 ### Best Practices
 
-* [The Best of the Best Practices](https://gist.github.com/sloria/7001839)
+* [The Best of the Best Practices (BOBP) Guide for Python](https://gist.github.com/sloria/7001839)
 
 ### Celery
 
@@ -260,10 +263,6 @@ Topics
 * [Hidden features of Python](http://stackoverflow.com/questions/101268/hidden-features-of-python)
 * [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
 * [A collection of Python "wat" moments](http://www.b-list.org/weblog/2015/oct/13/wats-doc/)
-
-### Highly Available Code
-
-* [Lessons learned writing highly available code](https://medium.com/imgur-engineering/lessons-learned-writing-highly-available-code-7eaf3d7aae00)
 
 ### Internals
 
@@ -343,7 +342,7 @@ There are two main newsletters for Python, which mostly cover the same things:
 
 You can also checkout the [Python subreddit](https://www.reddit.com/r/Python/).
 
-Non-python professional coding education
+Non-Python professional coding education
 ========================================
 
 Read this up on my [professional programming doc](https://github.com/charlax/professional-programming).
