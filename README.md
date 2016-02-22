@@ -168,6 +168,7 @@ Small exercises:
 
 Larger projects:
 
+* [Discover Flask](https://github.com/realpython/discover-flask)
 * Build a lock library for redis.
 * Build a cache library for redis.
 * Build an API for next bus departure time.
