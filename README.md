@@ -76,6 +76,7 @@ Other resources include (prefer the one listed above):
 
 * [Automate the boring stuff with Python](https://automatetheboringstuff.com/)
 * [Invent with Python](http://inventwithpython.com/chapters/)
+* [Learn python3 in one picture](https://github.com/coodict/python3-in-one-pic)
 
 
 Intermediate
