@@ -34,11 +34,11 @@
 Ramping up with professional Python
 ===================================
 
-The goal of this documentation is to help you become a productive Python developer. 
+The goal of this documentation is to help you become a productive Python developer.
 
 It assumes that those skills will be used in a professional environment. It includes concrete exercises, because the best way to learn is by doing. It focuses on real-world, applied documentation that will help your programming on a day-to-day basis.
 
-This doc assumes programming knowledge and experience. 
+This doc assumes programming knowledge and experience.
 
 If you're also interested in generic programming best practices, I've compiled a list of [professional programming](https://github.com/charlax/professional-programming) resources.
 
@@ -100,9 +100,10 @@ Learning to write idiomatic Python
 
 First things first, let's get code styling out of the way. Make sure you've
 read an memorized [PEP8](https://www.python.org/dev/peps/pep-0008/) (code
-style) and [PEP257](https://www.python.org/dev/peps/pep-0257/) (docstring
-style). Those two code styles are applied by almost all major Python
-applications and libraries. Use flake8.
+style, [more readable version here](http://pep8.org/)) and
+[PEP257](https://www.python.org/dev/peps/pep-0257/) (docstring style). Those
+two code styles are applied by almost all major Python applications and
+libraries. Use flake8 and autopep8.
 
 What is called "idiomatic Python" might feel magical at first, especially if
 you don't know Python. I'd recommend getting your hands dirty with some real
@@ -286,7 +287,7 @@ Topics
 * [Python 3 Patterns, Recipes and Idioms](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/index.html)
 * [Decorators in 12
   steps](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
-  
+
 I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on another repo. This is a highly recommended read.
 
 ### Performance optimization
