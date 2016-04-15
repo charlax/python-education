@@ -6,33 +6,34 @@
 - [Learning the language](#learning-the-language)
   - [Beginner](#beginner)
   - [Intermediate](#intermediate)
-  - [Learning to write idiomatic Python](#learning-to-write-idiomatic-python)
+  - [Writing idiomatic Python](#writing-idiomatic-python)
 - [Exercises](#exercises)
+  - [Small exercises:](#small-exercises)
+  - [Larger projects:](#larger-projects)
 - [Ramping up with specific libraries](#ramping-up-with-specific-libraries)
-  - [Topics](#topics)
-    - [Best Practices](#best-practices)
-    - [Celery](#celery)
-    - [Code Architecture](#code-architecture)
-    - [Functional code](#functional-code)
-    - [Magic methods](#magic-methods)
-    - [Quirks and gotchas](#quirks-and-gotchas)
-    - [Internals](#internals)
-    - [Debugging](#debugging)
-    - [Design patterns](#design-patterns)
-    - [Performance optimization](#performance-optimization)
-    - [Packaging](#packaging)
-    - [Static analysis of code](#static-analysis-of-code)
-    - [Tests](#tests)
-    - [Unicode](#unicode)
-- [Staying up to date](#staying-up-to-date)
-- [Non-Python professional coding education](#non-python-professional-coding-education)
+- [Topics](#topics)
+  - [Best Practices](#best-practices)
+  - [Celery](#celery)
+  - [Code Architecture](#code-architecture)
+  - [Design patterns](#design-patterns)
+  - [Functional code](#functional-code)
+  - [Internals](#internals)
+  - [Magic methods](#magic-methods)
+  - [Packages (finding them)](#packages-finding-them)
+  - [Packaging](#packaging)
+  - [Performance optimization](#performance-optimization)
   - [Python and beyond](#python-and-beyond)
-  - [Reference and other lists](#reference-and-other-lists)
+  - [Quirks and gotchas](#quirks-and-gotchas)
+  - [Static analysis of code](#static-analysis-of-code)
+  - [Tests](#tests)
+  - [Unicode](#unicode)
+- [Reference and other lists](#reference-and-other-lists)
+  - [Staying up to date](#staying-up-to-date)
+  - [Non-Python professional coding education](#non-python-professional-coding-education)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-Ramping up with professional Python
-===================================
+# Ramping up with professional Python
 
 The goal of this documentation is to help you become a productive Python developer.
 
@@ -42,14 +43,11 @@ This doc assumes programming knowledge and experience.
 
 If you're also interested in generic programming best practices, I've compiled a list of [professional programming](https://github.com/charlax/professional-programming) resources.
 
-Learning the language
-=====================
+# Learning the language
 
-Beginner
---------
+## Beginner
 
-First, [Why Beginners Should Learn
-Python](http://stackabuse.com/why-beginners-should-learn-python/)
+First, [Why Beginners Should Learn Python](http://stackabuse.com/why-beginners-should-learn-python/)
 
 Here are some free books:
 
@@ -78,9 +76,7 @@ Other resources include (prefer the one listed above):
 * [Invent with Python](http://inventwithpython.com/chapters/)
 * [Learn python3 in one picture](https://github.com/coodict/python3-in-one-pic)
 
-
-Intermediate
-------------
+## Intermediate
 
 Books:
 
@@ -95,8 +91,7 @@ Videos & presentation:
 
 * [py-must-watch](https://github.com/s16h/py-must-watch)
 
-Learning to write idiomatic Python
-----------------------------------
+## Writing idiomatic Python
 
 First things first, let's get code styling out of the way. Make sure you've
 read an memorized [PEP8](https://www.python.org/dev/peps/pep-0008/) (code
@@ -156,19 +151,18 @@ Learning idiomatic Python:
 * [Elements of Python
   style](https://github.com/amontalenti/elements-of-python-style)
 
-Exercises
-=========
+# Exercises
 
 The best way to learn is to do.
 
-Small exercises:
+## Small exercises:
 
 * Create a virtual environment with virtualenv.
 * Create a virtual environment with virtualenvwrapper tools.
 * Fix a bug in one of the Python packages listed in [the Python guide](http://docs.python-guide.org/en/latest/#scenario-guide).
 * Create a server exposing a Thrift API.
 
-Larger projects:
+## Larger projects:
 
 * [Discover Flask](https://github.com/realpython/discover-flask)
 * Build a lock library for redis.
@@ -197,8 +191,7 @@ Python](https://github.com/vinta/awesome-python). Make sure you pick a library
 where the tickets are not too involved, and where the community is still alive
 (i.e. there's recent merged pull requests).
 
-Ramping up with specific libraries
-==================================
+# Ramping up with specific libraries
 
 Regardless of whether you use them, those tutorials introduce you to important
 concept and good design patterns, so they're highly recommended:
@@ -236,52 +229,29 @@ environments:
 [Awesome Python](https://github.com/vinta/awesome-python) provides a great list
 of third party libraries.
 
-Topics
-------
+# Topics
 
-### Best Practices
+## Best Practices
 
 * [The Best of the Best Practices (BOBP) Guide for Python](https://gist.github.com/sloria/7001839)
 
-### Celery
+## Celery
 
 * [Celery best practices](https://blog.balthazar-rouberol.com/celery-best-practices), Balthazar
 
-### Code Architecture
+## Code Architecture
 
 * [The clean
   architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
-
-### Functional code
-
-* [Python Partials are Fun!](http://www.pydanny.com/python-partials-are-fun.html)
-
-### Magic methods
-
-* [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
-
-### Quirks and gotchas
-
-* [Python quirks](http://www.lshift.net/blog/2009/10/29/python-quirks/)
-* [Hidden features of Python](http://stackoverflow.com/questions/101268/hidden-features-of-python)
-* [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
-* [A collection of Python "wat" moments](http://www.b-list.org/weblog/2015/oct/13/wats-doc/)
-
-### Internals
-
-* [Why Python is Slow: Looking Under the Hood](http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/)
-* [The internals of Python string interning](http://guilload.com/python-string-interning/)
-* [Python Data
-  structures](http://rhodesmill.org/brandon/slides/2014-04-pycon/data-structures/)
-
-### Debugging
+  
+## Debugging
 
 * General introduction: [Python debugging
   tools](http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/)
 * A better debugger: [pudb](http://heather.cs.ucdavis.edu/~matloff/pudb.html)
 * [Debugging Python Like a Boss](https://zapier.com/engineering/debugging-python-boss/)
 
-### Design patterns
+## Design patterns
 
 * [Design patterns explained](http://www.pysnap.com/design-patterns-explained/)
 * [Python 3 Patterns, Recipes and Idioms](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/index.html)
@@ -290,7 +260,31 @@ Topics
 
 I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on another repo. This is a highly recommended read.
 
-### Performance optimization
+## Functional code
+
+* [Python Partials are Fun!](http://www.pydanny.com/python-partials-are-fun.html)
+
+## Internals
+
+* [Why Python is Slow: Looking Under the Hood](http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/)
+* [The internals of Python string interning](http://guilload.com/python-string-interning/)
+* [Python Data structures](http://rhodesmill.org/brandon/slides/2014-04-pycon/data-structures/)
+
+## Magic methods
+
+* [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
+
+## Packages (finding them)
+
+* [Awesome Python](http://python.libhunt.com/)
+
+## Packaging
+
+* [Read the guide](https://python-packaging-user-guide.readthedocs.org/en/latest/)
+* [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
+* [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
+
+## Performance optimization
 
 * [Profiling Python using cProfile: a concrete
   case](https://julien.danjou.info/blog/2015/guide-to-python-profiling-cprofile-concrete-case-carbonara)
@@ -304,17 +298,22 @@ I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on 
   viewer for the output of Python’s cProfile module.
 * [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
 
-### Packaging
+## Python and beyond
 
-* [Read the guide](https://python-packaging-user-guide.readthedocs.org/en/latest/)
-* [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
-* [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
+* [27 languages to improve your Python](http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html)
 
-### Static analysis of code
+## Quirks and gotchas
+
+* [Python quirks](http://www.lshift.net/blog/2009/10/29/python-quirks/)
+* [Hidden features of Python](http://stackoverflow.com/questions/101268/hidden-features-of-python)
+* [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
+* [A collection of Python "wat" moments](http://www.b-list.org/weblog/2015/oct/13/wats-doc/)
+
+## Static analysis of code
 
 * [Essential python tools - Quality](http://aboumrad.info/essential-python-tools-quality.html)
 
-### Tests
+## Tests
 
 Half of coding time is usually spent writing tests. Yet how to write tests
 efficiently is very rarely taught at school - even though it came make a huge
@@ -331,12 +330,19 @@ Then, read some of those articles:
   tests](http://hernantz.github.io/mock-yourself-not-your-tests.html): great
   articles about the danger of mocking, and better unit testing strategies.
 
-### Unicode
+## Unicode
 
 * [Solving Unicode Problems in Python 2.7](http://www.azavea.com/blogs/labs/2014/03/solving-unicode-problems-in-python-2-7/)
 
-Staying up to date
-==================
+# Reference and other lists
+
+* [Best Python Resources](http://www.fullstackpython.com/best-python-resources.html)
+* [Awesome Python](https://github.com/vinta/awesome-python)
+* [PyCon 2015](https://www.youtube.com/channel/UCgxzjK6GuOHVKR_08TT4hJQ)
+* Invent With Python, [Further Reading: Intermediate Python Resources](http://inventwithpython.com/blog/2015/09/01/further-reading-intermediate-python-resources/)
+* [Good to great Python reads](http://jessenoller.com/good-to-great-python-reads/)
+
+## Staying up to date
 
 There are two main newsletters for Python, which mostly cover the same things:
 
@@ -345,22 +351,6 @@ There are two main newsletters for Python, which mostly cover the same things:
 
 You can also checkout the [Python subreddit](https://www.reddit.com/r/Python/).
 
-Non-Python professional coding education
-========================================
+## Non-Python professional coding education
 
 Read this up on my [professional programming doc](https://github.com/charlax/professional-programming).
-
-Python and beyond
------------------
-
-[27 languages to improve your
-Python](http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html)
-
-Reference and other lists
--------------------------
-
-* [Best Python Resources](http://www.fullstackpython.com/best-python-resources.html)
-* [Awesome Python](https://github.com/vinta/awesome-python)
-* [PyCon 2015](https://www.youtube.com/channel/UCgxzjK6GuOHVKR_08TT4hJQ)
-* Invent With Python, [Further Reading: Intermediate Python Resources](http://inventwithpython.com/blog/2015/09/01/further-reading-intermediate-python-resources/)
-* [Good to great Python reads](http://jessenoller.com/good-to-great-python-reads/)
