@@ -161,6 +161,7 @@ The best way to learn is to do.
 * Create a virtual environment with virtualenvwrapper tools.
 * Fix a bug in one of the Python packages listed in [the Python guide](http://docs.python-guide.org/en/latest/#scenario-guide).
 * Create a server exposing a Thrift API.
+* Take inspiration from this [list of Raspberry Pi projects on reddit](https://www.reddit.com/r/Python/comments/4e59wb/what_have_you_done_with_python_and_raspberry_pi/)
 
 ## Larger projects:
 
