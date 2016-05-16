@@ -177,10 +177,9 @@ The best way to learn is to do.
 * Build a template engine.
 * Build a static site generator.
 * Build an HTTP library.
-* Clone one of those
-  [games](http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/)
-* Solve some of the [Project Euler
-  problems](https://projecteuler.net/)
+* Clone one of those [games](http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/)
+* Solve some of the [Project Euler problems](https://projecteuler.net/)
+* Write a game using [pyarcade](http://pythonhosted.org/arcade/index.html)
 
 Reddit's [dailyprogrammer subreddit](https://www.reddit.com/r/dailyprogrammer)
 has some good exercises as well.
