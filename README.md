@@ -85,7 +85,7 @@ Other resources include (prefer the one listed above):
 
 I wrote some introductory material to advanced Python:
 
-* Read the [Introduction to advanced Python](advanced_python/advanced_python.md).
+* Read the [Introduction to advanced Python](advanced_python/advanced_python.md) article.
 * Check out the [advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) I authored on Slideshare.
 
 ### Articles, videos and presentations
@@ -357,3 +357,5 @@ You can also checkout the [Python subreddit](https://www.reddit.com/r/Python/).
 ## Non-Python professional coding education
 
 Read this up on my [professional programming doc](https://github.com/charlax/professional-programming).
+
+If you want to get in touch, checkout [my website](http://www.d3in.org/).
