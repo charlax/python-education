@@ -6,6 +6,8 @@
 - [Learning the language](#learning-the-language)
   - [Beginner](#beginner)
   - [Intermediate](#intermediate)
+    - [Books](#books)
+    - [Videos & presentation:](#videos-&-presentation)
   - [Writing idiomatic Python](#writing-idiomatic-python)
 - [Exercises](#exercises)
   - [Small exercises:](#small-exercises)
@@ -149,15 +151,15 @@ List of books:
 
 The best way to learn is to do.
 
-## Small exercises:
+## Small exercises
 
-* Create a virtual environment with virtualenv.
-* Create a virtual environment with virtualenvwrapper tools.
+* Create a virtual environment with `virtualenv`.
+* Create a virtual environment with `virtualenvwrapper` tools.
 * Fix a bug in one of the Python packages listed in [the Python guide](http://docs.python-guide.org/en/latest/#scenario-guide).
 * Create a server exposing a Thrift API.
 * Take inspiration from this [list of Raspberry Pi projects on reddit](https://www.reddit.com/r/Python/comments/4e59wb/what_have_you_done_with_python_and_raspberry_pi/)
 
-## Larger projects:
+## Larger projects
 
 * [Discover Flask](https://github.com/realpython/discover-flask)
 * Build a lock library for redis.
