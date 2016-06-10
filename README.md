@@ -78,18 +78,17 @@ Other resources include (prefer the one listed above):
 
 ## Intermediate
 
-Books:
+### Books
 
 * Muhammad Yasoob Ullah Khalid, [Intermediate Python](http://book.pythontips.com/en/latest/)
-* Luciano Ramalho, [Fluent
-  Python](http://www.amazon.com/gp/product/1491946008/)
+* Luciano Ramalho, [Fluent Python](http://www.amazon.com/gp/product/1491946008/)
 * Dusty Phillips, [Python 3 Object-Oriented Programming](http://www.amazon.com/gp/product/1784398780/)
-* Brett Slatkin, [Effective Python: 59 Specific Ways to Write Better
-  Python](http://www.amazon.com/gp/product/0134034287/)
+* Brett Slatkin, [Effective Python: 59 Specific Ways to Write Better Python](http://www.amazon.com/gp/product/0134034287/)
 
-Videos & presentation:
+### Videos & presentation:
 
 * [py-must-watch](https://github.com/s16h/py-must-watch)
+* Read the [advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) I authored on slideshare. You'll find the source of this presentation in this repository.
 
 ## Writing idiomatic Python
 
