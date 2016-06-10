@@ -3,6 +3,7 @@
 # Table of Contents
 
 - [Introduction to Advanced Python](#introduction-to-advanced-python)
+  - [Presentation](#presentation)
   - [Introduction](#introduction)
   - [Prerequisite](#prerequisite)
   - [Object Oriented Programming](#object-oriented-programming)
@@ -51,6 +52,10 @@
 The goal of this article is to broaden your knowledge of Python, exploring some concepts and techniques you might have never heard about. I won't go into too much detail, the goal is only to inspire you to research those features and patterns.
 
 *Note: all examples are run with Python 3.4*
+
+## Presentation
+
+This is also available as a [presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python). The source of this presentation can be found in this repo.
 
 ## Introduction
 
@@ -105,7 +110,7 @@ A metaclass is just the class (or the type) of a class.
 
 In Python, even classes are object.
 
-```
+```python
 >>> class LaClasse(object):
 ...     pass
 >>> LaClasse
@@ -114,7 +119,7 @@ In Python, even classes are object.
 
 Classes are instances of `type`:
 
-```
+```python
 >>> type(LaClasse)
 <class 'type'>
 >>> isinstance(LaClasse, type)
@@ -123,7 +128,7 @@ True
 
 The builtin function `type` can be also used to create new classes on the fly.  The first argument is the class name, the second one the base classes, the last one the class attributes.
 
-```
+```python
 >>> LaClasse = type("LaClasse", (object, ), {})
 >>> LaClasse
 <class '__main__.LaClasse'>
@@ -131,14 +136,14 @@ The builtin function `type` can be also used to create new classes on the fly.  
 
 Python uses type to create classes. So the class of a class is `type`, or, in other words, the metaclass of classes is `type`. Because this is the default, the following does nothing different from what Python would have done. It just says that the class Toaster's class is type:
 
-```
+```python
 >>> class Toaster(object):
 ...     __metaclass__ = type
 ```
 
 So a basic way to use metaclass would be (note: the syntax is a bit different in Python 2):
 
-```
+```python
 >>> def prepend_class_name(name, bases, attr):
 ...     new_attr = {}
 ...     for key, value in attr.items():
@@ -174,7 +179,7 @@ As Tim Peters puts it, "Metaclasses are deeper magic than 99% of users should ev
 
 Python allows operator overloading by allowing classes to override methods with special names. For instance:
 
-```
+```python
 >>> class Toaster(object):
 ...     def __init__(self, number_of_slots):
 ...             self.number_of_slots = number_of_slots
@@ -206,7 +211,7 @@ Here's a list of the main operations:
 
 Overriding special methods lets you write much more readable code. Let's imagine we want to compare two cards:
 
-```
+```python
 import functools
 
 
@@ -238,7 +243,7 @@ This code is arguably much easier to read and keeps the logic of how to compare 
 
 Another interesting use cases is how SQLAlchemy is able to have the following work:
 
-```
+```python
 session.query(Toaster.name == 'the_name')
 ```
 
@@ -255,7 +260,7 @@ The reason this works is that `Toaster.name` overloads the `__eq__` special meth
 
 The basic idea is that descriptors are reusable properties. This might sound quite confusing, so let's start with a very simple example:
 
-```
+```python
 CACHE = {
     'toaster1': {'color': 'red', 'brand': 'noname'},
 }
@@ -298,7 +303,7 @@ Properties (usually created by decorating a method with the `property` builtin f
 
 The function's signature is: `property(fget=None, fset=None, fdel=None, doc=None)`, where `fget` is the attribute getter, `fset` the setter, `fdel` the deleter and `doc` the docstring. `property` can also be used as a decorator.  Once it's applied, it exposes a `getter`, `setter` and `deleter` method that can also be used as decorators. Those two ways are completely identical:
 
-```
+```python
 class Toaster(object):
 
     def __init__(self, color):
@@ -344,7 +349,7 @@ assert toaster.color == 'red'
 
 Property are very often use to create readonly attributes, defining only the getter:
 
-```
+```python
 import pytest
 
 
@@ -380,7 +385,7 @@ Descriptors themselves are rarely used. Notable uses include SQLAlchemy's `Colum
 
 Context managers are used with the `with` statement. They let you define code that is run before and after the block. You could achieve the same result with `try... except... finally` but a `with` block can be more readable and provide some more flexibility. The canonical example is probably the following:
 
-```
+```python
 with open("/etc/resolv.conf") as f:
     print(f.read())
 
@@ -395,7 +400,7 @@ finally:
 
 In the first example, `f.close()` is omitted because `open` can be used directly (as in the second example), but also as a context manager. In the latter case, it will handle closing automatically. This behavior is defined in `Lib/_pyio.py`:
 
-```
+```python
 class IOBase(metaclass=abc.ABCMeta):
     ...
 
@@ -408,7 +413,7 @@ There's multiple ways to define a context manager. The most explicit one is to c
 
 Class-based way:
 
-```
+```python
 class assert_raises(object):
     """Assert that an exception is raised."""
 
@@ -439,7 +444,7 @@ with assert_raises(ValueError):
 
 Function-based way:
 
-```
+```python
 from contextlib import contextmanager
 
 
@@ -469,7 +474,7 @@ The [`contextlib`](http://docs.python.org/3/library/contextlib.html) module prov
 * `suppress`: suppresses specific exceptions
 * `redirect_stdout`
 
-```
+```python
 from contextlib import suppress
 
 with suppress(FileNotFoundError):
@@ -478,7 +483,7 @@ with suppress(FileNotFoundError):
 
 SQLAlchemy's [`Session.begin()`](http://docs.sqlalchemy.org/en/latest/orm/session.html#sqlalchemy.orm.session.Session.begin) is a context manager. You could imagine a lot of other use cases: Redis pipelines, wrapping SQL transactions, etc.
 
-```
+```python
 from contextlib import contextmanager
 
 @contextmanager
@@ -503,7 +508,7 @@ def run_my_program():
 
 Here's how a reds pipeline command can be created using [redis-py](https://github.com/andymccurdy/redis-py):
 
-```
+```python
 with redis_client.pipeline() as pipe:
     pipe.set('toaster:1', 'brioche')
     bread = pipe.get('toaster:2')
@@ -526,7 +531,7 @@ Even though `object` are first class citizen in Python, the language can totally
 
 Decorator are nothing complicated. They're just syntactic sugar.
 
-```
+```python
 def function():
     pass
 
@@ -546,14 +551,14 @@ Now what is `decorate`? Let's think about the behavior it needs to have:
 
 Here's the simplest possible decorator (which does not do anything:
 
-```
+```python
 def decorate(function):
     return function
 ```
 
 Not terribly useful. Let's create a decorator that will return `None` if the function raises an exception.
 
-```
+```python
 import functools
 
 
@@ -595,7 +600,7 @@ How would you change the decorator's behavior? You would need to write a decorat
 
 Let's make the simplest possible decorator maker:
 
-```
+```python
 def decorater_maker():
     def decorator(function):
         return function
@@ -609,7 +614,7 @@ def function():
 
 Note that we **call** `decorator_maker`, because we need it to return the decorator. Now, let's see a more useful example:
 
-```
+```python
 # This the decorator factory. It returns a decorator.
 def silence_exception(exceptions):
     """Create a decorator to ignore some exceptions."""
@@ -657,7 +662,7 @@ with assert_raises(TypeError):
 
 Note that this is effectively reinventing `contextlib`'s simpler `suppress` context manager:
 
-```
+```python
 class suppress:
     """Context manager to suppress specified exceptions
 
@@ -681,7 +686,7 @@ class suppress:
 
 Decorators can also be applied to class. There's not much difference in the behavior:
 
-```
+```python
 @decorator
 class Foo:
     pass
@@ -689,7 +694,7 @@ class Foo:
 
 Is equivalent to:
 
-```
+```python
 class Foo:
     pass
 Foo = decorator(Foo)
@@ -718,7 +723,7 @@ Decorators are an extremely versatile tool. Here's some examples:
 
 Just a simpler way to define list/dict/set:
 
-```
+```python
 >>> [str(i) for i in range(4)]
 ['0', '1', '2', '3']
 >>> {key: str(key) for key in range(4)}
@@ -729,7 +734,7 @@ Just a simpler way to define list/dict/set:
 
 Note that they can be nested as well:
 
-```
+```python
 >>> [[(i, j) for i in range(2)] for j in range(2)]
 [[(0, 0), (1, 0)], [(0, 1), (1, 1)]]
 ```
@@ -742,7 +747,7 @@ List/dict/set comprehensions can provide a more readable way to create simple li
 
 They lower the readability when used for complex data structures, in which case it's usually better to use a plain loop.
 
-```
+```python
 >>> my_dict = {str(i): [j % 2 for j in range(i)] for i in range(2)}
 >>> my_dict2 = {}
 >>> for i in range(2):
@@ -770,7 +775,7 @@ Note that when you do a `for` loop over a container, the container is guaranteed
 
 Here's a very simple iterator:
 
-```
+```python
 >>> class Toaster(object):
 ...    def __init__(self):
 ...        self.toasts = [0, 1]
@@ -796,7 +801,7 @@ Here's a very simple iterator:
 
 Let's use the `dis` module, which lets you disassemble Python to see what's going on:
 
-```
+```python
 >>> import dis
 >>> def over_list():
 ...     for i in None: pass
@@ -820,7 +825,7 @@ TypeError: 'NoneType' object is not iterable
 
 Obviously this would never have worked but the most interesting part is that we can verify what we just said: Python calls `iter` on the object (`GET_ITER`), and then calls (`FOR_ITER`) on its result. Another way to verify that:
 
-```
+```python
 >>> iter(None)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -831,7 +836,7 @@ TypeError: 'NoneType' object is not iterable
 
 Iterators provide a very clean way to support looping over some content. You could imagine having a class that gives a simpler access to a list of resources:
 
-```
+```python
 >>> def get_api_resource(url):
 ...     """Return an API resource."""
 ...     if url.endswith("2"):
@@ -876,7 +881,7 @@ To simplify, they're just a simple way to create an iterator using a function in
 
 If we were to re-implement the `ApiResources` class from above, we could it do this way:
 
-```
+```python
 >>> def get_toasters():
 ...    while True:
 ...        resource = get_api_resource("/toasters/" + str(index))
@@ -891,7 +896,7 @@ found /toasters/1
 
 This is arguably much more readable. Here's the interesting piece:
 
-```
+```python
 >>> type(get_resources)
 <class 'function'>
 >>> type(get_resources())
@@ -905,21 +910,21 @@ What this means is that while `get_resources` is a function, it returns a `gener
 
 Let's see if we can verify this using the `inspect` module, which provides useful functions to get more insights into live objects.
 
-```
+```python
 >>> import inspect
 >>> gen = get_resources()
 ```
 
 At this point, we just got the generator and we haven't started generating, which means that nothing has been run yet:
 
-```
+```python
 >>> inspect.getgeneratorlocals(gen)
 {}
 ```
 
 We can use the `next()` builtin to manually advance to the next iteration and see that the generator now has two local variables that are stored: `index` and `resource`:
 
-```
+```python
 >>> next(gen)
 'found /toasters/0'
 >>> inspect.getgeneratorlocals(gen)
@@ -932,7 +937,7 @@ We can use the `next()` builtin to manually advance to the next iteration and se
 
 Note that generators do not return the implicit `None` that you're used to.  Instead, they raise `StopIteration` to comply with the iteration protocol:
 
-```
+```python
 >>> next(gen)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -943,7 +948,7 @@ What happens if you mix `return` and `yield`? In that case, `return <something>`
 
 Generator expression can be used for simple generators:
 
-```
+```python
 >>> toasters = (get_api_resource("/toasters/%d" % i) for i in range(2))
 >>> toasters
 <generator object <genexpr> at ...>
@@ -951,7 +956,7 @@ Generator expression can be used for simple generators:
 
 Note that `toasters` is a generator, not a list. List comprehensions use `[]`:
 
-```
+```python
 >>> toasters_list = [get_api_resource("/toasters/%d" % i) for i in range(2)]
 >>> toasters_list
 ['found /toasters/0', 'found /toasters/1']
@@ -961,7 +966,7 @@ As we explained, generators' main interest is that they are evaluated lazily one
 
 Note that you can evidently force evaluation of all the iterator's items with the `list()` constructor, which accepts an iterable and will construct a list from it:
 
-```
+```python
 >>> list(toasters)
 ['found /toasters/0', 'found /toasters/1']
 ```
@@ -1006,7 +1011,7 @@ There's three main categories:
 
 For instance, let's say you want to generate all permutations in the order of cards for a straight flush. No need to reinvent the wheel... `itertools` has a handy `permutations` iterator:
 
-```
+```python
 >>> all = list(itertools.permutations([Card('A'), Card('K'), Card('Q'), Card('J'), Card(10)])
 >>> all
 [(<Card A of hearts>,

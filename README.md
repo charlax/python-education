@@ -6,12 +6,13 @@
 - [Learning the language](#learning-the-language)
   - [Beginner](#beginner)
   - [Intermediate](#intermediate)
+    - [An introduction to advanced Python](#an-introduction-to-advanced-python)
+    - [Articles, videos and presentations](#articles-videos-and-presentations)
     - [Books](#books)
-    - [Videos & presentation:](#videos-&-presentation)
   - [Writing idiomatic Python](#writing-idiomatic-python)
 - [Exercises](#exercises)
-  - [Small exercises:](#small-exercises)
-  - [Larger projects:](#larger-projects)
+  - [Small exercises](#small-exercises)
+  - [Larger projects](#larger-projects)
 - [Ramping up with specific libraries](#ramping-up-with-specific-libraries)
 - [Topics](#topics)
   - [Best Practices](#best-practices)
@@ -80,17 +81,23 @@ Other resources include (prefer the one listed above):
 
 ## Intermediate
 
+### An introduction to advanced Python
+
+I wrote some introductory material to advanced Python:
+
+* Read the [Introduction to advanced Python](advanced_python/advanced_python.md).
+* Check out the [advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) I authored on Slideshare.
+
+### Articles, videos and presentations
+
+* [py-must-watch](https://github.com/s16h/py-must-watch)
+
 ### Books
 
 * Muhammad Yasoob Ullah Khalid, [Intermediate Python](http://book.pythontips.com/en/latest/)
 * Luciano Ramalho, [Fluent Python](http://www.amazon.com/gp/product/1491946008/)
 * Dusty Phillips, [Python 3 Object-Oriented Programming](http://www.amazon.com/gp/product/1784398780/)
 * Brett Slatkin, [Effective Python: 59 Specific Ways to Write Better Python](http://www.amazon.com/gp/product/0134034287/)
-
-### Videos & presentation:
-
-* [py-must-watch](https://github.com/s16h/py-must-watch)
-* Read the [advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) I authored on slideshare. You'll find the source of this presentation in this repository.
 
 ## Writing idiomatic Python
 
