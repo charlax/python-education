@@ -92,17 +92,9 @@ Other resources include (prefer the one listed above):
 
 ## Writing idiomatic Python
 
-First things first, let's get code styling out of the way. Make sure you've
-read an memorized [PEP8](https://www.python.org/dev/peps/pep-0008/) (code
-style, [more readable version here](http://pep8.org/)) and
-[PEP257](https://www.python.org/dev/peps/pep-0257/) (docstring style). Those
-two code styles are applied by almost all major Python applications and
-libraries. Use flake8 and autopep8.
+First things first, let's get code styling out of the way. Make sure you've read an memorized [PEP8](https://www.python.org/dev/peps/pep-0008/) (code style, [more readable version here](http://pep8.org/)) and [PEP257](https://www.python.org/dev/peps/pep-0257/) (docstring style). Those two code styles are applied by almost all major Python applications and libraries. Use flake8 and autopep8.
 
-What is called "idiomatic Python" might feel magical at first, especially if
-you don't know Python. I'd recommend getting your hands dirty with some real
-world Python code. Try to wander around the code, opening random files. Run the
-tutorial with a debugger to follow the flow and understand what's going on.
+What is called "idiomatic Python" might feel magical at first, especially if you don't know Python. I'd recommend getting your hands dirty with some real world Python code. Try to wander around the code, opening random files. Run the tutorial with a debugger to follow the flow and understand what's going on.
 
 * [bottle.py](https://github.com/bottlepy/bottle/blob/master/bottle.py): bottle
   is a web framework. It's a great resource because it's in all in whole file!
