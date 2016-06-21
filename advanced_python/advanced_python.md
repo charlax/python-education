@@ -100,427 +100,6 @@ This article assumes knowledge of those core Python concepts:
 
 If you don't understand one of those concepts, or feel rusty, you should revisit it before carrying with the rest of the article.
 
-## Object Oriented Programming
-
-### Metaclasses
-
-#### What are they?
-
-A metaclass is just the class (or the type) of a class.
-
-In Python, even classes are object.
-
-```python
->>> class LaClasse(object):
-...     pass
->>> LaClasse
-<class '__main__.LaClasse'>
-```
-
-Classes are instances of `type`:
-
-```python
->>> type(LaClasse)
-<class 'type'>
->>> isinstance(LaClasse, type)
-True
-```
-
-The builtin function `type` can be also used to create new classes on the fly.  The first argument is the class name, the second one the base classes, the last one the class attributes.
-
-```python
->>> LaClasse = type("LaClasse", (object, ), {})
->>> LaClasse
-<class '__main__.LaClasse'>
-```
-
-Python uses type to create classes. So the class of a class is `type`, or, in other words, the metaclass of classes is `type`. Because this is the default, the following does nothing different from what Python would have done. It just says that the class Toaster's class is type:
-
-```python
->>> class Toaster(object):
-...     __metaclass__ = type
-```
-
-So a basic way to use metaclass would be (note: the syntax is a bit different in Python 2):
-
-```python
->>> def prepend_class_name(name, bases, attr):
-...     new_attr = {}
-...     for key, value in attr.items():
-...         new_attr[name.lower() + "_" + key] = value
-...     return type(name, bases, new_attr)
-...
->>> class Toaster(metaclass=prepend_class_name):
-...     color = "red"
-...
->>> Toaster.color
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-AttributeError: type object 'Toaster' has no attribute 'color'
->>> Toaster.toaster_color
-'red'
-```
-
-#### Use cases
-
-As Tim Peters puts it, "Metaclasses are deeper magic than 99% of users should ever worry about. If you wonder whether you need them, you don't." That being said, there's some very legitimate use cases for metaclasses:
-
-* Use the class as a way for developer to configure something. This is how ORM such as SQLAlchemy allow you to use a class to define the table, the mapper and the class all at one (see the documentation about its [declarative extension](http://docs.sqlalchemy.org/en/rel_0_9/orm/extensions/declarative.html)).
-* Add some logic after a class has been defined: verify that some methods/attributes are present, automatically apply decorators, etc.
-
-#### Further reading
-
-* StackOverflow, [What is a metaclass in Python](http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python)
-* Python Docs, [Customizing class creation](http://docs.python.org/3.3/reference/datamodel.html#customizing-class-creation)
-
-### Special methods
-
-#### What are they?
-
-Python allows operator overloading by allowing classes to override methods with special names. For instance:
-
-```python
->>> class Toaster(object):
-...     def __init__(self, number_of_slots):
-...             self.number_of_slots = number_of_slots
-...     def __lt__(self, other):
-...             return self.number_of_slots < other.number_of_slots
-...
->>> Toaster(3) < Toaster(4)
-True
-```
-
-In this example, we have defined a way to compare whether a toaster is lower than another one.
-
-Pretty much every operation can be redefined. Object identity (`is`) cannot be overridden though (`Toaster is Toaster`). 
-
-Here's a list of the main operations:
-
-* `__repr__`: official string representation of an object. Typically used to ease debugging.
-* `__lt__`, `__le__`, `__eq__`...: rich comparison methods. Note that you can use `functools.total_ordering` so that you don't have to define all of them to allow all the possible rich comparison operations.
-* `__bool__`: when doing truth value testing.
-* `__getattr__`, `__setattr__`, `__delattr__`: respectively used for attribute lookup, assignment and deletion.
-* `__call__`: called when the instance is called as a function.
-* Container type emulation
-  * `__len__`: called with `len()`
-  * `__getitem__`, `__setitem__`, `__delitem__`: respectively used for evaluation, assignment and deletion of `self[key]`.
-  * `__contains__`: called with `item in self`.
-* Numeric types emulation: `__add__`, `__sub__`, `__mul__`... Also includes the augmented arithmetic assignments (`+=`, `-=`...): `__iadd__`, `__isub__`...)
-
-#### Use cases
-
-Overriding special methods lets you write much more readable code. Let's imagine we want to compare two cards:
-
-```python
-import functools
-
-
-@functools.total_ordering
-class Card(object):
-    _order = (2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A')
-
-    def __init__(self, rank, suite='hearts'):
-        assert rank in self._order
-        self.rank = rank
-        self.suite = suite
-
-    def __repr__(self):
-        return '<Card %s of %s>' % (self.rank, self.suite)
-
-    def __lt__(self, other):
-        return self._order.index(self.rank) < self._order.index(other.rank)
-
-    def __eq(self, other):
-        return self.rank == other.rank
-
-ace_of_spades = Card('A', 'spades')
-eight_of_hearts = Card(8, 'hearts')
-
-assert ace_of_spades > eight_of_hearts
-```
-
-This code is arguably much easier to read and keeps the logic of how to compare two cards encapsulated in the class.
-
-Another interesting use cases is how SQLAlchemy is able to have the following work:
-
-```python
-session.query(Toaster.name == 'the_name')
-```
-
-The reason this works is that `Toaster.name` overloads the `__eq__` special method to return a specific comparator object (this is hugely simplified, but that's the basic idea).
-
-#### Further reading
-
-* Python docs, [Data model](http://docs.python.org/3.3/reference/datamodel.html)
-* Rafe Kettler, [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
-
-### Descriptors and properties
-
-#### What are they?
-
-The basic idea is that descriptors are reusable properties. This might sound quite confusing, so let's start with a very simple example:
-
-```python
-CACHE = {
-    'toaster1': {'color': 'red', 'brand': 'noname'},
-}
-
-
-class CachedObject(object):
-
-    def __init__(self, name):
-        self.name = name
-
-    def __get__(self, instance, owner):
-        return CACHE[instance.key][self.name]
-
-    def __set__(self, instance, value):
-        CACHE.get[instance.key][self.name] = value
-
-
-class Toaster(object):
-    color = CachedObject('color')
-    brand = CachedObject('brand')
-
-    def __init__(self, key):
-        self.key = key
-
-
-toaster = Toaster('toaster1')
-assert toaster.color == 'red'
-assert toaster.brand == 'noname'
-toaster.color = 'blue'
-assert toaster.color == 'blue'
-```
-
-In this example, descriptors let us define some behavior once (i.e. where to get the data from), and reuse for two different attributes. Descriptors only work as class attribute and define one or multiple of the following methods:
-
-* `__get__(self, instance, owner)` where `instance` is the instance it's called on and can be `None` if it's called on the class, and `owner` the class.
-* `__set__(self, instance, value)` for overriding attribute assignment.
-* `__del__(self, instance)` for overriding attribute deletion (with `del`).
-
-Properties (usually created by decorating a method with the `property` builtin function) are a simpler and more pervasive way of using descriptors. They're defined in `Objects/descrobject.c` in the CPython code.
-
-The function's signature is: `property(fget=None, fset=None, fdel=None, doc=None)`, where `fget` is the attribute getter, `fset` the setter, `fdel` the deleter and `doc` the docstring. `property` can also be used as a decorator.  Once it's applied, it exposes a `getter`, `setter` and `deleter` method that can also be used as decorators. Those two ways are completely identical:
-
-```python
-class Toaster(object):
-
-    def __init__(self, color):
-        self._color = color
-
-    def get_color(self):
-        return self._color
-
-    def set_color(self, value):
-        self._color = color
-
-    def del_color(self):
-        raise AttributeError("can't delete attribute")
-
-    color = property(get_color, set_color, del_color)
-
-toaster = Toaster('red')
-assert toaster.color == 'red'
-
-
-class Toaster(object):
-
-    def __init__(self, color):
-        self._color = color
-
-    @property
-    def color(self):
-        return self._color
-
-    @color.setter
-    def set_color(self, value):
-        self._color = color
-
-    @color.deleter
-    def del_color(self):
-        raise AttributeError("can't delete attribute")
-
-toaster = Toaster('red')
-assert toaster.color == 'red'
-```
-
-#### Use cases
-
-Property are very often use to create readonly attributes, defining only the getter:
-
-```python
-import pytest
-
-
-class Toaster(object):
-
-    def __init__(self, color):
-        self._color = color
-
-    @property
-    def color(self):
-        return self._color
-
-
-toaster = Toaster('red')
-assert toaster.color == 'red'
-
-with pytest.raises(AttributeError):
-    toaster.color = 'blue'
-```
-
-Descriptors themselves are rarely used. Notable uses include SQLAlchemy's `ColumnDescriptor`.
-
-#### Further reading
-
-* Python docs, [Implementing descriptors](http://docs.python.org/3.3/reference/datamodel.html#implementing-descriptors)
-* Python docs, [property](http://docs.python.org/3.3/library/functions.html#property)
-* Chris Beaumont, [Python Descriptors Demystified](http://nbviewer.ipython.org/urls/gist.github.com/ChrisBeaumont/5758381/raw/descriptor_writeup.ipynb)
-* Alex Munroe, Fuzzy Notepad, [Python FAQ: Descriptors](http://me.veekun.com/blog/2012/05/23/python-faq-descriptors/)
-
-### Context Managers
-
-#### What are they?
-
-Context managers are used with the `with` statement. They let you define code that is run before and after the block. You could achieve the same result with `try... except... finally` but a `with` block can be more readable and provide some more flexibility. The canonical example is probably the following:
-
-```python
-with open("/etc/resolv.conf") as f:
-    print(f.read())
-
-# Is **roughly** equivalent to:
-
-try:
-    f = open("/etc/resolv.conf")
-    print(f.read())
-finally:
-    f.close()
-```
-
-In the first example, `f.close()` is omitted because `open` can be used directly (as in the second example), but also as a context manager. In the latter case, it will handle closing automatically. This behavior is defined in `Lib/_pyio.py`:
-
-```python
-class IOBase(metaclass=abc.ABCMeta):
-    ...
-
-    def __exit__(self, *args):
-        """Context management protocol.  Calls close()"""
-        self.close()
-```
-
-There's multiple ways to define a context manager. The most explicit one is to create an object that has the `__enter__()` and `__exit__(exc_type, exc_val, exc_tb)` methods. The `contextlib` module also provides a more functional way to define them. Here's two equivalent examples.
-
-Class-based way:
-
-```python
-class assert_raises(object):
-    """Assert that an exception is raised."""
-
-    def __init__(self, exceptions):
-        self.exceptions = exceptions
-
-    def __enter__(self):
-        print("Enter")
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        print("Exit")
-        if not exc_type:
-            raise AssertionError("No exception raised")
-        if not issubclass(exc_type, self.exceptions):
-            raise AssertionError("Exception %r raised" % exc_type)
-
-        # From the doc:
-        # Returning a true value from this method will cause the with
-        # statement to suppress the exception and continue execution
-        # with the statement immediately following the with statement.
-
-        return True
-
-
-with assert_raises(ValueError):
-    raise ValueError("Whatever")
-```
-
-Function-based way:
-
-```python
-from contextlib import contextmanager
-
-
-@contextmanager
-def assert_raises(exceptions):
-    """Assert that an exception is raised."""
-    print("Enter")
-    try:
-        yield
-    except Exception as exc:
-        print("Exit")
-        if not isinstance(exc, exceptions):
-            raise AssertionError("Exception %r raised" % exc_type)
-    else:
-        raise AssertionError("No exception raised")
-
-
-with assert_raises(ValueError):
-    raise ValueError("Whatever")
-```
-
-#### Use cases
-
-The [`contextlib`](http://docs.python.org/3/library/contextlib.html) module provides a lot of interesting use cases for context managers:
-
-* `closing`: closes something upon completion
-* `suppress`: suppresses specific exceptions
-* `redirect_stdout`
-
-```python
-from contextlib import suppress
-
-with suppress(FileNotFoundError):
-    os.remove('somefile.tmp')
-```
-
-SQLAlchemy's [`Session.begin()`](http://docs.sqlalchemy.org/en/latest/orm/session.html#sqlalchemy.orm.session.Session.begin) is a context manager. You could imagine a lot of other use cases: Redis pipelines, wrapping SQL transactions, etc.
-
-```python
-from contextlib import contextmanager
-
-@contextmanager
-def session_scope():
-    """Provide a transactional scope around a series of operations."""
-    session = Session()
-    try:
-        yield session
-        session.commit()
-    except:
-        session.rollback()
-        raise
-    finally:
-        session.close()
-
-
-def run_my_program():
-    with session_scope() as session:
-        ThingOne().go(session)
-        ThingTwo().go(session)
-```
-
-Here's how a reds pipeline command can be created using [redis-py](https://github.com/andymccurdy/redis-py):
-
-```python
-with redis_client.pipeline() as pipe:
-    pipe.set('toaster:1', 'brioche')
-    bread = pipe.get('toaster:2')
-    pipe.set('toaster:3', bread)
-```
-
-#### Further reading
-
-* Python docs, [The `with` statement](http://docs.python.org/3.4/reference/compound_stmts.html#with)
-* Python docs, [Context Manager Types](http://docs.python.org/3.4/library/stdtypes.html#context-manager-types)
-* Python docs, [`contextlib`](http://docs.python.org/3.4/library/contextlib.html)
-
 ## Functional Programming
 
 Even though `object` are first class citizen in Python, the language can totally be used in a more functional way.
@@ -1033,3 +612,425 @@ For instance, let's say you want to generate all permutations in the order of ca
 #### Further reading
 
 * Python docs, [itertools](https://docs.python.org/3/library/itertools.html)
+
+
+## Object Oriented Programming
+
+### Metaclasses
+
+#### What are they?
+
+A metaclass is just the class (or the type) of a class.
+
+In Python, even classes are object.
+
+```python
+>>> class LaClasse(object):
+...     pass
+>>> LaClasse
+<class '__main__.LaClasse'>
+```
+
+Classes are instances of `type`:
+
+```python
+>>> type(LaClasse)
+<class 'type'>
+>>> isinstance(LaClasse, type)
+True
+```
+
+The builtin function `type` can be also used to create new classes on the fly.  The first argument is the class name, the second one the base classes, the last one the class attributes.
+
+```python
+>>> LaClasse = type("LaClasse", (object, ), {})
+>>> LaClasse
+<class '__main__.LaClasse'>
+```
+
+Python uses type to create classes. So the class of a class is `type`, or, in other words, the metaclass of classes is `type`. Because this is the default, the following does nothing different from what Python would have done. It just says that the class Toaster's class is type:
+
+```python
+>>> class Toaster(object):
+...     __metaclass__ = type
+```
+
+So a basic way to use metaclass would be (note: the syntax is a bit different in Python 2):
+
+```python
+>>> def prepend_class_name(name, bases, attr):
+...     new_attr = {}
+...     for key, value in attr.items():
+...         new_attr[name.lower() + "_" + key] = value
+...     return type(name, bases, new_attr)
+...
+>>> class Toaster(metaclass=prepend_class_name):
+...     color = "red"
+...
+>>> Toaster.color
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: type object 'Toaster' has no attribute 'color'
+>>> Toaster.toaster_color
+'red'
+```
+
+#### Use cases
+
+As Tim Peters puts it, "Metaclasses are deeper magic than 99% of users should ever worry about. If you wonder whether you need them, you don't." That being said, there's some very legitimate use cases for metaclasses:
+
+* Use the class as a way for developer to configure something. This is how ORM such as SQLAlchemy allow you to use a class to define the table, the mapper and the class all at one (see the documentation about its [declarative extension](http://docs.sqlalchemy.org/en/rel_0_9/orm/extensions/declarative.html)).
+* Add some logic after a class has been defined: verify that some methods/attributes are present, automatically apply decorators, etc.
+
+#### Further reading
+
+* StackOverflow, [What is a metaclass in Python](http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python)
+* Python Docs, [Customizing class creation](http://docs.python.org/3.3/reference/datamodel.html#customizing-class-creation)
+
+### Special methods
+
+#### What are they?
+
+Python allows operator overloading by allowing classes to override methods with special names. For instance:
+
+```python
+>>> class Toaster(object):
+...     def __init__(self, number_of_slots):
+...             self.number_of_slots = number_of_slots
+...     def __lt__(self, other):
+...             return self.number_of_slots < other.number_of_slots
+...
+>>> Toaster(3) < Toaster(4)
+True
+```
+
+In this example, we have defined a way to compare whether a toaster is lower than another one.
+
+Pretty much every operation can be redefined. Object identity (`is`) cannot be overridden though (`Toaster is Toaster`). 
+
+Here's a list of the main operations:
+
+* `__repr__`: official string representation of an object. Typically used to ease debugging.
+* `__lt__`, `__le__`, `__eq__`...: rich comparison methods. Note that you can use `functools.total_ordering` so that you don't have to define all of them to allow all the possible rich comparison operations.
+* `__bool__`: when doing truth value testing.
+* `__getattr__`, `__setattr__`, `__delattr__`: respectively used for attribute lookup, assignment and deletion.
+* `__call__`: called when the instance is called as a function.
+* Container type emulation
+  * `__len__`: called with `len()`
+  * `__getitem__`, `__setitem__`, `__delitem__`: respectively used for evaluation, assignment and deletion of `self[key]`.
+  * `__contains__`: called with `item in self`.
+* Numeric types emulation: `__add__`, `__sub__`, `__mul__`... Also includes the augmented arithmetic assignments (`+=`, `-=`...): `__iadd__`, `__isub__`...)
+
+#### Use cases
+
+Overriding special methods lets you write much more readable code. Let's imagine we want to compare two cards:
+
+```python
+import functools
+
+
+@functools.total_ordering
+class Card(object):
+    _order = (2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A')
+
+    def __init__(self, rank, suite='hearts'):
+        assert rank in self._order
+        self.rank = rank
+        self.suite = suite
+
+    def __repr__(self):
+        return '<Card %s of %s>' % (self.rank, self.suite)
+
+    def __lt__(self, other):
+        return self._order.index(self.rank) < self._order.index(other.rank)
+
+    def __eq(self, other):
+        return self.rank == other.rank
+
+ace_of_spades = Card('A', 'spades')
+eight_of_hearts = Card(8, 'hearts')
+
+assert ace_of_spades > eight_of_hearts
+```
+
+This code is arguably much easier to read and keeps the logic of how to compare two cards encapsulated in the class.
+
+Another interesting use cases is how SQLAlchemy is able to have the following work:
+
+```python
+session.query(Toaster.name == 'the_name')
+```
+
+The reason this works is that `Toaster.name` overloads the `__eq__` special method to return a specific comparator object (this is hugely simplified, but that's the basic idea).
+
+#### Further reading
+
+* Python docs, [Data model](http://docs.python.org/3.3/reference/datamodel.html)
+* Rafe Kettler, [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
+
+### Descriptors and properties
+
+#### What are they?
+
+The basic idea is that descriptors are reusable properties. This might sound quite confusing, so let's start with a very simple example:
+
+```python
+CACHE = {
+    'toaster1': {'color': 'red', 'brand': 'noname'},
+}
+
+
+class CachedObject(object):
+
+    def __init__(self, name):
+        self.name = name
+
+    def __get__(self, instance, owner):
+        return CACHE[instance.key][self.name]
+
+    def __set__(self, instance, value):
+        CACHE.get[instance.key][self.name] = value
+
+
+class Toaster(object):
+    color = CachedObject('color')
+    brand = CachedObject('brand')
+
+    def __init__(self, key):
+        self.key = key
+
+
+toaster = Toaster('toaster1')
+assert toaster.color == 'red'
+assert toaster.brand == 'noname'
+toaster.color = 'blue'
+assert toaster.color == 'blue'
+```
+
+In this example, descriptors let us define some behavior once (i.e. where to get the data from), and reuse for two different attributes. Descriptors only work as class attribute and define one or multiple of the following methods:
+
+* `__get__(self, instance, owner)` where `instance` is the instance it's called on and can be `None` if it's called on the class, and `owner` the class.
+* `__set__(self, instance, value)` for overriding attribute assignment.
+* `__del__(self, instance)` for overriding attribute deletion (with `del`).
+
+Properties (usually created by decorating a method with the `property` builtin function) are a simpler and more pervasive way of using descriptors. They're defined in `Objects/descrobject.c` in the CPython code.
+
+The function's signature is: `property(fget=None, fset=None, fdel=None, doc=None)`, where `fget` is the attribute getter, `fset` the setter, `fdel` the deleter and `doc` the docstring. `property` can also be used as a decorator.  Once it's applied, it exposes a `getter`, `setter` and `deleter` method that can also be used as decorators. Those two ways are completely identical:
+
+```python
+class Toaster(object):
+
+    def __init__(self, color):
+        self._color = color
+
+    def get_color(self):
+        return self._color
+
+    def set_color(self, value):
+        self._color = color
+
+    def del_color(self):
+        raise AttributeError("can't delete attribute")
+
+    color = property(get_color, set_color, del_color)
+
+toaster = Toaster('red')
+assert toaster.color == 'red'
+
+
+class Toaster(object):
+
+    def __init__(self, color):
+        self._color = color
+
+    @property
+    def color(self):
+        return self._color
+
+    @color.setter
+    def set_color(self, value):
+        self._color = color
+
+    @color.deleter
+    def del_color(self):
+        raise AttributeError("can't delete attribute")
+
+toaster = Toaster('red')
+assert toaster.color == 'red'
+```
+
+#### Use cases
+
+Property are very often use to create readonly attributes, defining only the getter:
+
+```python
+import pytest
+
+
+class Toaster(object):
+
+    def __init__(self, color):
+        self._color = color
+
+    @property
+    def color(self):
+        return self._color
+
+
+toaster = Toaster('red')
+assert toaster.color == 'red'
+
+with pytest.raises(AttributeError):
+    toaster.color = 'blue'
+```
+
+Descriptors themselves are rarely used. Notable uses include SQLAlchemy's `ColumnDescriptor`.
+
+#### Further reading
+
+* Python docs, [Implementing descriptors](http://docs.python.org/3.3/reference/datamodel.html#implementing-descriptors)
+* Python docs, [property](http://docs.python.org/3.3/library/functions.html#property)
+* Chris Beaumont, [Python Descriptors Demystified](http://nbviewer.ipython.org/urls/gist.github.com/ChrisBeaumont/5758381/raw/descriptor_writeup.ipynb)
+* Alex Munroe, Fuzzy Notepad, [Python FAQ: Descriptors](http://me.veekun.com/blog/2012/05/23/python-faq-descriptors/)
+
+### Context Managers
+
+#### What are they?
+
+Context managers are used with the `with` statement. They let you define code that is run before and after the block. You could achieve the same result with `try... except... finally` but a `with` block can be more readable and provide some more flexibility. The canonical example is probably the following:
+
+```python
+with open("/etc/resolv.conf") as f:
+    print(f.read())
+
+# Is **roughly** equivalent to:
+
+try:
+    f = open("/etc/resolv.conf")
+    print(f.read())
+finally:
+    f.close()
+```
+
+In the first example, `f.close()` is omitted because `open` can be used directly (as in the second example), but also as a context manager. In the latter case, it will handle closing automatically. This behavior is defined in `Lib/_pyio.py`:
+
+```python
+class IOBase(metaclass=abc.ABCMeta):
+    ...
+
+    def __exit__(self, *args):
+        """Context management protocol.  Calls close()"""
+        self.close()
+```
+
+There's multiple ways to define a context manager. The most explicit one is to create an object that has the `__enter__()` and `__exit__(exc_type, exc_val, exc_tb)` methods. The `contextlib` module also provides a more functional way to define them. Here's two equivalent examples.
+
+Class-based way:
+
+```python
+class assert_raises(object):
+    """Assert that an exception is raised."""
+
+    def __init__(self, exceptions):
+        self.exceptions = exceptions
+
+    def __enter__(self):
+        print("Enter")
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print("Exit")
+        if not exc_type:
+            raise AssertionError("No exception raised")
+        if not issubclass(exc_type, self.exceptions):
+            raise AssertionError("Exception %r raised" % exc_type)
+
+        # From the doc:
+        # Returning a true value from this method will cause the with
+        # statement to suppress the exception and continue execution
+        # with the statement immediately following the with statement.
+
+        return True
+
+
+with assert_raises(ValueError):
+    raise ValueError("Whatever")
+```
+
+Function-based way:
+
+```python
+from contextlib import contextmanager
+
+
+@contextmanager
+def assert_raises(exceptions):
+    """Assert that an exception is raised."""
+    print("Enter")
+    try:
+        yield
+    except Exception as exc:
+        print("Exit")
+        if not isinstance(exc, exceptions):
+            raise AssertionError("Exception %r raised" % exc_type)
+    else:
+        raise AssertionError("No exception raised")
+
+
+with assert_raises(ValueError):
+    raise ValueError("Whatever")
+```
+
+#### Use cases
+
+The [`contextlib`](http://docs.python.org/3/library/contextlib.html) module provides a lot of interesting use cases for context managers:
+
+* `closing`: closes something upon completion
+* `suppress`: suppresses specific exceptions
+* `redirect_stdout`
+
+```python
+from contextlib import suppress
+
+with suppress(FileNotFoundError):
+    os.remove('somefile.tmp')
+```
+
+SQLAlchemy's [`Session.begin()`](http://docs.sqlalchemy.org/en/latest/orm/session.html#sqlalchemy.orm.session.Session.begin) is a context manager. You could imagine a lot of other use cases: Redis pipelines, wrapping SQL transactions, etc.
+
+```python
+from contextlib import contextmanager
+
+@contextmanager
+def session_scope():
+    """Provide a transactional scope around a series of operations."""
+    session = Session()
+    try:
+        yield session
+        session.commit()
+    except:
+        session.rollback()
+        raise
+    finally:
+        session.close()
+
+
+def run_my_program():
+    with session_scope() as session:
+        ThingOne().go(session)
+        ThingTwo().go(session)
+```
+
+Here's how a reds pipeline command can be created using [redis-py](https://github.com/andymccurdy/redis-py):
+
+```python
+with redis_client.pipeline() as pipe:
+    pipe.set('toaster:1', 'brioche')
+    bread = pipe.get('toaster:2')
+    pipe.set('toaster:3', bread)
+```
+
+#### Further reading
+
+* Python docs, [The `with` statement](http://docs.python.org/3.4/reference/compound_stmts.html#with)
+* Python docs, [Context Manager Types](http://docs.python.org/3.4/library/stdtypes.html#context-manager-types)
+* Python docs, [`contextlib`](http://docs.python.org/3.4/library/contextlib.html)
