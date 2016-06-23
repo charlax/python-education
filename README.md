@@ -336,6 +336,8 @@ Then, read some of those articles:
 ## Unicode
 
 * [Solving Unicode Problems in Python 2.7](http://www.azavea.com/blogs/labs/2014/03/solving-unicode-problems-in-python-2-7/)
+* [Unicode Howto in Python 3](https://docs.python.org/3/howto/unicode.html) (official Python documentation).
+* [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](http://www.joelonsoftware.com/articles/Unicode.html)
 
 # Reference and other lists
 
