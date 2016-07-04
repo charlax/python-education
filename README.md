@@ -79,6 +79,10 @@ Other resources include (prefer the one listed above):
 * [Invent with Python](http://inventwithpython.com/chapters/)
 * [Learn python3 in one picture](https://github.com/coodict/python3-in-one-pic)
 
+To find other list of resources:
+
+* [Learn Python online – A curated list of courses on Python](http://bafflednerd.com/learn-python-online/)
+
 ## Intermediate
 
 ### An introduction to advanced Python
