@@ -744,7 +744,7 @@ class Card(object):
     def __lt__(self, other):
         return self._order.index(self.rank) < self._order.index(other.rank)
 
-    def __eq(self, other):
+    def __eq__(self, other):
         return self.rank == other.rank
 
 ace_of_spades = Card('A', 'spades')
@@ -789,7 +789,7 @@ class CachedObject(object):
         return CACHE[instance.key][self.name]
 
     def __set__(self, instance, value):
-        CACHE.get[instance.key][self.name] = value
+        CACHE.setdefault(instance.key, {})[self.name] = value
 
 
 class Toaster(object):
