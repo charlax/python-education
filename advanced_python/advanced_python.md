@@ -789,7 +789,7 @@ class CachedObject(object):
         return CACHE[instance.key][self.name]
 
     def __set__(self, instance, value):
-        CACHE.setdefault(instance.key, {})[self.name] = value
+        CACHE[instance.key][self.name] = value
 
 
 class Toaster(object):
