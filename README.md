@@ -81,7 +81,7 @@ Other resources include (prefer the one listed above):
 
 To find other list of resources:
 
-* [Learn Python online – A curated list of courses on Python](http://bafflednerd.com/learn-python-online/)
+[Learn Python online – A curated list of courses on Python](http://bafflednerd.com/learn-python-online/)
 
 ## Intermediate
 
@@ -308,6 +308,7 @@ I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on 
 ## Python and beyond
 
 * [27 languages to improve your Python](http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html)
+* [List of languages that compile to Python](https://github.com/vindarel/languages-that-compile-to-python)
 
 ## Quirks and gotchas
 
