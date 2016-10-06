@@ -262,8 +262,8 @@ of third party libraries.
 
 * [Design patterns explained](http://www.pysnap.com/design-patterns-explained/)
 * [Python 3 Patterns, Recipes and Idioms](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/index.html)
-* [Decorators in 12
-  steps](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
+* [Decorators in 12 steps](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
+* [Design pattern templates in Python](https://github.com/tylerlaberge/PyPattyrn) (Github)
 
 I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on another repo. This is a highly recommended read.
 
