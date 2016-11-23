@@ -285,11 +285,12 @@ I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on 
 
 * [Awesome Python](http://python.libhunt.com/)
 
-## Packaging
+## Packaging & pip
 
 * [Read the guide](https://python-packaging-user-guide.readthedocs.org/en/latest/)
 * [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
 * [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
+* [Pipfile](https://github.com/pypa/pipfile): a `Pipfile`, and its related `Pipfile.lock`, are a new (and much better!) replacement for pip's requirements.txt files.
 
 ## Performance optimization
 
