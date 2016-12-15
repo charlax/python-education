@@ -277,6 +277,10 @@ I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on 
 * [The internals of Python string interning](http://guilload.com/python-string-interning/)
 * [Python Data structures](http://rhodesmill.org/brandon/slides/2014-04-pycon/data-structures/)
 
+## Learning to learn
+
+* [My advice on learning Python efficiently](http://www.simplydjango.com/learn-python-efficiently/)
+
 ## Magic methods
 
 * [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
