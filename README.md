@@ -321,6 +321,7 @@ I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on 
 * [Hidden features of Python](http://stackoverflow.com/questions/101268/hidden-features-of-python)
 * [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
 * [A collection of Python "wat" moments](http://www.b-list.org/weblog/2015/oct/13/wats-doc/)
+* [satwikkansal/wtfpython: a collection of interesting, subtle, and tricky Python snippets](https://github.com/satwikkansal/wtfpython)
 
 ## Static analysis of code
 
