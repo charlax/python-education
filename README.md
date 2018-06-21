@@ -343,6 +343,10 @@ Then, read some of those articles:
 * [Mock yourself, not your
   tests](http://hernantz.github.io/mock-yourself-not-your-tests.html): great
   articles about the danger of mocking, and better unit testing strategies.
+  
+## Types
+
+* [The state of type hints in Python](https://www.bernat.tech/the-state-of-type-hints-in-python/): a good summary of typing in Python and its gotchas.
 
 ## Unicode
 
