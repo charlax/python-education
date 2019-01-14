@@ -18,17 +18,21 @@
   - [Best Practices](#best-practices)
   - [Celery](#celery)
   - [Code Architecture](#code-architecture)
+  - [Debugging](#debugging)
   - [Design patterns](#design-patterns)
   - [Functional code](#functional-code)
   - [Internals](#internals)
+  - [Learning to learn](#learning-to-learn)
   - [Magic methods](#magic-methods)
+  - [Open source Python programs](#open-source-python-programs)
   - [Packages (finding them)](#packages-finding-them)
-  - [Packaging](#packaging)
+  - [Packaging & pip](#packaging--pip)
   - [Performance optimization](#performance-optimization)
   - [Python and beyond](#python-and-beyond)
   - [Quirks and gotchas](#quirks-and-gotchas)
   - [Static analysis of code](#static-analysis-of-code)
   - [Tests](#tests)
+  - [Types](#types)
   - [Unicode](#unicode)
 - [Reference and other lists](#reference-and-other-lists)
   - [Staying up to date](#staying-up-to-date)
@@ -284,6 +288,12 @@ I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on 
 ## Magic methods
 
 * [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
+
+## Open source Python programs
+
+It's often a good idea to read the Python source code of well-written applications:
+
+* [mahmoud/awesome-python-applications](https://github.com/mahmoud/awesome-python-applications): free software that works great, and also happens to be open-source Python
 
 ## Packages (finding them)
 
