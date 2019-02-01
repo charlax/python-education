@@ -461,11 +461,13 @@ To simplify, they're just a simple way to create an iterator using a function in
 If we were to re-implement the `ApiResources` class from above, we could it do this way:
 
 ```python
->>> def get_toasters():
+>>> def get_resources():
+...    index = 0
 ...    while True:
 ...        resource = get_api_resource("/toasters/" + str(index))
 ...        if not resource:
 ...            break
+...        index += 1
 ...        yield resource
 >>> for resource in get_resources():
 ...     print(resource)
