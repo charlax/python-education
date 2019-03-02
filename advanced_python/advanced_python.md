@@ -564,6 +564,7 @@ Generator are just iterators, so their use cases are the same.
 * [PEP 289: Generator Expressions](http://legacy.python.org/dev/peps/pep-0289/)
 * [PEP 380:	Syntax for Delegating to a Subgenerator](http://legacy.python.org/dev/peps/pep-0380/)
 * Jeff Knupp, [Improve Your Python: 'yield' and Generators Explained](https://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/)
+* Dabeaz, [Generators Tricks for System Programmers](http://www.dabeaz.com/generators/Generators.pdf)
 
 ### The itertools module
 
