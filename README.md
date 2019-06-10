@@ -2,6 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 # Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Ramping up with professional Python](#ramping-up-with-professional-python)
 - [Learning the language](#learning-the-language)
   - [Beginner](#beginner)
@@ -72,7 +73,7 @@ Here are some free books:
 [The Python Guide](http://docs.python-guide.org/en/latest/intro/learning/) has
 some other good resources.
 
-If you're coming from another language, read this article about the [ten myths of enterprise Python](https://www.paypal-engineering.com/2014/12/10/10-myths-of-enterprise-python/).
+If you're coming from another language, read this article about the [ten myths of enterprise Python](https://medium.com/paypal-engineering/10-myths-of-enterprise-python-8302b8f21f82).
 
 If you want to review algorithms at the same time, you can use [Problem Solving
 with Algorithms and Data Structures using Python](http://interactivepython.org/runestone/static/pythonds/index.html) by Bradley N. Miller, David L. Ranum.
