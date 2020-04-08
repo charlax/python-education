@@ -158,7 +158,7 @@ Learning idiomatic Python:
 * [Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
 * [What the heck does “pythonic” mean?](http://halitalptekin.tumblr.com/post/30028271874/pythonic-syntax)
 * [Elements of Python style](https://github.com/amontalenti/elements-of-python-style)
-  
+
 List of books:
 
 * [Awesome Python Books](https://github.com/Junnplus/awesome-python-books)
@@ -246,6 +246,7 @@ of third party libraries.
 ## Best Practices
 
 * [The Best of the Best Practices (BOBP) Guide for Python](https://gist.github.com/sloria/7001839)
+* [When Python Practices Go Wrong](https://rhodesmill.org/brandon/slides/2019-11-codedive/): a pretty opinionated presentation that can be too concise at times, but nonetheless very interesting for somebody looking to constrain their creativity with Python constructs.
 
 ## Celery
 
@@ -255,7 +256,7 @@ of third party libraries.
 
 * [The clean
   architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
-  
+
 ## Debugging
 
 * General introduction: [Python debugging
@@ -354,7 +355,7 @@ Then, read some of those articles:
 * [Mock yourself, not your
   tests](http://hernantz.github.io/mock-yourself-not-your-tests.html): great
   articles about the danger of mocking, and better unit testing strategies.
-  
+
 ## Types
 
 * [The state of type hints in Python](https://www.bernat.tech/the-state-of-type-hints-in-python/): a good summary of typing in Python and its gotchas.
