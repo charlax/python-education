@@ -334,6 +334,7 @@ It's often a good idea to read the Python source code of well-written applicatio
 * [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
 * [A collection of Python "wat" moments](http://www.b-list.org/weblog/2015/oct/13/wats-doc/)
 * [satwikkansal/wtfpython: a collection of interesting, subtle, and tricky Python snippets](https://github.com/satwikkansal/wtfpython)
+* Ned Batchelder, [Facts and myths about Python names and values](https://nedbatchelder.com/text/names.html)
 
 ## Static analysis of code
 
