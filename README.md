@@ -2,7 +2,6 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 # Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [Ramping up with professional Python](#ramping-up-with-professional-python)
 - [Learning the language](#learning-the-language)
   - [Beginner](#beginner)
@@ -247,6 +246,7 @@ of third party libraries.
 
 * [The Best of the Best Practices (BOBP) Guide for Python](https://gist.github.com/sloria/7001839)
 * [When Python Practices Go Wrong](https://rhodesmill.org/brandon/slides/2019-11-codedive/): a pretty opinionated presentation that can be too concise at times, but nonetheless very interesting for somebody looking to constrain their creativity with Python constructs.
+* [Stop naming your python modules "utils"](https://breadcrumbscollector.tech/stop-naming-your-python-modules-utils/)
 
 ## Celery
 
@@ -356,6 +356,18 @@ Then, read some of those articles:
 * [Mock yourself, not your
   tests](http://hernantz.github.io/mock-yourself-not-your-tests.html): great
   articles about the danger of mocking, and better unit testing strategies.
+* [Building Good Tests](https://salmonmode.github.io//2019/03/29/building-good-tests.html), Chris NeJame
+	* 1 assert per test function/method and nothing else
+	* Use standard assert statements, instead of the unittest.TestCase assert methods
+	* Test behavior, not implementation
+	* Only verify state-changing method calls
+	* Test the result, not the process
+	* Every test should be able to be run in parallel with any other test
+	* A test should never be flaky
+	* Try to avoid mocking things whenever possible.
+	* Test coverage is not a metric for what was tested; it’s a metric for what code your tests managed to hit
+	* The code should be easy to test
+	* Make your test code succinct and idiomatic
 
 ## Types
 
