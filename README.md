@@ -249,6 +249,7 @@ of third party libraries.
 - [The Best of the Best Practices (BOBP) Guide for Python](https://gist.github.com/sloria/7001839)
 - [When Python Practices Go Wrong](https://rhodesmill.org/brandon/slides/2019-11-codedive/): a pretty opinionated presentation that can be too concise at times, but nonetheless very interesting for somebody looking to constrain their creativity with Python constructs.
 - [Stop naming your python modules "utils"](https://breadcrumbscollector.tech/stop-naming-your-python-modules-utils/)
+- [zedr/clean-code-python](https://github.com/zedr/clean-code-python): Clean Code concepts adapted for Python
 
 ## Celery
 
@@ -258,6 +259,17 @@ of third party libraries.
 
 - [The clean
   architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
+  
+## Configuration
+
+- [Best Practices for Working with Configuration in Python Applications](https://tech.preferred.jp/en/blog/working-with-configuration-in-python/)
+	- Use identifiers rather than string keys to access configuration values.
+	- Use static typing
+	- Validate early.
+	- Declare close to where it is used.
+- [Doing Python Configuration Right](https://whalesalad.com/blog/doing-python-configuration-right)
+	- Static things that don't change often, or things that dramatically influence the behavior of the system should live in the code.
+	- Dynamic things that change frequently, or things that should be kept secret (API keys/credentials) should live outside the code.
 
 ## Debugging
 
@@ -274,6 +286,10 @@ of third party libraries.
 - [Design pattern templates in Python](https://github.com/tylerlaberge/PyPattyrn) (Github)
 
 I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on another repo. This is a highly recommended read.
+
+## File organisation (monorepo, folders, etc.)
+
+- [Our Python Monorepo](https://medium.com/opendoor-labs/our-python-monorepo-d34028f2b6fa), OpenDoor
 
 ## Functional code
 
@@ -309,6 +325,7 @@ It's often a good idea to read the Python source code of well-written applicatio
 - [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
 - [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
 - [Pipfile](https://github.com/pypa/pipfile): a `Pipfile`, and its related `Pipfile.lock`, are a new (and much better!) replacement for pip's requirements.txt files.
+- [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools) 
 
 ## Performance optimization
 
