@@ -157,6 +157,7 @@ Learning idiomatic Python:
 * [Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
 * [What the heck does “pythonic” mean?](http://halitalptekin.tumblr.com/post/30028271874/pythonic-syntax)
 * [Elements of Python style](https://github.com/amontalenti/elements-of-python-style)
+* [Meditations on the Zen of Python](https://orbifold.xyz/zen-of-python.html)
 
 List of books:
 
