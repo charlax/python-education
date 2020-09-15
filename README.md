@@ -1,5 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 # Table of Contents
 
 - [Ramping up with professional Python](#ramping-up-with-professional-python)
@@ -58,15 +59,15 @@ First, [Why Beginners Should Learn Python](http://stackabuse.com/why-beginners-s
 
 Here are some free books:
 
-* [Learn Python the Hard Way](http://learnpythonthehardway.org/book/): slow
+- [Learn Python the Hard Way](http://learnpythonthehardway.org/book/): slow
   introduction, suitable for people with limited programming language
   experience.
-* [Dive Into Python](http://www.diveintopython.net/toc/index.html): much faster
+- [Dive Into Python](http://www.diveintopython.net/toc/index.html): much faster
   introduction to Python, a bit outdated but will get you ramped up really
   fast, especially if you've learned a number of programming language in the
   past. There's a version for [Python 3](http://www.diveinto.org/python3/) as
   well.
-* [Official Tutorial](https://docs.python.org/2/tutorial/index.html): Python's
+- [Official Tutorial](https://docs.python.org/2/tutorial/index.html): Python's
   official doc is really good, highly recommended read.
 
 [The Python Guide](http://docs.python-guide.org/en/latest/intro/learning/) has
@@ -79,9 +80,9 @@ with Algorithms and Data Structures using Python](http://interactivepython.org/r
 
 Other resources include (prefer the one listed above):
 
-* [Automate the boring stuff with Python](https://automatetheboringstuff.com/)
-* [Invent with Python](http://inventwithpython.com/chapters/)
-* [Learn python3 in one picture](https://github.com/coodict/python3-in-one-pic)
+- [Automate the boring stuff with Python](https://automatetheboringstuff.com/)
+- [Invent with Python](http://inventwithpython.com/chapters/)
+- [Learn python3 in one picture](https://github.com/coodict/python3-in-one-pic)
 
 To find other list of resources:
 
@@ -93,19 +94,19 @@ To find other list of resources:
 
 I wrote some introductory material to advanced Python:
 
-* Read the [Introduction to advanced Python](advanced_python/advanced_python.md) article.
-* Check out the [advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) I authored on Slideshare.
+- Read the [Introduction to advanced Python](advanced_python/advanced_python.md) article.
+- Check out the [advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) I authored on Slideshare.
 
 ### Articles, videos and presentations
 
-* [py-must-watch](https://github.com/s16h/py-must-watch)
+- [py-must-watch](https://github.com/s16h/py-must-watch)
 
 ### Books
 
-* Muhammad Yasoob Ullah Khalid, [Intermediate Python](http://book.pythontips.com/en/latest/)
-* Luciano Ramalho, [Fluent Python](http://www.amazon.com/gp/product/1491946008/)
-* Dusty Phillips, [Python 3 Object-Oriented Programming](http://www.amazon.com/gp/product/1784398780/)
-* Brett Slatkin, [Effective Python: 59 Specific Ways to Write Better Python](http://www.amazon.com/gp/product/0134034287/)
+- Muhammad Yasoob Ullah Khalid, [Intermediate Python](http://book.pythontips.com/en/latest/)
+- Luciano Ramalho, [Fluent Python](http://www.amazon.com/gp/product/1491946008/)
+- Dusty Phillips, [Python 3 Object-Oriented Programming](http://www.amazon.com/gp/product/1784398780/)
+- Brett Slatkin, [Effective Python: 59 Specific Ways to Write Better Python](http://www.amazon.com/gp/product/0134034287/)
 
 ## Writing idiomatic Python
 
@@ -113,10 +114,10 @@ First things first, let's get code styling out of the way. Make sure you've read
 
 What is called "idiomatic Python" might feel magical at first, especially if you don't know Python. I'd recommend getting your hands dirty with some real world Python code. Try to wander around the code, opening random files. Run the tutorial with a debugger to follow the flow and understand what's going on.
 
-* [bottle.py](https://github.com/bottlepy/bottle/blob/master/bottle.py): bottle
+- [bottle.py](https://github.com/bottlepy/bottle/blob/master/bottle.py): bottle
   is a web framework. It's a great resource because it's in all in whole file!
   Recommended reading. You can even print it.
-* [flask](https://github.com/mitsuhiko/flask): another web framework, one of
+- [flask](https://github.com/mitsuhiko/flask): another web framework, one of
   the best. Reading its code is highly recommended as well.
 
 You can find other ideas on [this hacker news
@@ -153,15 +154,15 @@ Namespaces are one honking great idea -- let's do more of those!
 
 Learning idiomatic Python:
 
-* [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
-* [Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
-* [What the heck does “pythonic” mean?](http://halitalptekin.tumblr.com/post/30028271874/pythonic-syntax)
-* [Elements of Python style](https://github.com/amontalenti/elements-of-python-style)
-* [Meditations on the Zen of Python](https://orbifold.xyz/zen-of-python.html)
+- [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
+- [Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
+- [What the heck does “pythonic” mean?](http://halitalptekin.tumblr.com/post/30028271874/pythonic-syntax)
+- [Elements of Python style](https://github.com/amontalenti/elements-of-python-style)
+- [Meditations on the Zen of Python](https://orbifold.xyz/zen-of-python.html)
 
 List of books:
 
-* [Awesome Python Books](https://github.com/Junnplus/awesome-python-books)
+- [Awesome Python Books](https://github.com/Junnplus/awesome-python-books)
 
 # Exercises
 
@@ -169,26 +170,26 @@ The best way to learn is to do.
 
 ## Small exercises
 
-* Create a virtual environment with `virtualenv`.
-* Create a virtual environment with `virtualenvwrapper` tools.
-* Fix a bug in one of the Python packages listed in [the Python guide](http://docs.python-guide.org/en/latest/#scenario-guide).
-* Create a server exposing a Thrift API.
-* Take inspiration from this [list of Raspberry Pi projects on reddit](https://www.reddit.com/r/Python/comments/4e59wb/what_have_you_done_with_python_and_raspberry_pi/)
+- Create a virtual environment with `virtualenv`.
+- Create a virtual environment with `virtualenvwrapper` tools.
+- Fix a bug in one of the Python packages listed in [the Python guide](http://docs.python-guide.org/en/latest/#scenario-guide).
+- Create a server exposing a Thrift API.
+- Take inspiration from this [list of Raspberry Pi projects on reddit](https://www.reddit.com/r/Python/comments/4e59wb/what_have_you_done_with_python_and_raspberry_pi/)
 
 ## Larger projects
 
-* [Discover Flask](https://github.com/realpython/discover-flask)
-* Build a lock library for redis.
-* Build a cache library for redis.
-* Build an API for next bus departure time.
-* Build an ORM for a SQL database.
-* Build a command line parser.
-* Build a template engine.
-* Build a static site generator.
-* Build an HTTP library.
-* Clone one of those [games](http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/)
-* Solve some of the [Project Euler problems](https://projecteuler.net/)
-* Write a game using [pyarcade](http://pythonhosted.org/arcade/index.html)
+- [Discover Flask](https://github.com/realpython/discover-flask)
+- Build a lock library for redis.
+- Build a cache library for redis.
+- Build an API for next bus departure time.
+- Build an ORM for a SQL database.
+- Build a command line parser.
+- Build a template engine.
+- Build a static site generator.
+- Build an HTTP library.
+- Clone one of those [games](http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/)
+- Solve some of the [Project Euler problems](https://projecteuler.net/)
+- Write a game using [pyarcade](http://pythonhosted.org/arcade/index.html)
 
 Reddit's [dailyprogrammer subreddit](https://www.reddit.com/r/dailyprogrammer)
 has some good exercises as well.
@@ -208,35 +209,35 @@ where the tickets are not too involved, and where the community is still alive
 Regardless of whether you use them, those tutorials introduce you to important
 concept and good design patterns, so they're highly recommended:
 
-* Do the [Flask tutorial](http://flask.pocoo.org/docs/tutorial/).
-* Watch the [SQLAlchemy introduction
+- Do the [Flask tutorial](http://flask.pocoo.org/docs/tutorial/).
+- Watch the [SQLAlchemy introduction
   video](https://www.youtube.com/watch?v=P141KRbxVKc). It lasts 3 hours but is
   extremely insightful, and introduces to some great object oriented patterns.
 
 Other great SQLAlchemy resources include:
 
-* [Handcoded application with SQLAlchemy](http://pyvideo.org/video/665/hand-coded-applications-with-sqlalchemy)
+- [Handcoded application with SQLAlchemy](http://pyvideo.org/video/665/hand-coded-applications-with-sqlalchemy)
 
 Other specific libraries that are very often used in professional
 environments:
 
-* [Celery](http://www.celeryproject.org/) is an asynchronous task queue/job
+- [Celery](http://www.celeryproject.org/) is an asynchronous task queue/job
   queue based on distributed message passing. It is focused on real-time
   operation, but supports scheduling as well.
-* [Tornado](http://www.tornadoweb.org/en/stable/) is a Python web framework and
+- [Tornado](http://www.tornadoweb.org/en/stable/) is a Python web framework and
   asynchronous networking library.
-* [Alembic](http://alembic.readthedocs.org/en/latest/) is a lightweight
+- [Alembic](http://alembic.readthedocs.org/en/latest/) is a lightweight
   database migration tool for usage with the SQLAlchemy Database Toolkit for
   Python.
-* [Jinja](http://jinja.pocoo.org/) is a full featured template engine for
+- [Jinja](http://jinja.pocoo.org/) is a full featured template engine for
   Python. It has full unicode support, an optional integrated sandboxed
   execution environment, widely used and BSD licensed.
-* [Doubles](http://doubles.readthedocs.org/en/latest/) is a Python package that
+- [Doubles](http://doubles.readthedocs.org/en/latest/) is a Python package that
   provides test doubles for use in automated tests.
-* [Mock](http://www.voidspace.org.uk/python/mock/) is a library for testing in
+- [Mock](http://www.voidspace.org.uk/python/mock/) is a library for testing in
   Python. It allows you to replace parts of your system under test with mock
   objects and make assertions about how they have been used.
-* [pytest](http://pytest.org/latest/) is a test framework.
+- [pytest](http://pytest.org/latest/) is a test framework.
 
 [Awesome Python](https://github.com/vinta/awesome-python) provides a great list
 of third party libraries.
@@ -245,101 +246,101 @@ of third party libraries.
 
 ## Best Practices
 
-* [The Best of the Best Practices (BOBP) Guide for Python](https://gist.github.com/sloria/7001839)
-* [When Python Practices Go Wrong](https://rhodesmill.org/brandon/slides/2019-11-codedive/): a pretty opinionated presentation that can be too concise at times, but nonetheless very interesting for somebody looking to constrain their creativity with Python constructs.
-* [Stop naming your python modules "utils"](https://breadcrumbscollector.tech/stop-naming-your-python-modules-utils/)
+- [The Best of the Best Practices (BOBP) Guide for Python](https://gist.github.com/sloria/7001839)
+- [When Python Practices Go Wrong](https://rhodesmill.org/brandon/slides/2019-11-codedive/): a pretty opinionated presentation that can be too concise at times, but nonetheless very interesting for somebody looking to constrain their creativity with Python constructs.
+- [Stop naming your python modules "utils"](https://breadcrumbscollector.tech/stop-naming-your-python-modules-utils/)
 
 ## Celery
 
-* [Celery best practices](https://blog.balthazar-rouberol.com/celery-best-practices), Balthazar
+- [Celery best practices](https://blog.balthazar-rouberol.com/celery-best-practices), Balthazar
 
 ## Code Architecture
 
-* [The clean
+- [The clean
   architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
 
 ## Debugging
 
-* General introduction: [Python debugging
+- General introduction: [Python debugging
   tools](http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/)
-* A better debugger: [pudb](http://heather.cs.ucdavis.edu/~matloff/pudb.html)
-* [Debugging Python Like a Boss](https://zapier.com/engineering/debugging-python-boss/)
+- A better debugger: [pudb](http://heather.cs.ucdavis.edu/~matloff/pudb.html)
+- [Debugging Python Like a Boss](https://zapier.com/engineering/debugging-python-boss/)
 
 ## Design patterns
 
-* [Design patterns explained](http://www.pysnap.com/design-patterns-explained/)
-* [Python 3 Patterns, Recipes and Idioms](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/index.html)
-* [Decorators in 12 steps](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
-* [Design pattern templates in Python](https://github.com/tylerlaberge/PyPattyrn) (Github)
+- [Design patterns explained](http://www.pysnap.com/design-patterns-explained/)
+- [Python 3 Patterns, Recipes and Idioms](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/index.html)
+- [Decorators in 12 steps](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
+- [Design pattern templates in Python](https://github.com/tylerlaberge/PyPattyrn) (Github)
 
 I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on another repo. This is a highly recommended read.
 
 ## Functional code
 
-* [Python Partials are Fun!](http://www.pydanny.com/python-partials-are-fun.html)
+- [Python Partials are Fun!](http://www.pydanny.com/python-partials-are-fun.html)
 
 ## Internals
 
-* [Why Python is Slow: Looking Under the Hood](http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/)
-* [The internals of Python string interning](http://guilload.com/python-string-interning/)
-* [Python Data structures](http://rhodesmill.org/brandon/slides/2014-04-pycon/data-structures/)
+- [Why Python is Slow: Looking Under the Hood](http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/)
+- [The internals of Python string interning](http://guilload.com/python-string-interning/)
+- [Python Data structures](http://rhodesmill.org/brandon/slides/2014-04-pycon/data-structures/)
 
 ## Learning to learn
 
-* [My advice on learning Python efficiently](http://www.simplydjango.com/learn-python-efficiently/)
+- [My advice on learning Python efficiently](http://www.simplydjango.com/learn-python-efficiently/)
 
 ## Magic methods
 
-* [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
+- [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
 
 ## Open source Python programs
 
 It's often a good idea to read the Python source code of well-written applications:
 
-* [mahmoud/awesome-python-applications](https://github.com/mahmoud/awesome-python-applications): free software that works great, and also happens to be open-source Python
+- [mahmoud/awesome-python-applications](https://github.com/mahmoud/awesome-python-applications): free software that works great, and also happens to be open-source Python
 
 ## Packages (finding them)
 
-* [Awesome Python](http://python.libhunt.com/)
+- [Awesome Python](http://python.libhunt.com/)
 
 ## Packaging & pip
 
-* [Read the guide](https://packaging.python.org/)
-* [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
-* [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
-* [Pipfile](https://github.com/pypa/pipfile): a `Pipfile`, and its related `Pipfile.lock`, are a new (and much better!) replacement for pip's requirements.txt files.
+- [Read the guide](https://packaging.python.org/)
+- [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
+- [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
+- [Pipfile](https://github.com/pypa/pipfile): a `Pipfile`, and its related `Pipfile.lock`, are a new (and much better!) replacement for pip's requirements.txt files.
 
 ## Performance optimization
 
-* [Profiling Python using cProfile: a concrete
+- [Profiling Python using cProfile: a concrete
   case](https://julien.danjou.info/blog/2015/guide-to-python-profiling-cprofile-concrete-case-carbonara)
-* [cProfile module documentation](https://docs.python.org/2/library/profile.html)
-* [Example cProfile session](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
-* [A guide to analyzing Python performance](http://www.huyng.com/posts/python-performance-analysis/)
-* [RunSnakeRun](http://www.vrplumber.com/programming/runsnakerun/) is a small
+- [cProfile module documentation](https://docs.python.org/2/library/profile.html)
+- [Example cProfile session](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
+- [A guide to analyzing Python performance](http://www.huyng.com/posts/python-performance-analysis/)
+- [RunSnakeRun](http://www.vrplumber.com/programming/runsnakerun/) is a small
   GUI utility that allows you to view (Python) cProfile or Profile profiler
   dumps in a sortable GUI view.
-* [SnakeViz](http://jiffyclub.github.io/snakeviz/) is a browser based graphical
+- [SnakeViz](http://jiffyclub.github.io/snakeviz/) is a browser based graphical
   viewer for the output of Python’s cProfile module.
-* [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
+- [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
 
 ## Python and beyond
 
-* [27 languages to improve your Python](http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html)
-* [List of languages that compile to Python](https://github.com/vindarel/languages-that-compile-to-python)
+- [27 languages to improve your Python](http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html)
+- [List of languages that compile to Python](https://github.com/vindarel/languages-that-compile-to-python)
 
 ## Quirks and gotchas
 
-* [Python quirks](http://www.lshift.net/blog/2009/10/29/python-quirks/)
-* [Hidden features of Python](http://stackoverflow.com/questions/101268/hidden-features-of-python)
-* [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
-* [A collection of Python "wat" moments](http://www.b-list.org/weblog/2015/oct/13/wats-doc/)
-* [satwikkansal/wtfpython: a collection of interesting, subtle, and tricky Python snippets](https://github.com/satwikkansal/wtfpython)
-* Ned Batchelder, [Facts and myths about Python names and values](https://nedbatchelder.com/text/names.html)
+- [Python quirks](http://www.lshift.net/blog/2009/10/29/python-quirks/)
+- [Hidden features of Python](http://stackoverflow.com/questions/101268/hidden-features-of-python)
+- [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
+- [A collection of Python "wat" moments](http://www.b-list.org/weblog/2015/oct/13/wats-doc/)
+- [satwikkansal/wtfpython: a collection of interesting, subtle, and tricky Python snippets](https://github.com/satwikkansal/wtfpython)
+- Ned Batchelder, [Facts and myths about Python names and values](https://nedbatchelder.com/text/names.html)
 
 ## Static analysis of code
 
-* [Essential python tools - Quality](http://aboumrad.info/essential-python-tools-quality.html)
+- [Essential python tools - Quality](http://aboumrad.info/essential-python-tools-quality.html)
 
 ## Tests
 
@@ -354,46 +355,45 @@ Fowler).
 
 Then, read some of those articles:
 
-* [Mock yourself, not your
+- [Mock yourself, not your
   tests](http://hernantz.github.io/mock-yourself-not-your-tests.html): great
   articles about the danger of mocking, and better unit testing strategies.
-* [Building Good Tests](https://salmonmode.github.io//2019/03/29/building-good-tests.html), Chris NeJame
-	* 1 assert per test function/method and nothing else
-	* Use standard assert statements, instead of the unittest.TestCase assert methods
-	* Test behavior, not implementation
-	* Only verify state-changing method calls
-	* Test the result, not the process
-	* Every test should be able to be run in parallel with any other test
-	* A test should never be flaky
-	* Try to avoid mocking things whenever possible.
-	* Test coverage is not a metric for what was tested; it’s a metric for what code your tests managed to hit
-	* The code should be easy to test
-	* Make your test code succinct and idiomatic
+- [Building Good Tests](https://salmonmode.github.io//2019/03/29/building-good-tests.html), Chris NeJame
+  _ 1 assert per test function/method and nothing else
+  _ Use standard assert statements, instead of the unittest.TestCase assert methods
+  _ Test behavior, not implementation
+  _ Only verify state-changing method calls
+  _ Test the result, not the process
+  _ Every test should be able to be run in parallel with any other test
+  _ A test should never be flaky
+  _ Try to avoid mocking things whenever possible.
+  _ Test coverage is not a metric for what was tested; it’s a metric for what code your tests managed to hit
+  _ The code should be easy to test \* Make your test code succinct and idiomatic
 
 ## Types
 
-* [The state of type hints in Python](https://www.bernat.tech/the-state-of-type-hints-in-python/): a good summary of typing in Python and its gotchas.
+- [The state of type hints in Python](https://www.bernat.tech/the-state-of-type-hints-in-python/): a good summary of typing in Python and its gotchas.
 
 ## Unicode
 
-* [Solving Unicode Problems in Python 2.7](http://www.azavea.com/blogs/labs/2014/03/solving-unicode-problems-in-python-2-7/)
-* [Unicode Howto in Python 3](https://docs.python.org/3/howto/unicode.html) (official Python documentation).
-* [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](http://www.joelonsoftware.com/articles/Unicode.html)
+- [Solving Unicode Problems in Python 2.7](http://www.azavea.com/blogs/labs/2014/03/solving-unicode-problems-in-python-2-7/)
+- [Unicode Howto in Python 3](https://docs.python.org/3/howto/unicode.html) (official Python documentation).
+- [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](http://www.joelonsoftware.com/articles/Unicode.html)
 
 # Reference and other lists
 
-* [Best Python Resources](http://www.fullstackpython.com/best-python-resources.html)
-* [Awesome Python](https://github.com/vinta/awesome-python)
-* [PyCon 2015](https://www.youtube.com/channel/UCgxzjK6GuOHVKR_08TT4hJQ)
-* Invent With Python, [Further Reading: Intermediate Python Resources](http://inventwithpython.com/blog/2015/09/01/further-reading-intermediate-python-resources/)
-* [Good to great Python reads](http://jessenoller.com/good-to-great-python-reads/)
+- [Best Python Resources](http://www.fullstackpython.com/best-python-resources.html)
+- [Awesome Python](https://github.com/vinta/awesome-python)
+- [PyCon 2015](https://www.youtube.com/channel/UCgxzjK6GuOHVKR_08TT4hJQ)
+- Invent With Python, [Further Reading: Intermediate Python Resources](http://inventwithpython.com/blog/2015/09/01/further-reading-intermediate-python-resources/)
+- [Good to great Python reads](http://jessenoller.com/good-to-great-python-reads/)
 
 ## Staying up to date
 
 There are two main newsletters for Python, which mostly cover the same things:
 
-* [Pycoder's Weekly](http://www.pycoders.com/)
-* [Python Weekly](http://www.pythonweekly.com/)
+- [Pycoder's Weekly](http://www.pycoders.com/)
+- [Python Weekly](http://www.pythonweekly.com/)
 
 You can also checkout the [Python subreddit](https://www.reddit.com/r/Python/).
 
