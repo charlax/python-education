@@ -94,8 +94,7 @@ To find other list of resources:
 
 I wrote some introductory material to advanced Python:
 
-- Read the [Introduction to advanced Python](advanced_python/advanced_python.md) article.
-- Check out the [advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) I authored on Slideshare.
+- [Introduction to advanced Python](advanced_python/advanced_python.md) (article). [Advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) (Slideshare).
 
 ### Articles, videos and presentations
 
@@ -110,22 +109,17 @@ I wrote some introductory material to advanced Python:
 
 ## Writing idiomatic Python
 
-First things first, let's get code styling out of the way. Make sure you've read an memorized [PEP8](https://www.python.org/dev/peps/pep-0008/) (code style, [more readable version here](http://pep8.org/)) and [PEP257](https://www.python.org/dev/peps/pep-0257/) (docstring style). Those two code styles are applied by almost all major Python applications and libraries. Use flake8 and autopep8.
+First things first, let's get **code style** out of the way. Make sure you've read and memorized [PEP8](https://www.python.org/dev/peps/pep-0008/) (code style, [more readable version here](http://pep8.org/)) and [PEP257](https://www.python.org/dev/peps/pep-0257/) (docstring style). Those two code styles are applied by almost all major Python applications and libraries. Use flake8, autopep8 and black to ensure they are applied.
 
 What is called "idiomatic Python" might feel magical at first, especially if you don't know Python. I'd recommend getting your hands dirty with some real world Python code. Try to wander around the code, opening random files. Run the tutorial with a debugger to follow the flow and understand what's going on.
 
-- [bottle.py](https://github.com/bottlepy/bottle/blob/master/bottle.py): bottle
-  is a web framework. It's a great resource because it's in all in whole file!
+- [bottle.py](https://github.com/bottlepy/bottle/blob/master/bottle.py): bottle is a web framework. It's a great resource because it's in all in whole file!
   Recommended reading. You can even print it.
-- [flask](https://github.com/mitsuhiko/flask): another web framework, one of
-  the best. Reading its code is highly recommended as well.
+- [flask](https://github.com/mitsuhiko/flask): another web framework, one of the best. Reading its code is highly recommended as well.
 
-You can find other ideas on [this hacker news
-thread](https://news.ycombinator.com/item?id=9896369).
+You can find other ideas on [this hacker news thread](https://news.ycombinator.com/item?id=9896369).
 
-I feel it's more important to understand the vision behind Python's design,
-than to know specific Python idioms. The Zen of Python will let you understand
-the fundamental reasoning behind each idiom.
+I feel it's more important to understand the vision behind Python's design, than to know specific Python idioms. The Zen of Python will help you understand the fundamental reasoning behind each idiom.
 
 ```
 >>> import this
@@ -232,8 +226,6 @@ environments:
 - [Jinja](http://jinja.pocoo.org/) is a full featured template engine for
   Python. It has full unicode support, an optional integrated sandboxed
   execution environment, widely used and BSD licensed.
-- [Doubles](http://doubles.readthedocs.org/en/latest/) is a Python package that
-  provides test doubles for use in automated tests.
 - [Mock](http://www.voidspace.org.uk/python/mock/) is a library for testing in
   Python. It allows you to replace parts of your system under test with mock
   objects and make assertions about how they have been used.
