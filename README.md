@@ -59,34 +59,26 @@ First, [Why Beginners Should Learn Python](http://stackabuse.com/why-beginners-s
 
 Here are some free books:
 
-- [Learn Python the Hard Way](http://learnpythonthehardway.org/book/): slow
-  introduction, suitable for people with limited programming language
-  experience.
-- [Dive Into Python](http://www.diveintopython.net/toc/index.html): much faster
-  introduction to Python, a bit outdated but will get you ramped up really
-  fast, especially if you've learned a number of programming language in the
-  past. There's a version for [Python 3](http://www.diveinto.org/python3/) as
-  well.
-- [Official Tutorial](https://docs.python.org/2/tutorial/index.html): Python's
-  official doc is really good, highly recommended read.
+- [Official Tutorial](https://docs.python.org/3/tutorial/index.html): Python's official doc is really good, highly recommended read.
+- [Dive Into Python](https://diveintopython3.problemsolving.io/): much faster
+  introduction to Python, a bit outdated but will get you ramped up really fast, especially if you've learned a number of programming language in the past.
 
-[The Python Guide](http://docs.python-guide.org/en/latest/intro/learning/) has
-some other good resources.
+[The Python Guide](http://docs.python-guide.org/en/latest/intro/learning/) has some other good resources.
 
 If you're coming from another language, read this article about the [ten myths of enterprise Python](https://medium.com/paypal-engineering/10-myths-of-enterprise-python-8302b8f21f82).
 
-If you want to review algorithms at the same time, you can use [Problem Solving
-with Algorithms and Data Structures using Python](http://interactivepython.org/runestone/static/pythonds/index.html) by Bradley N. Miller, David L. Ranum.
+If you want to review algorithms at the same time, you can use [Problem Solving with Algorithms and Data Structures using Python](http://interactivepython.org/runestone/static/pythonds/index.html) by Bradley N. Miller, David L. Ranum.
 
 Other resources include (prefer the one listed above):
 
 - [Automate the boring stuff with Python](https://automatetheboringstuff.com/)
 - [Invent with Python](http://inventwithpython.com/chapters/)
-- [Learn python3 in one picture](https://github.com/coodict/python3-in-one-pic)
-
-To find other list of resources:
-
-[Learn Python online – A curated list of courses on Python](http://bafflednerd.com/learn-python-online/)
+- [Learn Python in one picture](https://github.com/coodict/python3-in-one-pic)
+- [11 Beginner Tips for Learning Python Programming](https://realpython.com/python-beginner-tips/)
+- [BeginnersGuide - Python Wiki](https://wiki.python.org/moin/BeginnersGuide) 
+- [Learning Python — The Hitchhiker's Guide to Python](https://docs.python-guide.org/intro/learning/) 
+- [Crash into Python](https://stephensugden.com/crash_into_python/): for experienced programmers
+- [Full Stack Python](https://www.fullstackpython.com/)
 
 ## Intermediate
 
@@ -149,7 +141,6 @@ Namespaces are one honking great idea -- let's do more of those!
 Learning idiomatic Python:
 
 - [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
-- [Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
 - [What the heck does “pythonic” mean?](http://halitalptekin.tumblr.com/post/30028271874/pythonic-syntax)
 - [Elements of Python style](https://github.com/amontalenti/elements-of-python-style)
 - [Meditations on the Zen of Python](https://orbifold.xyz/zen-of-python.html)
@@ -231,8 +222,7 @@ environments:
   objects and make assertions about how they have been used.
 - [pytest](http://pytest.org/latest/) is a test framework.
 
-[Awesome Python](https://github.com/vinta/awesome-python) provides a great list
-of third party libraries.
+[Awesome Python](https://github.com/vinta/awesome-python) provides a great list of third party libraries.
 
 # Topics
 
@@ -293,10 +283,6 @@ I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on 
 - [The internals of Python string interning](http://guilload.com/python-string-interning/)
 - [Python Data structures](http://rhodesmill.org/brandon/slides/2014-04-pycon/data-structures/)
 
-## Learning to learn
-
-- [My advice on learning Python efficiently](http://www.simplydjango.com/learn-python-efficiently/)
-
 ## Magic methods
 
 - [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
@@ -323,7 +309,7 @@ It's often a good idea to read the Python source code of well-written applicatio
 
 - [Profiling Python using cProfile: a concrete
   case](https://julien.danjou.info/blog/2015/guide-to-python-profiling-cprofile-concrete-case-carbonara)
-- [cProfile module documentation](https://docs.python.org/2/library/profile.html)
+- [cProfile module documentation](https://docs.python.org/3/library/profile.html)
 - [Example cProfile session](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
 - [A guide to analyzing Python performance](http://www.huyng.com/posts/python-performance-analysis/)
 - [RunSnakeRun](http://www.vrplumber.com/programming/runsnakerun/) is a small
@@ -340,7 +326,6 @@ It's often a good idea to read the Python source code of well-written applicatio
 
 ## Quirks and gotchas
 
-- [Python quirks](http://www.lshift.net/blog/2009/10/29/python-quirks/)
 - [Hidden features of Python](http://stackoverflow.com/questions/101268/hidden-features-of-python)
 - [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
 - [A collection of Python "wat" moments](http://www.b-list.org/weblog/2015/oct/13/wats-doc/)
