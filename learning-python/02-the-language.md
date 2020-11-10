@@ -25,6 +25,13 @@
 
 ## Mutability, identity, conversion, representation
 
+❓ Questions to ask orally:
+
+- What are mutable and immutable types in Python?
+- What is the difference between equality and identity?
+- How do you convert between types?
+- How do you display the value of a name?
+
 Most types are immutable. `list`, `set` and `dict` are mutable.
 
 - `id(obj)` returns the object's memory address
@@ -51,6 +58,12 @@ bool(True)
 
 ## Operations on strings
 
+❓ Questions to ask orally:
+
+- How do you check if a string starts with something?
+- Is all alphabetical characters?
+- How do you join a list with a string?
+
 ```python
 s.startswith(value)
 s.endswith(value)
@@ -64,6 +77,10 @@ s.join(sequence)
 assert ", ".join([1, 2]) == "1, 2"
 ```
 
+❓ Questions to ask orally:
+
+- How do you `print` a variable within a string?
+
 Formatting:
 
 ```python
@@ -72,6 +89,12 @@ print(f"Hello {name}")
 ```
 
 ## Containers
+
+❓ Questions to ask orally:
+
+- How do you get the length of a container?
+- How do you get the minimum of a list?
+- How do you return `True` if all values within a container are truthy?
 
 `len`, `min`, `sorted`, `enumerate`, `zip`, `all`, `any`, `reversed`
 
@@ -86,12 +109,21 @@ assert v is True
 
 ## Lists
 
+❓ Questions to ask orally:
+
+- How do you append to a list?
+- How do you get the last item in a list?
+- How do you get the last 3 items in a list?
+
 Operation on lists: `l.append`, `l.extend`, `l.insert(index, val)`, `l.remove(val)`, `l.pop([index])`, `l.sort()` (in place), `l.reverse()`
 
 ```python
+v = list([1, 2])
+# literals are preferred
 v = [1, 2]
 
 # Sequence containers indexing: l[start slide:end slide:step]
+# -1 works as you would expect
 ```
 
 ## Loops
@@ -118,9 +150,19 @@ while v == True:
 
 ## Dict
 
+❓ Questions to ask orally:
+
+- How do you write a dict?
+- How do you add a key and value to a dict?
+- How do you access a dict key?
+- How do you check of a key in a dict?
+- How do you get a value in a dict or a default if it's not there?
+
 ```python
 # Definition
 value = 1
+c = dict(key=value)
+# literal is preferred
 c = {"key": value}
 
 # Access
@@ -145,8 +187,9 @@ d.setdefault(key[, default])
 ## Set
 
 ```python
+# How do you define a set?
 s = {1, 2, 3}
-# Union
+# How do you get the union of a set with another?
 s |= {1, 2}
 # Intersection
 s &= {1, 2}
@@ -162,6 +205,13 @@ s.pop()
 ```
 
 ## Function
+
+❓ Questions to ask orally:
+
+- How do you define a function?
+- How do you define a function with mandatory arguments?
+- How do you define a function with optional arguments?
+- What happens when mandatory arguments are not provided?
 
 ```python
 def hello():
@@ -215,6 +265,11 @@ See also:
 
 ## Exceptions
 
+❓ Questions to ask orally:
+
+- How do you try something?
+- How do you create a custom exception?
+
 ```python
 # Simple try... except... with raise
 try:
@@ -240,6 +295,13 @@ class MyException(Exception):
 
 ## OOP and classes (introduction)
 
+❓ Questions to ask orally:
+
+- When are classes created? Runtime or compile time?
+- What are instances?
+- What are class attributes vs. instance attributes?
+- What are class methods vs. instance methods?
+
 Classes are created at runtime and can be modified at runtime.
 
 - Class = type
@@ -258,6 +320,13 @@ class Toaster:
 
 
 ### Class objects
+
+❓ Questions to ask orally:
+
+- How do you define a class?
+- How do you define a constructor?
+- How do you define a method?
+- How do you define a class variable?
 
 ```python
 class Toaster:
@@ -282,6 +351,11 @@ print(toaster.say_hello())
 ```
 
 ### Class instance
+
+❓ Questions to ask orally:
+
+- How do you create a class instance?
+- How do you assign instance attributes?
 
 ```python
 class Toaster:
@@ -344,6 +418,11 @@ assert t.status == "on"
 
 ### Inheritance
 
+❓ Questions to ask orally:
+
+- How do you inherit?
+- Does Python support multiple inheritance?
+
 ```python
 class Animal:
     pass
@@ -380,6 +459,11 @@ https://docs.python.org/3/tutorial/classes.html
 
 ## Imports and modules
 
+❓ Questions to ask orally:
+
+- How do you group functionality in Python?
+- How do you import and export?
+
 ```python
 from module import x
 import x
@@ -392,6 +476,10 @@ import x
 - Should you use relative or absolute imports?
 
 ## Files
+
+❓ Questions to ask orally:
+
+- What can go wrong when not using `with`?
 
 ```python
 f = open("file.md")
@@ -425,6 +513,11 @@ def a():
 
 ### Typing
 
+❓ Questions to ask orally:
+
+- Is Python weakly typed?
+- Is Python statically typed?
+
 - Types are always optional.
 - Types are not checked at runtime, only if you use a tool like `mypy`.
 
@@ -442,6 +535,11 @@ def get_double(i: int) -> int:
 
 #### Namespaces
 
+❓ Questions to ask orally:
+
+- What is a namespace?
+- When are they created?
+
 > A namespace is a mapping from names to objects. Most namespaces are currently implemented as Python dictionaries, but that’s normally not noticeable in any way (except for performance), and it may change in the future. Examples of namespaces are: the set of built-in names (containing functions such as abs(), and built-in exception names); the global names in a module; and the local names in a function invocation. In a sense the set of attributes of an object also form a namespace. The important thing to know about namespaces is that there is absolutely no relation between names in different namespaces; for instance, two different modules may both define a function maximize without confusion — users of the modules must prefix it with the module name.
 
 https://docs.python.org/3/tutorial/classes.html
@@ -449,6 +547,10 @@ https://docs.python.org/3/tutorial/classes.html
 - Namespaces are created at different moments and have different lifetimes.
 
 #### Scope
+
+❓ Questions to ask orally:
+
+- What is a scope?
 
 > A scope is a textual region of a Python program where a namespace is directly accessible. “Directly accessible” here means that an unqualified reference to a name attempts to find the name in the namespace.
 
@@ -468,19 +570,23 @@ Some other ways:
 
 #### The LEGB rule
 
+❓ Questions to ask orally:
+
+- Where does Python look for references?
+
 Python looks for a reference in this order:
 
-- Local (or function) scope
+- **Local** (or function) scope
     - A scope is created for each run, not at function definition
     - True even if you call the function recursively
     - `locals()`
-- Enclosing (or nonlocal) scope
+- **Enclosing** (or nonlocal) scope
     - Names of the enclosing function for nested function definition
-- Global (or module) scope
+- **Global** (or module) scope
     - Top-level scope
     - Formatted `UPPER_CASE_WITH_UNDERSCORE`
     - `globals()`
-- Builtin
+- **Builtin**
     - E.g. `dir`, `open`, `len`, etc.
     - `dir(__builtins__)`
 
@@ -504,6 +610,10 @@ say_hello("de Funès")
 ```
 
 #### Modifying scope behavior
+
+❓ Questions to ask orally:
+
+- How do you write a global var?
 
 In Python, you can't modify `global` or `nonlocal` variables without being explicit about it:
 
@@ -583,6 +693,13 @@ def modify_dict(d):
 ```
 
 ### Python is fully dynamic and everything is an object
+
+❓ Questions to ask orally:
+
+- Is a class an object?
+- Is a function an object?
+- Is an exception an object?
+- Is a module an object?
 
 ```python
 class Toaster:
