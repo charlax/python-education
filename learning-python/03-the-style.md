@@ -1,5 +1,9 @@
 # Python style
 
+## Readability first
+
+Python code reads and should read very much like pseudo code.
+
 ## Avoid classes
 
 ## Avoid heavy OOP stuff

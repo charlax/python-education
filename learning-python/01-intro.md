@@ -2,7 +2,7 @@
 
 ## Why learn Python
 
-Question to ask orally:
+❓ Questions to ask orally:
 
 - Where is Python used?
 - What can you use Python for?
@@ -28,6 +28,10 @@ Answers:
 - Its philosophy can help you become a better programmer, whatever your language
 
 ## Python pros & cons
+
+❓ Questions to ask orally:
+
+- What are the pros & cons of Python?
 
 Pros:
 
@@ -67,8 +71,16 @@ Pro or con? It depends on use case and viewpoint.
 
 ## Myths about Python
 
+❓ Questions to ask orally:
+
+- Have you heard about "..."?
+- What do you think about it.
+
+Myths about Python:
+
 - Python does not scale
     - Uber API: about 400k lines of Uber code (on top of the Pyramid web framework)
+    - Sentry
 - Python is a weakly typed language
     - "static" vs "dynamic" typing
     - "weak" vs "strong" typing
@@ -80,6 +92,11 @@ Pro or con? It depends on use case and viewpoint.
     - There are other ways to achieve concurrency: processes
 
 ## Starting from first principles: the Zen of Python
+
+❓ Questions to ask orally:
+
+- Have you heard about the Zen of Python?
+- Have you heard about "pythonic"?
 
 ```
 In [1]: import this

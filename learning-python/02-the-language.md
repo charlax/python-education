@@ -1,4 +1,4 @@
-# Learning Python the language
+# Learning Python as a language
 
 ## Intro
 
@@ -9,26 +9,19 @@
 
 ## Syntax
 
-This part focuses on the syntax.
+❓ Questions to ask orally:
 
-- Base types: `int`, `float`, `bool`, `str`, `bytes`, `complex`
-- Container types: `list` (literal: `[]`), `tuple` (`()`), `dict` (`{"key": "value"}`), `set` (`{1, 2, 3}`), `frozenset`.
-- Variable assignment (`a = 1`, `a = b = 1`, `a += 1`)
-- Sequence containers indexing: `l[start slide:end slide:step]`
-- Boolean logic: `>`, `and`, `or`, `not`
-- Imports `import x` vs. `from x import y`
-- Conditional statement: `if... else`
-- Exceptions: `raise`,  `try... except... finally... else...`
-- Conditional loop: `while`
-- Iterative loop: `for i in sequence:`, `continue`, `break`
-- Display and input: `print`, `input("question?")`
-- Operation on containers: see below
-- Operation on lists: see below
-- Operations on dictionaries: see below
-- Operations on set: see below
-- Operations on strings: see below
-- Files: see below
-- Sequence: `range([start], end, step)`
+- How do you display something?
+    - `print`
+- How do you get some input?
+    - `input("yes or no?")`
+- What are the base types?
+    - `int`, `float`, `bool`, `str`, `bytes`, `complex`
+- What are the container types?
+    - `list` (literal: `[]`), `tuple` (`()`), `dict` (`{"key": "value"}`), `set` (`{1, 2, 3}`), `frozenset`.
+- How do you assign a variable?
+    - `a = 1`, `a = b = 1`, `a += 1`
+- How do you write a conditional statement? `if... else`
 
 ## Mutability, identity, conversion, representation
 
@@ -43,6 +36,18 @@ Most types are immutable. `list`, `set` and `dict` are mutable.
 More information:
 
 - [Pointers in Python: What's the Point?](https://realpython.com/pointers-in-python/#immutable-vs-mutable-objects)
+
+## Boolean logic
+
+```python
+# How do you compare numbers?
+x > 1
+
+# How do you check for truthiness?
+bool(True)
+
+# or, and, not?
+```
 
 ## Operations on strings
 
@@ -85,9 +90,16 @@ Operation on lists: `l.append`, `l.extend`, `l.insert(index, val)`, `l.remove(va
 
 ```python
 v = [1, 2]
+
+# Sequence containers indexing: l[start slide:end slide:step]
 ```
 
 ## Loops
+
+❓ Questions to ask orally:
+
+- How do you count from 1 to 10?
+    - Sequence: `range([start], end, step)`
 
 ```python
 for i in range(10):
@@ -95,6 +107,13 @@ for i in range(10):
 
 for item in [0, 2, 4]:
     print(item)
+
+# What will this loop do?
+while v == True:
+    v = False
+
+# continue
+# break
 ```
 
 ## Dict
@@ -142,7 +161,7 @@ s.remove(value)
 s.pop()
 ```
 
-## Defining a function
+## Function
 
 ```python
 def hello():
@@ -157,6 +176,9 @@ print(help(hello))
 def hello(name: str):
     print(f"Hello {name}")
 
+# Both work!
+hello("Louis")
+hello(name="Louis")
 
 # arguments are required in Python! No default null or undefined
 
@@ -173,25 +195,221 @@ def hello(x, y, z, *args, *, a=1, b="2", **kwargs):
     pass
 ```
 
+❓ Questions to ask orally:
+
 - Are there anonymous functions? No.
-- `lambda` is not supposed to be assigned and only support a single line
+    - `lambda` is not supposed to be assigned and only support a single line
+- How do you transform a list in positional arguments?
+    - `f(*args)`
+- How do you transform a dict in keyword arguments?
+    - `f(**kwargs)`
 
 ```python
 c = map(lambda v: v + "a", ["b", "c"])
 assert c == ["ba", "ca"]
 ```
 
+See also:
+
+- https://docs.python.org/3/tutorial/controlflow.html
+
+## Exceptions
+
+```python
+# Simple try... except... with raise
+try:
+    raise ValueError("Wrong value")
+except ValueError:
+    print("caught ValueError")
+
+
+try:
+    raise ValueError("e")
+except ValueError as e:
+    print(e)
+else:
+    print("no exception")
+finally:
+    print("always run")
+
+
+# Custom exception
+class MyException(Exception):
+    pass
+```
+
 ## OOP and classes (introduction)
+
+Classes are created at runtime and can be modified at runtime.
+
+- Class = type
+- Class instance = object
+- Class can have class attributes and class methods
+- Instance have attributes and methods defined on the class
 
 - `super()`
 - Multiple inheritance (e.g. mixins)
+- `isinstance`, `issubclass`
 
 ```python
 class Toaster:
     pass
 ```
 
+
+### Class objects
+
+```python
+class Toaster:
+    """A toaster."""
+    brand = "Moulinex"
+
+    def say_hello(self):
+        return "hello bread!"
+
+
+print(Toaster)
+print(Toaster.brand)
+print(Toaster.say_hello)
+print(Toaster.__doc__)
+
+
+# Let's create a new instance
+toaster = Toaster()
+print(toaster.brand)
+print(toaster.say_hello)
+print(toaster.say_hello())
+```
+
+### Class instance
+
+```python
+class Toaster:
+    brand = "Moulinex"
+
+    def __init__(self, color: str) -> None:
+        self.color = color
+
+    def say_color(self) -> None:
+        return f"hello my color is {self.color}"
+
+
+t = Toaster("red")
+print(t.color)
+print(t.say_color)
+print(t.say_color())
+
+# Attribute change
+t.color = "green"
+
+say_color = t.say_color
+# It works!
+say_color()
+
+t2 = Toaster("blue")
+
+assert t.brand == t2.brand
+assert t.color != t2.color
+
+# Watch out when using mutable variables as class variable
+```
+
+- There are no private methods or private attribute. Prefix with `_`
+  (preferred) or `__` to state that this should not be accessed.
+
+
+```python
+class BetterToaster:
+    def __init__(self, color: str, brand: str) -> None:
+        self.color = color
+        self._brand = brand
+        self._is_toasting = False
+
+    def start_toasting(self) -> None;
+        self._is_toasting = True
+
+    def toast(self) -> None:
+        self.color = "red"
+        self.start_toasting()
+
+    # Custom getter
+    @property
+    def status(self) -> str:
+        return "on" if self.is_toasting else "off"
+
+t = BetterToaster("red", "moulinex")
+t.toast()
+assert t.status == "on"
+```
+
+### Inheritance
+
+```python
+class Animal:
+    pass
+
+
+class Dog(Animal):
+    pass
+
+
+class GoldenRetriever(Dog):
+    pass
+
+
+olympe = GoldenRetriever()
+assert isinstance(olympe, Dog)
+assert isinstance(olympe, Animal)
+
+assert issubclass(GoldenRetriever, Dog)
+assert issubclass(GoldenRetriever, Animal)
+
+
+# Multiple inheritance
+class HasName:
+    pass
+
+
+class DogPet(Dog, HasName):
+    pass
+```
+
+### See also
+
+https://docs.python.org/3/tutorial/classes.html
+
+## Imports and modules
+
+```python
+from module import x
+import x
+```
+
+❓ Questions to ask orally:
+
+- How do you export stuff in Python?
+    - You don't! Everything is exported by default.
+- Should you use relative or absolute imports?
+
 ## Files
+
+```python
+f = open("file.md")
+content = f.read()
+f.close()
+
+# Better: using "context" with "with"
+with open("file.md", "w") as f:
+    f.write("# Hello")
+
+
+import json
+
+with open("file.json") as f:
+    content = json.load(f)
+
+# That's it!
+```
 
 ## Advanced topics
 
@@ -222,7 +440,17 @@ def get_double(i: int) -> int:
 
 ### Scopes, assignment and pass by reference/value
 
-#### Ways to add to scope
+#### Namespaces
+
+> A namespace is a mapping from names to objects. Most namespaces are currently implemented as Python dictionaries, but that’s normally not noticeable in any way (except for performance), and it may change in the future. Examples of namespaces are: the set of built-in names (containing functions such as abs(), and built-in exception names); the global names in a module; and the local names in a function invocation. In a sense the set of attributes of an object also form a namespace. The important thing to know about namespaces is that there is absolutely no relation between names in different namespaces; for instance, two different modules may both define a function maximize without confusion — users of the modules must prefix it with the module name.
+
+https://docs.python.org/3/tutorial/classes.html
+
+- Namespaces are created at different moments and have different lifetimes.
+
+#### Scope
+
+> A scope is a textual region of a Python program where a namespace is directly accessible. “Directly accessible” here means that an unqualified reference to a name attempts to find the name in the namespace.
 
 - Assignment `x = 1`
 - Imports `import sys`
@@ -235,6 +463,8 @@ Some other ways:
 - Container comprehension
 - Exception block
 - Classes and instances
+
+> A special quirk of Python is that – if no global or nonlocal statement is in effect – assignments to names always go into the innermost scope. Assignments do not copy data — they just bind names to objects.
 
 #### The LEGB rule
 
@@ -312,6 +542,7 @@ For more information:
 
 - [Python Scope & the LEGB Rule: Resolving Names in Your Code](https://realpython.com/python-scope-legb-rule/)
 - [Pass by Reference in Python: Background and Best Practices](https://realpython.com/python-pass-by-reference/)
+- https://docs.python.org/3/tutorial/classes.html
 
 #### Assignment
 
@@ -385,19 +616,59 @@ dir(hello)
 import sys
 
 dir(sys)
+
+# Exception are objects!
+try:
+    raise ValueError("hello")
+except ValueError as e:
+    print(e)
+    dir(e)
+
+
+# You can return class and function just like any other object
+def get_class_and_function():
+    def func():
+        return 1
+
+    class MyClass:
+        pass
+
+    return [func, MyClass]
 ```
 
 See also:
 
 - https://docs.python.org/3/library/inspect.html
 
-#### Operator overloading
+### Comprehensions
 
-Almost all operators can be overloaded (seeing how is an advanced topic). `+=`, `==` etc.
+```python
+# List
+r = [i ** 2 for i in range(10) if i % 3]
 
-### Context (`with`)
+# Generator
+r = (i ** 2 for i in range(10) if i % 3)
 
-See advanced Python
+# Dict
+r = {v: v * 2 for f in range(10)}
+```
+
+### The standard library
+
+See:
+
+- https://docs.python.org/3/tutorial/stdlib.html
+- https://docs.python.org/3/tutorial/stdlib2.html
+
+## Advanced Python
+
+- Context (`with`)
+- Iterators
+- Generators
+- Operator overloading
+- Descriptors
+- Properties
+- Decorators
 
 ## References
 
