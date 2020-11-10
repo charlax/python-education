@@ -35,3 +35,7 @@ To enforce following the [PEP8 style guide](https://www.python.org/dev/peps/pep-
 ### Async tasks
 
 - celery
+
+### CLI
+
+- https://docs.python.org/3/library/argparse.html

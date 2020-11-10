@@ -245,4 +245,3 @@ The proper way to update a package and its dependency is to use another tool, fo
   Anti-Patterns](http://docs.quantifiedcode.com/python-anti-patterns/)
 - [How to make mistakes in
   Python](http://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
-  G
