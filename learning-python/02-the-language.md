@@ -1,5 +1,42 @@
 # Learning Python as a language
 
+<!--TOC-->
+
+- [Learning Python as a language](#learning-python-as-a-language)
+  - [Intro](#intro)
+  - [Syntax](#syntax)
+  - [Mutability, identity, conversion, representation](#mutability-identity-conversion-representation)
+  - [Boolean logic](#boolean-logic)
+  - [Operations on strings](#operations-on-strings)
+  - [Containers](#containers)
+  - [Lists](#lists)
+  - [Loops](#loops)
+  - [Dict](#dict)
+  - [Set](#set)
+  - [Function](#function)
+  - [Exceptions](#exceptions)
+  - [OOP and classes (introduction)](#oop-and-classes-introduction)
+    - [Class objects](#class-objects)
+    - [Class instance](#class-instance)
+    - [Inheritance](#inheritance)
+    - [See also](#see-also)
+  - [Imports and modules](#imports-and-modules)
+  - [Files](#files)
+  - [Typing Python](#typing-python)
+  - [Scopes, assignment and pass by reference/value](#scopes-assignment-and-pass-by-referencevalue)
+    - [Namespaces](#namespaces)
+    - [Scope](#scope)
+    - [The LEGB rule](#the-legb-rule)
+    - [Modifying scope behavior](#modifying-scope-behavior)
+    - [Assignment](#assignment)
+  - [Python is fully dynamic and everything is an object](#python-is-fully-dynamic-and-everything-is-an-object)
+  - [The standard library](#the-standard-library)
+  - [Python "gotchas"](#python-gotchas)
+  - [What's next?](#whats-next)
+  - [References](#references)
+
+<!--TOC-->
+
 ## Intro
 
 - Indentation and spacing are syntax in Python

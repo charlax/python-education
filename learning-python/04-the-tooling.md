@@ -1,5 +1,19 @@
 # Python: the tooling
 
+<!--TOC-->
+
+- [Python: the tooling](#python-the-tooling)
+  - [Code style & linting](#code-style--linting)
+  - [Packaging](#packaging)
+  - [Tests](#tests)
+  - [Web apps](#web-apps)
+    - [HTTP framework](#http-framework)
+    - [ORM/DB](#ormdb)
+    - [Async tasks](#async-tasks)
+    - [CLI](#cli)
+
+<!--TOC-->
+
 ## Code style & linting
 
 To enforce following the [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/), use those tools:

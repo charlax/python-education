@@ -1,5 +1,21 @@
 # Python style
 
+<!--TOC-->
+
+- [Python style](#python-style)
+  - [Readability first](#readability-first)
+  - [Avoid classes](#avoid-classes)
+  - [Avoid heavy OOP stuff](#avoid-heavy-oop-stuff)
+  - [Avoid using magic](#avoid-using-magic)
+  - [Embrace flexibility](#embrace-flexibility)
+    - [Avoid strict typing, prefer duck typing](#avoid-strict-typing-prefer-duck-typing)
+    - [Ask for forgiveness, not for permission](#ask-for-forgiveness-not-for-permission)
+  - [Avoid long names](#avoid-long-names)
+  - [Avoid globals](#avoid-globals)
+  - [Functional programming in Python](#functional-programming-in-python)
+
+<!--TOC-->
+
 ## Readability first
 
 Python code reads and should read very much like pseudo code.

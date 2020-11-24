@@ -1,5 +1,19 @@
 # Python: intro
 
+<!--TOC-->
+
+- [Python: intro](#python-intro)
+  - [Why learn Python](#why-learn-python)
+  - [Python pros & cons](#python-pros--cons)
+  - [What we will see](#what-we-will-see)
+  - [Myths about Python](#myths-about-python)
+  - [Starting from first principles: the Zen of Python](#starting-from-first-principles-the-zen-of-python)
+  - [Things to unlearn](#things-to-unlearn)
+  - [Python glossary](#python-glossary)
+  - [Resources](#resources)
+
+<!--TOC-->
+
 ## Why learn Python
 
 ❓ Questions to ask orally:
