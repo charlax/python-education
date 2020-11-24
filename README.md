@@ -75,8 +75,8 @@ Other resources include (prefer the one listed above):
 - [Invent with Python](http://inventwithpython.com/chapters/)
 - [Learn Python in one picture](https://github.com/coodict/python3-in-one-pic)
 - [11 Beginner Tips for Learning Python Programming](https://realpython.com/python-beginner-tips/)
-- [BeginnersGuide - Python Wiki](https://wiki.python.org/moin/BeginnersGuide) 
-- [Learning Python — The Hitchhiker's Guide to Python](https://docs.python-guide.org/intro/learning/) 
+- [BeginnersGuide - Python Wiki](https://wiki.python.org/moin/BeginnersGuide)
+- [Learning Python — The Hitchhiker's Guide to Python](https://docs.python-guide.org/intro/learning/)
 - [Crash into Python](https://stephensugden.com/crash_into_python/): for experienced programmers
 - [Full Stack Python](https://www.fullstackpython.com/)
 
@@ -241,7 +241,7 @@ environments:
 
 - [The clean
   architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
-  
+
 ## Configuration
 
 - [Best Practices for Working with Configuration in Python Applications](https://tech.preferred.jp/en/blog/working-with-configuration-in-python/)
@@ -303,7 +303,7 @@ It's often a good idea to read the Python source code of well-written applicatio
 - [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
 - [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
 - [Pipfile](https://github.com/pypa/pipfile): a `Pipfile`, and its related `Pipfile.lock`, are a new (and much better!) replacement for pip's requirements.txt files.
-- [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools) 
+- [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools)
 
 ## Performance optimization
 

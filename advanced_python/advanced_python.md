@@ -709,7 +709,7 @@ True
 
 In this example, we have defined a way to compare whether a toaster is lower than another one.
 
-Pretty much every operation can be redefined. Object identity (`is`) cannot be overridden though (`Toaster is Toaster`). 
+Pretty much every operation can be redefined. Object identity (`is`) cannot be overridden though (`Toaster is Toaster`).
 
 Here's a list of the main operations:
 
