@@ -1,6 +1,20 @@
 # Python Antipatterns
 
-<!-- TOC -->
+<!--TOC-->
+
+- [Python Antipatterns](#python-antipatterns)
+  - [Redundant type checking](#redundant-type-checking)
+  - [Restricting version in setup.py dependencies](#restricting-version-in-setuppy-dependencies)
+  - [Unwieldy if... else instead of dict](#unwieldy-if-else-instead-of-dict)
+  - [Overreliance on kwargs](#overreliance-on-kwargs)
+  - [Overreliance on list/dict comprehensions](#overreliance-on-listdict-comprehensions)
+  - [Mutable default arguments](#mutable-default-arguments)
+  - [Using `is` to compare objects](#using-is-to-compare-objects)
+  - [Instantiating exception with a dict](#instantiating-exception-with-a-dict)
+  - [Not strictly pinning all packages](#not-strictly-pinning-all-packages)
+  - [Reference](#reference)
+
+<!--TOC-->
 
 ## Redundant type checking
 

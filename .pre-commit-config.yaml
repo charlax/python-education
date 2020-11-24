@@ -12,4 +12,4 @@ repos:
    rev: master  # or a specific git tag from md-toc
    hooks:
    - id: md-toc
-     args: [-p, --skip-lines, '1', github]
+     args: [-p, github]
