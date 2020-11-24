@@ -1,22 +1,6 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-## Table of Contents
-
-- [Python Antipatterns](#python-antipatterns)
-  - [Redundant type checking](#redundant-type-checking)
-  - [Restricting version in setup.py dependencies](#restricting-version-in-setuppy-dependencies)
-  - [Unwieldy if... else instead of dict](#unwieldy-if-else-instead-of-dict)
-  - [Overreliance on kwargs](#overreliance-on-kwargs)
-  - [Overreliance on list/dict comprehensions](#overreliance-on-listdict-comprehensions)
-  - [Mutable default arguments](#mutable-default-arguments)
-  - [Using `is` to compare objects](#using-is-to-compare-objects)
-  - [Instantiating exception with a dict](#instantiating-exception-with-a-dict)
-  - [Not strictly pinning all packages](#not-strictly-pinning-all-packages)
-- [Reference](#reference)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # Python Antipatterns
+
+<!-- TOC -->
 
 ## Redundant type checking
 
@@ -47,8 +31,7 @@ def toast(bread):
 
 Read those articles first:
 
-- [setup.py vs.
-  requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/)
+- [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/)
 - [Pin Your Packages](http://nvie.com/posts/pin-your-packages/)
 - [Better Package Management](http://nvie.com/posts/better-package-management/)
 
@@ -237,7 +220,7 @@ The proper way to update a package and its dependency is to use another tool, fo
 
 - [Pin Your Packages](http://nvie.com/posts/pin-your-packages/)
 
-# Reference
+## Reference
 
 - [Pythonic Pitfalls](http://nafiulis.me/potential-pythonic-pitfalls.html)
 - [Python Patterns](https://github.com/faif/python-patterns)
