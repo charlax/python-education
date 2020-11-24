@@ -1,8 +1,8 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 # Table of Contents
 
+<!--TOC-->
+
+- [Table of Contents](#table-of-contents)
 - [Ramping up with professional Python](#ramping-up-with-professional-python)
 - [Learning the language](#learning-the-language)
   - [Beginner](#beginner)
@@ -19,11 +19,12 @@
   - [Best Practices](#best-practices)
   - [Celery](#celery)
   - [Code Architecture](#code-architecture)
+  - [Configuration](#configuration)
   - [Debugging](#debugging)
   - [Design patterns](#design-patterns)
+  - [File organisation (monorepo, folders, etc.)](#file-organisation-monorepo-folders-etc)
   - [Functional code](#functional-code)
   - [Internals](#internals)
-  - [Learning to learn](#learning-to-learn)
   - [Magic methods](#magic-methods)
   - [Open source Python programs](#open-source-python-programs)
   - [Packages (finding them)](#packages-finding-them)
@@ -39,7 +40,7 @@
   - [Staying up to date](#staying-up-to-date)
   - [Non-Python professional coding education](#non-python-professional-coding-education)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!--TOC-->
 
 # Ramping up with professional Python
 
