@@ -25,6 +25,9 @@ Python code reads and should read very much like pseudo code.
 ## Avoid heavy OOP stuff
 
 - There are no private variables.
+- Avoid factories.
+- Avoid mixins.
+- Avoid more than one layer of inheritance.
 
 ## Avoid using magic
 

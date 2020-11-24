@@ -304,7 +304,7 @@ def hello(name: str = "toaster"):
 ❓ Questions to ask orally:
 
 - Are there anonymous functions? No.
-    - `lambda` is not supposed to be assigned and only support a single line
+    - `lambda` is not supposed to be assigned and only supports a single line
 - How do you transform a list in positional arguments?
     - `f(*args)`
 - How do you transform a dict in keyword arguments?
@@ -381,7 +381,7 @@ class Toaster:
 
 - How do you define a class?
 - How do you define a constructor?
-- How do you define a method?
+- How do you define a method? A classmethod?
 - How do you define a class variable?
 
 ```python
@@ -434,7 +434,7 @@ print(t.say_color())
 t.color = "green"
 
 say_color = t.say_color
-# It works!
+# It works! (poke JavaScript)
 say_color()
 
 t2 = Toaster("blue")

@@ -78,10 +78,16 @@ Pro or con? It depends on use case and viewpoint.
 
 ## What we will see
 
+First session:
+
 - Syntax
 - Tooling: pyenv, pipenv, poetry, dependency management, etc.
 - Constructs: lambda, list/dict/set comprehensions
+
+Later sessions:
+
 - Building a CLI tool
+- Building a simple web API
 
 ## Myths about Python
 
@@ -96,12 +102,12 @@ Myths about Python:
     - Uber API: about 400k lines of Uber code (on top of the Pyramid web framework)
     - Sentry
 - Python is a weakly typed language
-    - "static" vs "dynamic" typing
-    - "weak" vs "strong" typing
+    - "static" vs "dynamic" typing (vs. C)
+    - "weak" vs "strong" typing (vs. Perl)
 - Python is not compiled
     - The Python VM
 - Python is single-threaded
-    - GIL but multi-threaded
+    - CPython has the GIL but multi-threaded (see [Understanding the Python GIL](http://www.dabeaz.com/GIL/))
     - Python spec vs. Python implementation (CPython, PyPy, Jython, IronPython)
     - There are other ways to achieve concurrency: processes
 
@@ -164,7 +170,7 @@ Learning a new language requires unlearning some stuff. Those items are mostly f
     - There is no real need for a dependency injection framework in Python (the pattern is fine though)
     - There are no interfaces.
 - OOP is not the solution to all problems.
-    - Python usually prefer simple functions.
+    - Python usually prefer simple functions (KISS).
 - You absolutely need Docker.
     - Python on bare metal is fine. There are ways to isolate from the local env.
 - Any programming style is fine
