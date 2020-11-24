@@ -157,16 +157,14 @@ The best way to learn is to do.
 ## Small exercises
 
 - Create a virtual environment with `virtualenv`.
-- Create a virtual environment with `virtualenvwrapper` tools.
 - Fix a bug in one of the Python packages listed in [the Python guide](http://docs.python-guide.org/en/latest/#scenario-guide).
-- Create a server exposing a Thrift API.
 - Take inspiration from this [list of Raspberry Pi projects on reddit](https://www.reddit.com/r/Python/comments/4e59wb/what_have_you_done_with_python_and_raspberry_pi/)
 
 ## Larger projects
 
 - [Discover Flask](https://github.com/realpython/discover-flask)
-- Build a lock library for redis.
-- Build a cache library for redis.
+- Build a lock library for Redis.
+- Build a cache library for Redis.
 - Build an API for next bus departure time.
 - Build an ORM for a SQL database.
 - Build a command line parser.
@@ -175,7 +173,7 @@ The best way to learn is to do.
 - Build an HTTP library.
 - Clone one of those [games](http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/)
 - Solve some of the [Project Euler problems](https://projecteuler.net/)
-- Write a game using [pyarcade](http://pythonhosted.org/arcade/index.html)
+- Write a game using [pyarcade](https://arcade.academy/)
 
 Reddit's [dailyprogrammer subreddit](https://www.reddit.com/r/dailyprogrammer)
 has some good exercises as well.
@@ -218,9 +216,6 @@ environments:
 - [Jinja](http://jinja.pocoo.org/) is a full featured template engine for
   Python. It has full unicode support, an optional integrated sandboxed
   execution environment, widely used and BSD licensed.
-- [Mock](http://www.voidspace.org.uk/python/mock/) is a library for testing in
-  Python. It allows you to replace parts of your system under test with mock
-  objects and make assertions about how they have been used.
 - [pytest](http://pytest.org/latest/) is a test framework.
 
 [Awesome Python](https://github.com/vinta/awesome-python) provides a great list of third party libraries.
@@ -381,7 +376,6 @@ Then, read some of those articles:
 - [Awesome Python](https://github.com/vinta/awesome-python)
 - [PyCon 2015](https://www.youtube.com/channel/UCgxzjK6GuOHVKR_08TT4hJQ)
 - Invent With Python, [Further Reading: Intermediate Python Resources](http://inventwithpython.com/blog/2015/09/01/further-reading-intermediate-python-resources/)
-- [Good to great Python reads](http://jessenoller.com/good-to-great-python-reads/)
 
 ## Staying up to date
 

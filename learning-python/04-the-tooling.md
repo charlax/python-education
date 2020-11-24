@@ -3,8 +3,8 @@
 <!--TOC-->
 
 - [Python: the tooling](#python-the-tooling)
-  - [Code style & linting](#code-style--linting)
-  - [Packaging](#packaging)
+  - [Code style & linting & typing](#code-style--linting--typing)
+  - [Packaging & dependencies & local environment](#packaging--dependencies--local-environment)
   - [Tests](#tests)
   - [Web apps](#web-apps)
     - [HTTP framework](#http-framework)
@@ -14,19 +14,21 @@
 
 <!--TOC-->
 
-## Code style & linting
+## Code style & linting & typing
 
 To enforce following the [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/), use those tools:
 
 - black (autoformatter like `go fmt` or `prettier`)
 - flake8
 - pylint (I prefer flake8 because it's less strict)
+- mypy
 
-## Packaging
+## Packaging & dependencies & local environment
 
 - **Poetry**
 - pipenv
 - virtualenv
+- pyenv
 
 ## Tests
 

@@ -88,11 +88,11 @@ Pro or con? It depends on use case and viewpoint.
 First session:
 
 - Syntax
-- Tooling: pyenv, pipenv, poetry, dependency management, etc.
 - Constructs: lambda, list/dict/set comprehensions
 
 Later sessions:
 
+- Tooling: pyenv, pipenv, poetry, dependency management, etc.
 - Building a CLI tool
 - Building a simple web API
 
@@ -106,7 +106,7 @@ Later sessions:
 Myths about Python:
 
 - Python does not scale
-    - Uber API: about 400k lines of Uber code (on top of the Pyramid web framework)
+    - Uber API: about 400k lines of code (on top of the Pyramid web framework)
     - Sentry
 - Python is a weakly typed language
     - "static" vs "dynamic" typing (vs. C)
