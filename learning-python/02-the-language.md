@@ -272,7 +272,7 @@ def hello():
     print("hello world")
 
 
-print(help(hello))
+help(hello)
 ```
 
 ```python
@@ -466,7 +466,7 @@ class BetterToaster:
     # Custom getter
     @property
     def status(self) -> str:
-        return "on" if self.is_toasting else "off"
+        return "on" if self._is_toasting else "off"
 
 
 t = BetterToaster("red", "moulinex")

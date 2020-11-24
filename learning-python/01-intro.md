@@ -14,6 +14,11 @@
 
 <!--TOC-->
 
+Why happy:
+
+- Cool to relearn stuff
+- Python is a joy to work with
+
 ## Why learn Python
 
 ❓ Questions to ask orally:
@@ -50,7 +55,9 @@ Answers:
 
 Pros:
 
-- Has been fully battle-tested (created in 1991, 4 years before Java, 3 years before Python)
+- Has been fully battle-tested (created in 1991, 4 years before Java, 3 years before PHP).
+  - So many tools.
+  - So much experience deploying and monitoring it.
 - Supports numerous paradigm, including OOP and FP
 - Focuses on readability (i.e. conciseness). You can get A LOT done with very few lines of code.
 - Fostered by a welcoming community
@@ -68,7 +75,7 @@ Pro or con? It depends on use case and viewpoint.
     - But: PyPy has a JIT
 - No static types (Python has dynamic strong typing).
     - There are tools (mypy) to add type checking, but there's not fully integrated into the process yet.
-- Jack of trades and master of none? Some paradigms (e.g. FP and OOP) are not fully implemented.
+- Jack of all trades and master of none? Some paradigms (e.g. FP and OOP) are not fully implemented.
 - Some advanced features can be misused when put in the wrong hands (e.g. metaclasses, descriptors).
 - Concurrency API (a matter of taste)
 - Lots of features added those last days
@@ -107,7 +114,7 @@ Myths about Python:
 - Python is not compiled
     - The Python VM
 - Python is single-threaded
-    - CPython has the GIL but multi-threaded (see [Understanding the Python GIL](http://www.dabeaz.com/GIL/))
+    - CPython has the GIL but multi-threaded (see [Understanding the Python GIL](http://www.dabeaz.com/GIL/), especially the presentation)
     - Python spec vs. Python implementation (CPython, PyPy, Jython, IronPython)
     - There are other ways to achieve concurrency: processes
 
