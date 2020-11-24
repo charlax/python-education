@@ -23,7 +23,7 @@ Bad:
 ```python
 def toast(bread):
     if bread is None:
-        raise TypeError('Need bread to toast.')
+        raise TypeError("Need bread to toast.")
     if bread.is_toastable:
         toaster.toast(bread)
 ```
@@ -93,16 +93,16 @@ def get_operator(value):
     e.g. ``get_operator('+')`` returns a function which takes two arguments
     and return the sum of them.
     """
-    if value == '+':
+    if value == "+":
         return op.add
-    elif value == '-':
+    elif value == "-":
         return op.sub
-    elif value == '*':
+    elif value == "*":
         return op.mul
-    elif value == '/':
+    elif value == "/":
         return op.div
     else:
-        raise ValueError('Unknown operator %s' % value)
+        raise ValueError("Unknown operator %s" % value)
 ```
 
 Note: the operator module is a standard library modules that defines base
@@ -122,10 +122,10 @@ Good:
 import operator as op
 
 OPERATORS = {
-    '+': op.add,
-    '-': op.sub,
-    '*': op.mul,
-    '/': op.div,
+    "+": op.add,
+    "-": op.sub,
+    "*": op.mul,
+    "/": op.div,
 }
 
 
@@ -135,7 +135,7 @@ def get_operator(value):
     if operator:
         return operator
     else:
-        raise ValueError('Unknown operator %s' % value)
+        raise ValueError("Unknown operator %s" % value)
 ```
 
 ## Overreliance on kwargs
@@ -163,7 +163,7 @@ Example:
 
 ```python
 def main():
-    raise Exception({'msg': 'This is not a toaster', 'level': 'error'})
+    raise Exception({"msg": "This is not a toaster", "level": "error"})
 ```
 
 Why is this an antipattern? Exception are meant to be read by human beings.
@@ -175,7 +175,7 @@ class NotAToasterException(Exception):
 
 
 def main():
-    raise NotAToasterException('This is not a toaster')
+    raise NotAToasterException("This is not a toaster")
 ```
 
 Most tools expect this, most importantly
@@ -188,7 +188,6 @@ have a custom constructor:
 
 ```python
 class NotAToasterException(Exception):
-
     def __init__(self, message, level):
         super(NotAToasterException, self).__init__(message)
         self.message = message
@@ -196,7 +195,7 @@ class NotAToasterException(Exception):
 
 
 def main():
-    raise NotAToasterException('This is not a toaster', 'error')
+    raise NotAToasterException("This is not a toaster", "error")
 ```
 
 ## Not strictly pinning all packages

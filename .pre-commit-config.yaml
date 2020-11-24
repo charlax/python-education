@@ -6,10 +6,12 @@ repos:
   - id: trailing-whitespace
   - id: end-of-file-fixer
   - id: check-yaml
-
-repos:
- - repo: https://github.com/frnmst/md-toc
-   rev: master  # or a specific git tag from md-toc
-   hooks:
-   - id: md-toc
-     args: [-p, github]
+- repo: https://github.com/frnmst/md-toc
+  rev: master  # or a specific git tag from md-toc
+  hooks:
+  - id: md-toc
+    args: [-p, github]
+- repo: https://github.com/asottile/blacken-docs
+  rev: v1.8.0
+  hooks:
+  - id: blacken-docs

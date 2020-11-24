@@ -231,10 +231,10 @@ d.keys()
 d.values()
 d.items()
 
-d.pop(key[, default)
+d.pop(key, default)
 d.popitem()  # (key, value)
-d.get(key[, default])
-d.setdefault(key[, default])
+d.get(key, default)
+d.setdefault(key, default)
 ```
 
 ## Set
@@ -271,6 +271,7 @@ def hello():
     """Say hello."""
     print("hello world")
 
+
 print(help(hello))
 ```
 
@@ -278,6 +279,7 @@ print(help(hello))
 # arguments
 def hello(name: str):
     print(f"Hello {name}")
+
 
 # Both work!
 hello("Louis")
@@ -289,13 +291,14 @@ hello(name="Louis")
 def hello(name: str = "toaster"):
     print(f"Hello {name}")
 
+
 # x, y, z are positional arguments
 # args are the rest positional arguments (list)
 # a, b are keyword arguments
 # kwargs are the rest keyword arguments (dict)
 
-def hello(x, y, z, *args, *, a=1, b="2", **kwargs):
-    pass
+# def hello(x, y, z, *args, *, a=1, b="2", **kwargs):
+#     pass
 ```
 
 ❓ Questions to ask orally:
@@ -384,6 +387,7 @@ class Toaster:
 ```python
 class Toaster:
     """A toaster."""
+
     brand = "Moulinex"
 
     def say_hello(self):
@@ -452,7 +456,7 @@ class BetterToaster:
         self._brand = brand
         self._is_toasting = False
 
-    def start_toasting(self) -> None;
+    def start_toasting(self) -> None:
         self._is_toasting = True
 
     def toast(self) -> None:
@@ -463,6 +467,7 @@ class BetterToaster:
     @property
     def status(self) -> str:
         return "on" if self.is_toasting else "off"
+
 
 t = BetterToaster("red", "moulinex")
 t.toast()
@@ -688,7 +693,6 @@ def func():
 func()
 # Now it works!
 assert NAME == "Claude"
-
 ```
 
 For more information:
@@ -708,7 +712,7 @@ a = 2
 a = 3
 
 # Python keeps track of how many names are bound to a value
-class Toaster():
+class Toaster:
     pass
 
 
@@ -748,6 +752,7 @@ def modify_dict(d):
 class Toaster:
     def __init__(self, color: str):
         self.color = color
+
 
 t = Toaster("red")
 
