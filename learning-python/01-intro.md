@@ -9,8 +9,8 @@
 
 Answers:
 
-- It's pervasive:
-- It's here too stay (hiring)
+- It's pervasive.
+- It's here too stay (hiring, teaching kids)
 - It's super versatile and you can use it for almost anything
     - Server-side and client-side
     - CLI scripts and full apps
@@ -25,6 +25,7 @@ Answers:
     - Network
     - GUI
 - It's simple
+    - There are almost no gotchas.
 - Its philosophy can help you become a better programmer, whatever your language
 
 ## Python pros & cons
@@ -37,8 +38,7 @@ Pros:
 
 - Has been fully battle-tested (created in 1991, 4 years before Java, 3 years before Python)
 - Supports numerous paradigm, including OOP and FP
-- Focuses on readability (i.e. conciseness). You can get A LOT done with very
-  few lines of code.
+- Focuses on readability (i.e. conciseness). You can get A LOT done with very few lines of code.
 - Fostered by a welcoming community
 - Has very few gotchas compared to JS and PHP
 - Embraces its dynamic nature to build very concise DSLs

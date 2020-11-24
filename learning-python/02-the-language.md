@@ -53,6 +53,9 @@ x > 1
 # How do you check for truthiness?
 bool(True)
 
+# ternary operator
+ternary = "a" if v else "b"
+
 # or, and, not?
 ```
 
@@ -105,6 +108,19 @@ l = ["a", 1]
 # Presence check with "in"
 v = "a" in ["a"]
 assert v is True
+```
+
+Comprehensions:
+
+```python
+# List
+r = [i ** 2 for i in range(10) if i % 3]
+
+# Generator
+r = (i ** 2 for i in range(10) if i % 3)
+
+# Dict
+r = {v: v * 2 for f in range(10)}
 ```
 
 ## Lists
@@ -499,24 +515,14 @@ with open("file.json") as f:
 # That's it!
 ```
 
-## Advanced topics
-
-Those topics build upon your understanding the syntax.
-
-```python
-ternary = "a" if v else "b"
-
-# pass
-def a():
-    pass  # Empty statement, sometimes useful
-```
-
-### Typing
+## Typing Python
 
 ❓ Questions to ask orally:
 
 - Is Python weakly typed?
 - Is Python statically typed?
+
+Important points:
 
 - Types are always optional.
 - Types are not checked at runtime, only if you use a tool like `mypy`.
@@ -531,9 +537,9 @@ def get_double(i: int) -> int:
     return i * 2
 ```
 
-### Scopes, assignment and pass by reference/value
+## Scopes, assignment and pass by reference/value
 
-#### Namespaces
+### Namespaces
 
 ❓ Questions to ask orally:
 
@@ -546,7 +552,7 @@ https://docs.python.org/3/tutorial/classes.html
 
 - Namespaces are created at different moments and have different lifetimes.
 
-#### Scope
+### Scope
 
 ❓ Questions to ask orally:
 
@@ -568,7 +574,7 @@ Some other ways:
 
 > A special quirk of Python is that – if no global or nonlocal statement is in effect – assignments to names always go into the innermost scope. Assignments do not copy data — they just bind names to objects.
 
-#### The LEGB rule
+### The LEGB rule
 
 ❓ Questions to ask orally:
 
@@ -609,7 +615,7 @@ def say_hello(last_name: str) -> None:
 say_hello("de Funès")
 ```
 
-#### Modifying scope behavior
+### Modifying scope behavior
 
 ❓ Questions to ask orally:
 
@@ -654,7 +660,7 @@ For more information:
 - [Pass by Reference in Python: Background and Best Practices](https://realpython.com/python-pass-by-reference/)
 - https://docs.python.org/3/tutorial/classes.html
 
-#### Assignment
+### Assignment
 
 ```python
 # a is the name, 2 is the value
@@ -692,7 +698,7 @@ def modify_dict(d):
     d["a"] = None
 ```
 
-### Python is fully dynamic and everything is an object
+## Python is fully dynamic and everything is an object
 
 ❓ Questions to ask orally:
 
@@ -757,27 +763,26 @@ See also:
 
 - https://docs.python.org/3/library/inspect.html
 
-### Comprehensions
-
-```python
-# List
-r = [i ** 2 for i in range(10) if i % 3]
-
-# Generator
-r = (i ** 2 for i in range(10) if i % 3)
-
-# Dict
-r = {v: v * 2 for f in range(10)}
-```
-
-### The standard library
+## The standard library
 
 See:
 
 - https://docs.python.org/3/tutorial/stdlib.html
 - https://docs.python.org/3/tutorial/stdlib2.html
 
-## Advanced Python
+## Python "gotchas"
+
+- Mutable default arguments
+- Circular module dependencies
+- Clashes with builtin naming (e.g. `id`)
+- String identity
+- Identity (`is`) vs. equality (`==`)
+
+## What's next?
+
+Next course: [Python style](./03-the-style.md)
+
+See [my course on advanced Python](../advanced-python/).
 
 - Context (`with`)
 - Iterators
@@ -786,9 +791,13 @@ See:
 - Descriptors
 - Properties
 - Decorators
+- Useful builtin packages: `dataclasses`
+- Walrus (`:=`) operator
+- `is not` (a single binary operator) vs. `is (not ...)` (`is` and `not` are separated)
 
 ## References
 
 - [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)
 - [Python Cheatsheet](https://www.pythoncheatsheet.org/)
 - [Memento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3-english.pdf)
+- [satwikkansal/wtfpython: What the f*ck Python?](https://github.com/satwikkansal/wtfpython)

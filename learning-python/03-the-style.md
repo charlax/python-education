@@ -18,6 +18,8 @@ Explicit is better than implicit
 
 ### Avoid strict typing, prefer duck typing
 
+`getattr` and `hasattr`.
+
 ### Ask for forgiveness, not for permission
 
 - [Idiomatic Python: EAFP versus LBYL](https://devblogs.microsoft.com/python/idiomatic-python-eafp-versus-lbyl/)
@@ -45,3 +47,5 @@ Globals are:
 Python lacks some functional features:
 
 - Immutable by default
+- True anonymous functions
+- Tail recursion
