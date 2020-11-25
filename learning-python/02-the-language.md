@@ -799,6 +799,13 @@ def get_class_and_function():
         pass
 
     return [func, MyClass]
+
+
+# ImportError can happen anywhere and can be caught
+try:
+    import toaster
+except ImportError:
+    toaster = None
 ```
 
 See also:
@@ -819,6 +826,9 @@ See:
 - Clashes with builtin naming (e.g. `id`)
 - String identity
 - Identity (`is`) vs. equality (`==`)
+- Late binding closures
+- Tuple by default `a = "b",`
+- `sort` vs. `sorted`
 
 ## What's next?
 
