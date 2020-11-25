@@ -8,6 +8,7 @@ def read_file(filename: str) -> str:
     raise NotImplementedError  # TODO
 
 
+# You can use something else than a set!
 def get_variables(template: str) -> Set[str]:
     raise NotImplementedError  # TODO
 

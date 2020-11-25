@@ -7,6 +7,26 @@ filename.
 
 This should take less than 2 hours.
 
+There is a skeleton for the script in
+[render-template.py](./render-template.py).
+
+## Exercise objective
+
+This is a very complete exercise:
+
+- Write simple functions
+- Create a CLI script in Python
+- Use some standard lib modules
+- Use loops
+- Use standard input and output
+- Raise errors
+- Use datetime
+- Read and write to files
+- Interpolate variables in string
+- Manipulate dicts and sets
+- Optional: functional programming in Python
+- It's actually a useful script!
+
 ## Example usage
 
 [![asciicast](https://asciinema.org/a/tFkycU36PgYwDTvRqr6FBCa7B.svg)](https://asciinema.org/a/tFkycU36PgYwDTvRqr6FBCa7B)
