@@ -1,8 +1,11 @@
 # Exercise: render-template
 
 We want to create a CLI script that lets us generate files based on a template.
+
 The template can have variables to interpolate in its content and in its
 filename.
+
+This should take less than 2 hours.
 
 ## Example usage
 
