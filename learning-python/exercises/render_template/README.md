@@ -6,7 +6,7 @@ filename.
 
 ## Example usage
 
-[![asciicast](https://asciinema.org/a/gCfghX1V17YEH8z9U8KMpyIZq.png)](https://asciinema.org/a/gCfghX1V17YEH8z9U8KMpyIZq)
+[![asciicast](https://asciinema.org/a/gCfghX1V17YEH8z9U8KMpyIZq.svg)](https://asciinema.org/a/gCfghX1V17YEH8z9U8KMpyIZq)
 
 Say we have this template file, named `{firstname}.template.md`:
 
