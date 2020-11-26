@@ -9,5 +9,7 @@
     - https://docs.python.org/3/library/functools.html
     - https://docs.python.org/3/library/string.html
     - https://docs.python.org/3/library/argparse.html
+    - https://docs.python.org/3/library/re.html
 - Ask for user input: `input("prompt")`
 - Try a procedural style if you're stuck with a more functional style.
+- `re` module: see `re.sub`, `re.search`
