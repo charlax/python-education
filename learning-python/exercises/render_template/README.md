@@ -44,15 +44,17 @@ LinkedIn : {linkedin}
 We use it like this:
 
 ```bash
-$ ./render-template.py \{firstname\}.template.md
+$ ./render-template.py \{firstname\}.\{lastname\}template.md
 firstname: Louis
+lastname: de Funès
 linkedin: https://...
 
-./louis.template.md
-# Creates a file named louis.template.md, rendering its content with the input variables
+./louis.de_funès.md
+# Creates a file named louis.de_funès.md, rendering its content with the input variables
 ```
 
-Note that it does not ask for "today", because this is set to today's date automatically.
+- Note that it does not ask for "today", because this is set to today's date automatically.
+- Variable prompts are sorted by alphabetical order.
 
 ## Technical specs
 
