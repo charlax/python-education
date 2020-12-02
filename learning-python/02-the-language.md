@@ -31,8 +31,10 @@
     - [Assignment](#assignment)
   - [Python is fully dynamic and everything is an object](#python-is-fully-dynamic-and-everything-is-an-object)
   - [The standard library](#the-standard-library)
+  - [Navigating the Python documentation](#navigating-the-python-documentation)
   - [Python "gotchas"](#python-gotchas)
   - [What's next?](#whats-next)
+  - [Self-review](#self-review)
   - [References](#references)
 
 <!--TOC-->
@@ -303,7 +305,8 @@ def hello(name: str = "toaster"):
 
 ❓ Questions to ask orally:
 
-- Are there anonymous functions? No.
+- Are there anonymous functions?
+    - Not really.
     - `lambda` is not supposed to be assigned and only supports a single line
 - How do you transform a list in positional arguments?
     - `f(*args)`
@@ -798,7 +801,7 @@ def get_class_and_function():
     class MyClass:
         pass
 
-    return [func, MyClass]
+    return func, MyClass
 
 
 # ImportError can happen anywhere and can be caught
@@ -806,6 +809,11 @@ try:
     import toaster
 except ImportError:
     toaster = None
+
+# You can programmatically import
+import importlib
+
+toaster = importlib.import_module("toaster")
 ```
 
 See also:
@@ -818,6 +826,12 @@ See:
 
 - https://docs.python.org/3/tutorial/stdlib.html
 - https://docs.python.org/3/tutorial/stdlib2.html
+
+## Navigating the Python documentation
+
+https://docs.python.org/3/
+
+- builtin vs. standard lib
 
 ## Python "gotchas"
 
@@ -840,12 +854,35 @@ See [my course on advanced Python](../advanced-python/).
 - Iterators
 - Generators
 - Operator overloading
+- Magic methods
 - Descriptors
 - Properties
 - Decorators
 - Useful builtin packages: `dataclasses`
 - Walrus (`:=`) operator
 - `is not` (a single binary operator) vs. `is (not ...)` (`is` and `not` are separated)
+
+## Self-review
+
+❓ Questions to ask orally:
+
+- What are the base types?
+- What are the container types?
+- How do you get the length of a list?
+- How do you check if a key is in a dict?
+- How do you get a value from a dict? Even if it's not there?
+- How do you iterate over a dict's `key, value` in a `for` loop?
+- How do you coerce as a string? As a boolean?
+- How can you write a switch in Python?
+    - `dict`
+    - `if... elif... else`
+- What's the difference between equality and identity? What are the operators?
+- How do you count from 1 to 10?
+- How do function arguments work?
+- How do you type a function?
+- How do you write a class? With a constructor? With a class method? With inheritance?
+- How do you export a function from a module?
+- In what sense can we say that Python is a dynamic language?
 
 ## References
 

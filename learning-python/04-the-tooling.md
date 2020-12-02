@@ -5,6 +5,7 @@
 - [Python: the tooling](#python-the-tooling)
   - [Code style & linting & typing](#code-style--linting--typing)
   - [Packaging & dependencies & local environment](#packaging--dependencies--local-environment)
+    - [Virtual environment](#virtual-environment)
   - [Tests](#tests)
   - [Web apps](#web-apps)
     - [HTTP framework](#http-framework)
@@ -22,6 +23,8 @@ To enforce following the [PEP8 style guide](https://www.python.org/dev/peps/pep-
 - flake8
 - pylint (I prefer flake8 because it's less strict)
 - mypy
+- [pydocstyle](http://www.pydocstyle.org/en/stable/)
+- [isort](https://github.com/PyCQA/isort)
 
 ## Packaging & dependencies & local environment
 
@@ -29,6 +32,18 @@ To enforce following the [PEP8 style guide](https://www.python.org/dev/peps/pep-
 - pipenv
 - virtualenv
 - pyenv
+
+
+### Virtual environment
+
+- Why
+- How (without poetry & the likes)
+
+```bash
+python -m venv env
+source env/bin/activate
+pip install sqlalchemy  # compare with local env
+```
 
 ## Tests
 
@@ -55,3 +70,5 @@ To enforce following the [PEP8 style guide](https://www.python.org/dev/peps/pep-
 ### CLI
 
 - https://docs.python.org/3/library/argparse.html
+- typer
+- click
