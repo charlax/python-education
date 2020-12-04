@@ -94,6 +94,7 @@ Later sessions:
 
 - Tooling: pyenv, pipenv, poetry, dependency management, etc.
 - Building a CLI tool
+    - Walkthrough solutions
 - Building a simple web API
 
 ## Myths about Python

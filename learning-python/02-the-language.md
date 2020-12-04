@@ -767,7 +767,7 @@ locals()
 globals()
 
 # Classes are objects!
-Toaster.name
+Toaster.__name__
 dir(Toaster)
 
 

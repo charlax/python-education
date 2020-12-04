@@ -13,6 +13,7 @@
     - [Ask for forgiveness, not for permission](#ask-for-forgiveness-not-for-permission)
   - [Avoid long names](#avoid-long-names)
   - [Avoid globals](#avoid-globals)
+  - [Avoid using too many dependencies](#avoid-using-too-many-dependencies)
   - [Functional programming in Python](#functional-programming-in-python)
 
 <!--TOC-->
@@ -68,12 +69,22 @@ Globals are:
 - Difficult to debug (anything can modify them)
 - Difficult to reuse outside the library
 
+## Avoid using too many dependencies
+
+The standard library is very complete.
+
+[The State of the Octoverse 2020](https://octoverse.github.com/) shows that there are far less dependencies in Python projects:
+
+> 683 median transitive dependencies for npm followed by PHP (70), Ruby (68), and Python (19). All of which can become impacted by one security vulnerability.
+
 ## Functional programming in Python
 
 - `map` is builtin.
 - `import functools` for some functional tooling
+- `itertools`
 - Use a lib like `toolz` or `funcy` for more functional tools
 - `lambda` are a bit annoying, because they're single line.
+- Decorators are a super useful pattern and help understand how dynamic Python is
 
 Python lacks some functional features:
 

@@ -33,7 +33,6 @@ To enforce following the [PEP8 style guide](https://www.python.org/dev/peps/pep-
 - virtualenv
 - pyenv
 
-
 ### Virtual environment
 
 - Why
