@@ -1,20 +1,12 @@
-# Table of Contents
-
 <!--TOC-->
 
-- [Table of Contents](#table-of-contents)
-- [Ramping up with professional Python](#ramping-up-with-professional-python)
 - [Learning the language](#learning-the-language)
   - [Beginner](#beginner)
   - [Intermediate](#intermediate)
-    - [An introduction to advanced Python](#an-introduction-to-advanced-python)
-    - [Articles, videos and presentations](#articles-videos-and-presentations)
-    - [Books](#books)
-  - [Writing idiomatic Python](#writing-idiomatic-python)
+- [Writing idiomatic Python](#writing-idiomatic-python)
 - [Exercises](#exercises)
   - [Small exercises](#small-exercises)
   - [Larger projects](#larger-projects)
-- [Ramping up with specific libraries](#ramping-up-with-specific-libraries)
 - [Topics](#topics)
   - [Best Practices](#best-practices)
   - [Celery](#celery)
@@ -26,23 +18,22 @@
   - [Functional code](#functional-code)
   - [Internals](#internals)
   - [Magic methods](#magic-methods)
-  - [Open source Python programs](#open-source-python-programs)
+  - [Open source Python apps](#open-source-python-apps)
   - [Packages (finding them)](#packages-finding-them)
   - [Packaging & pip](#packaging--pip)
   - [Performance optimization](#performance-optimization)
   - [Python and beyond](#python-and-beyond)
   - [Quirks and gotchas](#quirks-and-gotchas)
+  - [SQLAlchemy](#sqlalchemy)
   - [Static analysis of code](#static-analysis-of-code)
   - [Tests](#tests)
   - [Types](#types)
   - [Unicode](#unicode)
 - [Reference and other lists](#reference-and-other-lists)
-  - [Staying up to date](#staying-up-to-date)
-  - [Non-Python professional coding education](#non-python-professional-coding-education)
+- [Staying up to date](#staying-up-to-date)
+- [Non-Python professional coding education](#non-python-professional-coding-education)
 
 <!--TOC-->
-
-# Ramping up with professional Python
 
 The goal of this documentation is to help you become a productive Python developer.
 
@@ -52,9 +43,9 @@ This doc assumes programming knowledge and experience.
 
 If you're also interested in generic programming best practices, I've compiled a list of [professional programming](https://github.com/charlax/professional-programming) resources.
 
-# Learning the language
+## Learning the language
 
-## Beginner
+### Beginner
 
 First, [Why Beginners Should Learn Python](http://stackabuse.com/why-beginners-should-learn-python/)
 
@@ -81,19 +72,17 @@ Other resources include (prefer the one listed above):
 - [Crash into Python](https://stephensugden.com/crash_into_python/): for experienced programmers
 - [Full Stack Python](https://www.fullstackpython.com/)
 
-## Intermediate
-
-### An introduction to advanced Python
+### Intermediate
 
 I wrote some introductory material to advanced Python:
 
 - [Introduction to advanced Python](advanced_python/advanced_python.md) (article). [Advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) (Slideshare).
 
-### Articles, videos and presentations
+#### Articles, videos and presentations
 
 - [py-must-watch](https://github.com/s16h/py-must-watch)
 
-### Books
+#### Books
 
 - Muhammad Yasoob Ullah Khalid, [Intermediate Python](http://book.pythontips.com/en/latest/)
 - Luciano Ramalho, [Fluent Python](http://www.amazon.com/gp/product/1491946008/)
@@ -150,21 +139,21 @@ List of books:
 
 - [Awesome Python Books](https://github.com/Junnplus/awesome-python-books)
 
-# Exercises
+## Exercises
 
 The best way to learn is to do.
 
-## Small exercises
+### Small exercises
 
 - Create a virtual environment with `virtualenv`.
 - Fix a bug in one of the Python packages listed in [the Python guide](http://docs.python-guide.org/en/latest/#scenario-guide).
 - Take inspiration from this [list of Raspberry Pi projects on reddit](https://www.reddit.com/r/Python/comments/4e59wb/what_have_you_done_with_python_and_raspberry_pi/)
 
-## Larger projects
+### Larger projects
 
-- [Discover Flask](https://github.com/realpython/discover-flask)
 - Build a lock library for Redis.
 - Build a cache library for Redis.
+- Build an API for storing todos
 - Build an API for next bus departure time.
 - Build an ORM for a SQL database.
 - Build a command line parser.
@@ -188,57 +177,27 @@ Python](https://github.com/vinta/awesome-python). Make sure you pick a library
 where the tickets are not too involved, and where the community is still alive
 (i.e. there's recent merged pull requests).
 
-# Ramping up with specific libraries
+## Topics
 
-Regardless of whether you use them, those tutorials introduce you to important
-concept and good design patterns, so they're highly recommended:
-
-- Do the [Flask tutorial](http://flask.pocoo.org/docs/tutorial/).
-- Watch the [SQLAlchemy introduction
-  video](https://www.youtube.com/watch?v=P141KRbxVKc). It lasts 3 hours but is
-  extremely insightful, and introduces to some great object oriented patterns.
-
-Other great SQLAlchemy resources include:
-
-- [Handcoded application with SQLAlchemy](http://pyvideo.org/video/665/hand-coded-applications-with-sqlalchemy)
-
-Other specific libraries that are very often used in professional
-environments:
-
-- [Celery](http://www.celeryproject.org/) is an asynchronous task queue/job
-  queue based on distributed message passing. It is focused on real-time
-  operation, but supports scheduling as well.
-- [Tornado](http://www.tornadoweb.org/en/stable/) is a Python web framework and
-  asynchronous networking library.
-- [Alembic](http://alembic.readthedocs.org/en/latest/) is a lightweight
-  database migration tool for usage with the SQLAlchemy Database Toolkit for
-  Python.
-- [Jinja](http://jinja.pocoo.org/) is a full featured template engine for
-  Python. It has full unicode support, an optional integrated sandboxed
-  execution environment, widely used and BSD licensed.
-- [pytest](http://pytest.org/latest/) is a test framework.
-
-[Awesome Python](https://github.com/vinta/awesome-python) provides a great list of third party libraries.
-
-# Topics
-
-## Best Practices
+### Best Practices
 
 - [The Best of the Best Practices (BOBP) Guide for Python](https://gist.github.com/sloria/7001839)
 - [When Python Practices Go Wrong](https://rhodesmill.org/brandon/slides/2019-11-codedive/): a pretty opinionated presentation that can be too concise at times, but nonetheless very interesting for somebody looking to constrain their creativity with Python constructs.
 - [Stop naming your python modules "utils"](https://breadcrumbscollector.tech/stop-naming-your-python-modules-utils/)
 - [zedr/clean-code-python](https://github.com/zedr/clean-code-python): Clean Code concepts adapted for Python
 
-## Celery
+### Celery
+
+Celery is a distributed async tasks runner.
 
 - [Celery best practices](https://blog.balthazar-rouberol.com/celery-best-practices), Balthazar
 
-## Code Architecture
+### Code Architecture
 
 - [The clean
   architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
 
-## Configuration
+### Configuration
 
 - [Best Practices for Working with Configuration in Python Applications](https://tech.preferred.jp/en/blog/working-with-configuration-in-python/)
 	- Use identifiers rather than string keys to access configuration values.
@@ -249,14 +208,14 @@ environments:
 	- Static things that don't change often, or things that dramatically influence the behavior of the system should live in the code.
 	- Dynamic things that change frequently, or things that should be kept secret (API keys/credentials) should live outside the code.
 
-## Debugging
+### Debugging
 
 - General introduction: [Python debugging
   tools](http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/)
 - A better debugger: [pudb](http://heather.cs.ucdavis.edu/~matloff/pudb.html)
 - [Debugging Python Like a Boss](https://zapier.com/engineering/debugging-python-boss/)
 
-## Design patterns
+### Design patterns
 
 - [Design patterns explained](http://www.pysnap.com/design-patterns-explained/)
 - [Python 3 Patterns, Recipes and Idioms](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/index.html)
@@ -265,35 +224,35 @@ environments:
 
 I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on another repo. This is a highly recommended read.
 
-## File organisation (monorepo, folders, etc.)
+### File organisation (monorepo, folders, etc.)
 
 - [Our Python Monorepo](https://medium.com/opendoor-labs/our-python-monorepo-d34028f2b6fa), OpenDoor
 
-## Functional code
+### Functional code
 
 - [Python Partials are Fun!](http://www.pydanny.com/python-partials-are-fun.html)
 
-## Internals
+### Internals
 
 - [Why Python is Slow: Looking Under the Hood](http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/)
 - [The internals of Python string interning](http://guilload.com/python-string-interning/)
 - [Python Data structures](http://rhodesmill.org/brandon/slides/2014-04-pycon/data-structures/)
 
-## Magic methods
+### Magic methods
 
 - [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
 
-## Open source Python programs
+### Open source Python apps
 
 It's often a good idea to read the Python source code of well-written applications:
 
 - [mahmoud/awesome-python-applications](https://github.com/mahmoud/awesome-python-applications): free software that works great, and also happens to be open-source Python
 
-## Packages (finding them)
+### Packages (finding them)
 
-- [Awesome Python](http://python.libhunt.com/)
+- [Awesome Python](https://github.com/vinta/awesome-python) provides a great list of third party libraries.
 
-## Packaging & pip
+### Packaging & pip
 
 - [Read the guide](https://packaging.python.org/)
 - [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
@@ -301,7 +260,7 @@ It's often a good idea to read the Python source code of well-written applicatio
 - [Pipfile](https://github.com/pypa/pipfile): a `Pipfile`, and its related `Pipfile.lock`, are a new (and much better!) replacement for pip's requirements.txt files.
 - [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools)
 
-## Performance optimization
+### Performance optimization
 
 - [Profiling Python using cProfile: a concrete
   case](https://julien.danjou.info/blog/2015/guide-to-python-profiling-cprofile-concrete-case-carbonara)
@@ -315,12 +274,12 @@ It's often a good idea to read the Python source code of well-written applicatio
   viewer for the output of Python’s cProfile module.
 - [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
 
-## Python and beyond
+### Python and beyond
 
 - [27 languages to improve your Python](http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html)
 - [List of languages that compile to Python](https://github.com/vindarel/languages-that-compile-to-python)
 
-## Quirks and gotchas
+### Quirks and gotchas
 
 - [Hidden features of Python](http://stackoverflow.com/questions/101268/hidden-features-of-python)
 - [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
@@ -328,11 +287,29 @@ It's often a good idea to read the Python source code of well-written applicatio
 - [satwikkansal/wtfpython: a collection of interesting, subtle, and tricky Python snippets](https://github.com/satwikkansal/wtfpython)
 - Ned Batchelder, [Facts and myths about Python names and values](https://nedbatchelder.com/text/names.html)
 
-## Static analysis of code
+### SQLAlchemy
+
+SQLAlchemy is the de facto standard ORM for Python. It has a unique approach:
+contrary to most ORM, it tries very hard not to hide the SQL implementation
+details from you. This is great because it forces you to really understand the
+underlying DB.
+
+Here is some slightly outdated content that is super useful to fully leverage
+the library:
+
+- Watch the [SQLAlchemy introduction
+  video](https://www.youtube.com/watch?v=P141KRbxVKc). It lasts 3 hours but is
+  extremely insightful, and introduces to some great object oriented patterns.
+- [Handcoded application with SQLAlchemy](http://pyvideo.org/video/665/hand-coded-applications-with-sqlalchemy)
+- [Alembic](http://alembic.readthedocs.org/en/latest/) is a lightweight
+  database migration tool for usage with the SQLAlchemy Database Toolkit for
+  Python.
+
+### Static analysis of code
 
 - [Essential python tools - Quality](http://aboumrad.info/essential-python-tools-quality.html)
 
-## Tests
+### Tests
 
 Half of coding time is usually spent writing tests. Yet how to write tests
 efficiently is very rarely taught at school - even though it came make a huge
@@ -349,28 +326,30 @@ Then, read some of those articles:
   tests](http://hernantz.github.io/mock-yourself-not-your-tests.html): great
   articles about the danger of mocking, and better unit testing strategies.
 - [Building Good Tests](https://salmonmode.github.io//2019/03/29/building-good-tests.html), Chris NeJame
-  _ 1 assert per test function/method and nothing else
-  _ Use standard assert statements, instead of the unittest.TestCase assert methods
-  _ Test behavior, not implementation
-  _ Only verify state-changing method calls
-  _ Test the result, not the process
-  _ Every test should be able to be run in parallel with any other test
-  _ A test should never be flaky
-  _ Try to avoid mocking things whenever possible.
-  _ Test coverage is not a metric for what was tested; it’s a metric for what code your tests managed to hit
-  _ The code should be easy to test \* Make your test code succinct and idiomatic
+  - 1 assert per test function/method and nothing else
+  - Use standard assert statements, instead of the unittest.TestCase assert methods
+  - Test behavior, not implementation
+  - Only verify state-changing method calls
+  - Test the result, not the process
+  - Every test should be able to be run in parallel with any other test
+  - A test should never be flaky
+  - Try to avoid mocking things whenever possible.
+  - Test coverage is not a metric for what was tested; it’s a metric for what code your tests managed to hit
+  - The code should be easy to test \* Make your test code succinct and idiomatic
+- [pytest](http://pytest.org/latest/) is a test framework. It's very elegant
+  and allows to quickly write very maintainable tests.
 
-## Types
+### Types
 
 - [The state of type hints in Python](https://www.bernat.tech/the-state-of-type-hints-in-python/): a good summary of typing in Python and its gotchas.
 
-## Unicode
+### Unicode
 
 - [Solving Unicode Problems in Python 2.7](http://www.azavea.com/blogs/labs/2014/03/solving-unicode-problems-in-python-2-7/)
 - [Unicode Howto in Python 3](https://docs.python.org/3/howto/unicode.html) (official Python documentation).
 - [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](http://www.joelonsoftware.com/articles/Unicode.html)
 
-# Reference and other lists
+## Reference and other lists
 
 - [Best Python Resources](http://www.fullstackpython.com/best-python-resources.html)
 - [Awesome Python](https://github.com/vinta/awesome-python)
