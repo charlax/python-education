@@ -1,5 +1,8 @@
 # Python exercise: write a cache decorator
 
+- Difficulty: medium
+- Time to complete: 1-2h
+
 ## Functional specs
 
 Write a Python decorator that can be used to cache a function's result. Its API

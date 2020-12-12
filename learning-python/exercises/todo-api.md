@@ -1,5 +1,8 @@
 # Python exercise: write a todo API
 
+- Difficulty: easy
+- Time to complete: 2-4h
+
 ## Functional specs
 
 Write an API with the following endpoints:
