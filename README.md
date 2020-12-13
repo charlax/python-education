@@ -5,8 +5,10 @@
   - [Intermediate](#intermediate)
 - [Writing idiomatic Python](#writing-idiomatic-python)
 - [Exercises](#exercises)
+  - [Code practice websites](#code-practice-websites)
   - [Small exercises](#small-exercises)
   - [Larger projects](#larger-projects)
+  - [My exercises](#my-exercises)
 - [Topics](#topics)
   - [Best Practices](#best-practices)
   - [Celery](#celery)
@@ -143,6 +145,15 @@ List of books:
 
 The best way to learn is to do.
 
+### Code practice websites
+
+- [Exercism](https://exercism.io/)
+- [Codingame](https://www.codingame.com/start)
+- Solve some of the [Project Euler problems](https://projecteuler.net/)
+- [LeetCode](https://leetcode.com/)
+- [Codewars](https://www.codewars.com/)
+- [HackerRank](https://www.hackerrank.com/)
+
 ### Small exercises
 
 - Create a virtual environment with `virtualenv`.
@@ -161,7 +172,6 @@ The best way to learn is to do.
 - Build a static site generator.
 - Build an HTTP library.
 - Clone one of those [games](http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/)
-- Solve some of the [Project Euler problems](https://projecteuler.net/)
 - Write a game using [pyarcade](https://arcade.academy/)
 
 Reddit's [dailyprogrammer subreddit](https://www.reddit.com/r/dailyprogrammer)
@@ -176,6 +186,10 @@ the libraries listed in [Awesome
 Python](https://github.com/vinta/awesome-python). Make sure you pick a library
 where the tickets are not too involved, and where the community is still alive
 (i.e. there's recent merged pull requests).
+
+### My exercises
+
+Check them out in [learning-python/exercises](./learning-python/exercises/).
 
 ## Topics
 
