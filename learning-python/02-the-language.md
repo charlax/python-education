@@ -878,8 +878,8 @@ See [my course on advanced Python](../advanced-python/).
     - `if... elif... else`
 - What's the difference between equality and identity? What are the operators?
 - How do you count from 1 to 10?
-- How do function arguments work?
 - How do you type a function?
+- How do function arguments work?
 - How do you write a class? With a constructor? With a class method? With inheritance?
 - How do you export a function from a module?
 - In what sense can we say that Python is a dynamic language?
