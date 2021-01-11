@@ -208,8 +208,8 @@ Celery is a distributed async tasks runner.
 
 ### Code Architecture
 
-- [The clean
-  architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
+- [The clean architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
+- [python-clean-architecture(https://github.com/pcah/python-clean-architecture)
 
 ### Configuration
 
@@ -235,8 +235,10 @@ Celery is a distributed async tasks runner.
 - [Python 3 Patterns, Recipes and Idioms](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/index.html)
 - [Decorators in 12 steps](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
 - [Design pattern templates in Python](https://github.com/tylerlaberge/PyPattyrn) (Github)
+- [Python Design Patterns Guide](https://www.toptal.com/python/python-design-patterns): a nice intro to design patterns in Python
+- [faif/python-patterns](https://github.com/faif/python-patterns): a collection of design patterns and idioms in Python.
 
-I maintain a [list of antipatterns](https://github.com/charlax/antipatterns) on another repo. This is a highly recommended read.
+I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
 
 ### File organisation (monorepo, folders, etc.)
 
