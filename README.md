@@ -15,6 +15,7 @@
   - [Code Architecture](#code-architecture)
   - [Configuration](#configuration)
   - [Debugging](#debugging)
+  - [Deployment](#deployment)
   - [Design patterns](#design-patterns)
   - [File organisation (monorepo, folders, etc.)](#file-organisation-monorepo-folders-etc)
   - [Functional code](#functional-code)
@@ -73,6 +74,7 @@ Other resources include (prefer the one listed above):
 - [Learning Python — The Hitchhiker's Guide to Python](https://docs.python-guide.org/intro/learning/)
 - [Crash into Python](https://stephensugden.com/crash_into_python/): for experienced programmers
 - [Full Stack Python](https://www.fullstackpython.com/)
+- [Learn Computer Science](https://hyperskill.org/onboarding/tracks/2) with Python, from JetBrains
 
 ### Intermediate
 
@@ -90,6 +92,10 @@ I wrote some introductory material to advanced Python:
 - Luciano Ramalho, [Fluent Python](http://www.amazon.com/gp/product/1491946008/)
 - Dusty Phillips, [Python 3 Object-Oriented Programming](http://www.amazon.com/gp/product/1784398780/)
 - Brett Slatkin, [Effective Python: 59 Specific Ways to Write Better Python](http://www.amazon.com/gp/product/0134034287/)
+
+Lists of books:
+
+- [Legally Free Python Books List](https://www.pythonkitchen.com/legally-free-python-books-list/)
 
 ## Writing idiomatic Python
 
@@ -229,6 +235,10 @@ Celery is a distributed async tasks runner.
 - A better debugger: [pudb](http://heather.cs.ucdavis.edu/~matloff/pudb.html)
 - [Debugging Python Like a Boss](https://zapier.com/engineering/debugging-python-boss/)
 
+### Deployment
+
+- [Production-ready Docker packaging for Python developers](https://pythonspeed.com/docker/)
+
 ### Design patterns
 
 - [Design patterns explained](http://www.pysnap.com/design-patterns-explained/)
@@ -247,6 +257,7 @@ I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
 ### Functional code
 
 - [Python Partials are Fun!](http://www.pydanny.com/python-partials-are-fun.html)
+- [sfermigier/awesome-functional-python](https://github.com/sfermigier/awesome-functional-python)
 
 ### Internals
 
@@ -270,11 +281,12 @@ It's often a good idea to read the Python source code of well-written applicatio
 
 ### Packaging & pip
 
-- [Read the guide](https://packaging.python.org/)
+- [Packaging guide](https://packaging.python.org/)
 - [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
 - [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
 - [Pipfile](https://github.com/pypa/pipfile): a `Pipfile`, and its related `Pipfile.lock`, are a new (and much better!) replacement for pip's requirements.txt files.
 - [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools)
+- [Virtual Environments Demystified](https://meribold.org/python/2018/02/13/virtual-environments-9487/)
 
 ### Performance optimization
 
