@@ -10,6 +10,7 @@
   - [Larger projects](#larger-projects)
   - [My exercises](#my-exercises)
 - [Topics](#topics)
+  - [Algorithms](#algorithms)
   - [Best Practices](#best-practices)
   - [Celery](#celery)
   - [Code Architecture](#code-architecture)
@@ -198,6 +199,10 @@ where the tickets are not too involved, and where the community is still alive
 Check them out in [learning-python/exercises](./learning-python/exercises/).
 
 ## Topics
+
+### Algorithms
+
+- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python): all algorithms implemented in Python
 
 ### Best Practices
 
