@@ -1,6 +1,8 @@
+# Introduction to Advanced Python
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-# Table of Contents
+## Table of Contents
 
 - [Introduction to Advanced Python](#introduction-to-advanced-python)
   - [Presentation](#presentation)
@@ -47,11 +49,9 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Introduction to Advanced Python
-
 The goal of this article is to broaden your knowledge of Python, exploring some concepts and techniques you might have never heard about. I won't go into too much detail, the goal is only to inspire you to research those features and patterns.
 
-*Note: all examples are run with Python 3.4*
+*Note: all examples are run with Python 3*
 
 ## Presentation
 
@@ -89,18 +89,57 @@ For a refresher of Python's design principles, run `import this` in the Python i
     Namespaces are one honking great idea -- let's do more of those!
 ```
 
-## Prerequisite
+## Prerequisites
 
 This article assumes knowledge of those core Python concepts:
 
-* Core syntax and programming constructs
+* Core syntax and programming constructs (`def`, function are objects, etc.)
+* Python execution flow
 * Basic differences between Python 2 and Python 3
 * Modules
 * Everything is an object
 
 If you don't understand one of those concepts, or feel rusty, you should revisit it before carrying with the rest of the article.
 
-## Functional Programming
+### Everything is an object
+
+See [Everything is an object](../learning-python/02-the-language.md).
+
+### Python execution flow
+
+#### Example 1
+
+```python
+def my_function():
+    print("hello")
+
+
+print("here")
+my_function()
+```
+
+What is displayed and when?
+
+#### Example 2
+
+```python
+def my_function():
+    print("hello")
+
+    def my_inner_function():
+        print("hello from inner")
+
+    return my_inner_function
+
+
+print("here")
+returned = my_function()
+returned()
+```
+
+What is displayed and when?
+
+## Functional programming patterns
 
 Even though `object` are first class citizen in Python, the language can totally be used in a more functional way.
 
@@ -127,7 +166,7 @@ def function():
 
 Now what is `decorate`? Let's think about the behavior it needs to have:
 
-* It takes a function as its single arguments.
+* It takes a function as its single argument.
 * It returns a function (or more generally a callable).
 
 Here's the simplest possible decorator (which does not do anything:
@@ -152,7 +191,7 @@ def silence_exception(function):
     def wrapped(*args, **kwargs):
         try:
             return function(*args, **kwargs)
-        except:
+        except Exception:  # NOTE: usually not a good idea, but ok for this example
             # Equivalent to returning None
             return
 
@@ -176,8 +215,8 @@ By the way: the example above can be considered an anti-pattern. There's almost 
 
 How would you change the decorator's behavior? You would need to write a decorator maker instead. Let's think about what kind of behavior this decorator maker will have:
 
-* It takes some arguments that change the decorator's behavior..
-* It returns a decorator, i.e. something that takes a function as its single argument, and return another callable.
+* It takes some arguments that change the decorator's behavior.
+* It returns a decorator, i.e. a function that takes a function as its single argument, and return another callable.
 
 Let's make the simplest possible decorator maker:
 
@@ -216,6 +255,7 @@ def silence_exception(exceptions):
                 # accepts a single object or a container.
                 if not isinstance(exception, exceptions):
                     raise
+                return
 
         return wrapped
 
@@ -290,10 +330,10 @@ Since the class object `Foo` is just an object, I'll let as an exercise to the r
 
 Decorators are an extremely versatile tool. Here's some examples:
 
+* [`functools.cache`](https://docs.python.org/3/library/functools.html#functools.cache) is a simple unbounded memoize function.
 * Celery uses them to define tasks from Python functions.
-* Flask uses them to attach routing metadata (such as method and URL) to Python functions.
-* Flask-cache uses them to cache the result of functions. It hashes the parameters to get the caching key.
-* Mock uses them to define the context in which a specific object will be mocked.
+* Microframeworks such as Flask and fastapi use them to attach routing metadata (such as method and URL) to Python functions.
+* `unittest.mock` uses them to define the context in which a specific object will be mocked.
 * SQLAlchemy uses them for all sorts of different use. One of the most interesting one is `hybrid_attribute`, which basically lets you define an attribute once that can be used both as a class attribute and as an instance attribute.
 
 #### Further reading
