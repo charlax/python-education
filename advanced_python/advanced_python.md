@@ -1,54 +1,26 @@
 # Introduction to Advanced Python
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-## Table of Contents
+<!--TOC-->
 
 - [Introduction to Advanced Python](#introduction-to-advanced-python)
   - [Presentation](#presentation)
   - [Introduction](#introduction)
-  - [Prerequisite](#prerequisite)
-  - [Functional Programming](#functional-programming)
+  - [Prerequisites](#prerequisites)
+    - [Everything is an object](#everything-is-an-object)
+    - [Python execution flow](#python-execution-flow)
+  - [Functional programming patterns](#functional-programming-patterns)
     - [Decorators](#decorators)
-      - [What are they?](#what-are-they)
-      - [Use cases](#use-cases)
-      - [Further reading](#further-reading)
     - [List, dict, set comprehensions](#list-dict-set-comprehensions)
-      - [What are they?](#what-are-they-1)
-      - [Use cases](#use-cases-1)
-      - [Further reading](#further-reading-1)
     - [Iterators](#iterators)
-      - [What are they?](#what-are-they-2)
-      - [Use cases](#use-cases-2)
-      - [Further reading](#further-reading-2)
     - [Generators](#generators)
-      - [What are they?](#what-are-they-3)
-      - [Use cases](#use-cases-3)
-      - [Further reading](#further-reading-3)
     - [The itertools module](#the-itertools-module)
-      - [What is it?](#what-is-it)
-      - [Use cases](#use-cases-4)
-      - [Further reading](#further-reading-4)
   - [Object Oriented Programming](#object-oriented-programming)
     - [Metaclasses](#metaclasses)
-      - [What are they?](#what-are-they-4)
-      - [Use cases](#use-cases-5)
-      - [Further reading](#further-reading-5)
     - [Special methods](#special-methods)
-      - [What are they?](#what-are-they-5)
-      - [Use cases](#use-cases-6)
-      - [Further reading](#further-reading-6)
     - [Descriptors and properties](#descriptors-and-properties)
-      - [What are they?](#what-are-they-6)
-      - [Use cases](#use-cases-7)
-      - [Further reading](#further-reading-7)
     - [Context Managers](#context-managers)
-      - [What are they?](#what-are-they-7)
-      - [Use cases](#use-cases-8)
-      - [Further reading](#further-reading-8)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!--TOC-->
 
 The goal of this article is to broaden your knowledge of Python, exploring some concepts and techniques you might have never heard about. I won't go into too much detail, the goal is only to inspire you to research those features and patterns.
 
