@@ -2,6 +2,7 @@
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 ## Table of Contents
 
 - [Introduction to Advanced Python](#introduction-to-advanced-python)
@@ -51,7 +52,7 @@
 
 The goal of this article is to broaden your knowledge of Python, exploring some concepts and techniques you might have never heard about. I won't go into too much detail, the goal is only to inspire you to research those features and patterns.
 
-*Note: all examples are run with Python 3*
+_Note: all examples are run with Python 3_
 
 ## Presentation
 
@@ -59,7 +60,7 @@ This is also available as a [presentation](http://www.slideshare.net/charlax/int
 
 ## Introduction
 
-Python's elegance can be attributed to the language's uncompromising focus on *readability*. Most of the design choices are discussed based on the fundamental premise that a programming language is first made to be read by human beings. That's probably why writing Python sometimes feels like writing English.
+Python's elegance can be attributed to the language's uncompromising focus on _readability_. Most of the design choices are discussed based on the fundamental premise that a programming language is first made to be read by human beings. That's probably why writing Python sometimes feels like writing English.
 
 That's also the raison d'être behind a lot of the advanced Python concepts introduced here - you should use them when they objectively make the code more readable. You should definitely not use them "when you feel like it". Metaclasses, decorators, context, iterators... should be conscious choices that improve the code's readability.
 
@@ -93,11 +94,11 @@ For a refresher of Python's design principles, run `import this` in the Python i
 
 This article assumes knowledge of those core Python concepts:
 
-* Core syntax and programming constructs (`def`, function are objects, etc.)
-* Python execution flow
-* Basic differences between Python 2 and Python 3
-* Modules
-* Everything is an object
+- Core syntax and programming constructs (`def`, function are objects, etc.)
+- Python execution flow
+- Basic differences between Python 2 and Python 3
+- Modules
+- Everything is an object
 
 If you don't understand one of those concepts, or feel rusty, you should revisit it before carrying with the rest of the article.
 
@@ -166,8 +167,8 @@ def function():
 
 Now what is `decorate`? Let's think about the behavior it needs to have:
 
-* It takes a function as its single argument.
-* It returns a function (or more generally a callable).
+- It takes a function as its single argument.
+- It returns a function (or more generally a callable).
 
 Here's the simplest possible decorator (which does not do anything:
 
@@ -209,14 +210,14 @@ assert toast("croissant") == "toasted"
 assert toast("baguette") is None
 ```
 
-That's it! Decorator lets you very easily *decorate* (i.e. add behavior) to a function.
+That's it! Decorator lets you very easily _decorate_ (i.e. add behavior) to a function.
 
 By the way: the example above can be considered an anti-pattern. There's almost never a good reason to silence exceptions this way.
 
 How would you change the decorator's behavior? You would need to write a decorator maker instead. Let's think about what kind of behavior this decorator maker will have:
 
-* It takes some arguments that change the decorator's behavior.
-* It returns a decorator, i.e. a function that takes a function as its single argument, and return another callable.
+- It takes some arguments that change the decorator's behavior.
+- It returns a decorator, i.e. a function that takes a function as its single argument, and return another callable.
 
 Let's make the simplest possible decorator maker:
 
@@ -330,16 +331,16 @@ Since the class object `Foo` is just an object, I'll let as an exercise to the r
 
 Decorators are an extremely versatile tool. Here's some examples:
 
-* [`functools.cache`](https://docs.python.org/3/library/functools.html#functools.cache) is a simple unbounded memoize function.
-* Celery uses them to define tasks from Python functions.
-* Microframeworks such as Flask and fastapi use them to attach routing metadata (such as method and URL) to Python functions.
-* `unittest.mock` uses them to define the context in which a specific object will be mocked.
-* SQLAlchemy uses them for all sorts of different use. One of the most interesting one is `hybrid_attribute`, which basically lets you define an attribute once that can be used both as a class attribute and as an instance attribute.
+- [`functools.cache`](https://docs.python.org/3/library/functools.html#functools.cache) is a simple unbounded memoize function.
+- Celery uses them to define tasks from Python functions.
+- Microframeworks such as Flask and fastapi use them to attach routing metadata (such as method and URL) to Python functions.
+- `unittest.mock` uses them to define the context in which a specific object will be mocked.
+- SQLAlchemy uses them for all sorts of different use. One of the most interesting one is `hybrid_attribute`, which basically lets you define an attribute once that can be used both as a class attribute and as an instance attribute.
 
 #### Further reading
 
-* Python docs, [Function definitions](http://docs.python.org/3/reference/compound_stmts.html#function-definitions)
-* StackOverflow, [How can I make a chain of function decorators in Python?](http://stackoverflow.com/questions/739654/how-can-i-make-a-chain-of-function-decorators-in-python/1594484#1594484)
+- Python docs, [Function definitions](http://docs.python.org/3/reference/compound_stmts.html#function-definitions)
+- StackOverflow, [How can I make a chain of function decorators in Python?](http://stackoverflow.com/questions/739654/how-can-i-make-a-chain-of-function-decorators-in-python/1594484#1594484)
 
 ### List, dict, set comprehensions
 
@@ -387,7 +388,7 @@ This is just an example but sometimes it's a better idea to be more verbose.
 
 #### Further reading
 
-* Python docs, [Data Structures](https://docs.python.org/3.4/tutorial/datastructures.html#data-structures)
+- Python docs, [Data Structures](https://docs.python.org/3.4/tutorial/datastructures.html#data-structures)
 
 ### Iterators
 
@@ -499,7 +500,7 @@ They're also useful for unbounded sets of results (where, by definition, you can
 
 #### Further reading
 
-* Python docs, [Iterators](https://docs.python.org/3.4/tutorial/classes.html#iterators)
+- Python docs, [Iterators](https://docs.python.org/3.4/tutorial/classes.html#iterators)
 
 ### Generators
 
@@ -535,8 +536,8 @@ This is arguably much more readable. Here's the interesting piece:
 
 What this means is that while `get_resources` is a function, it returns a `generator` type. Now it's important to take a step back and think about the difference between `return` and `yield`.
 
-* When a function does a `return`, it's completely relinquishing the control of execution.
-* When it does a `yield`, it temporarily passes on the control of execution, keeping its state between calls. In the example above, the variable `index` is stored between calls.
+- When a function does a `return`, it's completely relinquishing the control of execution.
+- When it does a `yield`, it temporarily passes on the control of execution, keeping its state between calls. In the example above, the variable `index` is stored between calls.
 
 Let's see if we can verify this using the `inspect` module, which provides useful functions to get more insights into live objects.
 
@@ -565,7 +566,7 @@ We can use the `next()` builtin to manually advance to the next iteration and se
 {'index': 1, 'resource': 'found /toasters/1'}
 ```
 
-Note that generators do not return the implicit `None` that you're used to.  Instead, they raise `StopIteration` to comply with the iteration protocol:
+Note that generators do not return the implicit `None` that you're used to. Instead, they raise `StopIteration` to comply with the iteration protocol:
 
 ```python-repl
 >>> next(gen)
@@ -607,13 +608,13 @@ Generator are just iterators, so their use cases are the same.
 
 #### Further reading
 
-* Python docs, [Generators](https://docs.python.org/3.4/tutorial/classes.html#generators)
-* Python docs, [Generator expressions](https://docs.python.org/2/reference/expressions.html#generator-expressions)
-* [PEP 255: Simple Generators](http://legacy.python.org/dev/peps/pep-0255/)
-* [PEP 289: Generator Expressions](http://legacy.python.org/dev/peps/pep-0289/)
-* [PEP 380:	Syntax for Delegating to a Subgenerator](http://legacy.python.org/dev/peps/pep-0380/)
-* Jeff Knupp, [Improve Your Python: 'yield' and Generators Explained](https://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/)
-* Dabeaz, [Generators Tricks for System Programmers](http://www.dabeaz.com/generators/Generators.pdf)
+- Python docs, [Generators](https://docs.python.org/3.4/tutorial/classes.html#generators)
+- Python docs, [Generator expressions](https://docs.python.org/2/reference/expressions.html#generator-expressions)
+- [PEP 255: Simple Generators](http://legacy.python.org/dev/peps/pep-0255/)
+- [PEP 289: Generator Expressions](http://legacy.python.org/dev/peps/pep-0289/)
+- [PEP 380: Syntax for Delegating to a Subgenerator](http://legacy.python.org/dev/peps/pep-0380/)
+- Jeff Knupp, [Improve Your Python: 'yield' and Generators Explained](https://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/)
+- Dabeaz, [Generators Tricks for System Programmers](http://www.dabeaz.com/generators/Generators.pdf)
 
 ### The itertools module
 
@@ -632,9 +633,9 @@ From the documentation:
 
 There's three main categories:
 
-* Infinite: `count`, `cycle`, `repeat`
-* Finite: `accumulate`, `chain`, `chain.from_iterable`, `compress`, `dropwhile`, `filterfalse`, `groupby`, `islice`, `starmap`, `takewhile`, `tee`, `zip_longest`
-* Combinatoric: `product`, `permutations`, `combinations`, `combinations_with_replacement`
+- Infinite: `count`, `cycle`, `repeat`
+- Finite: `accumulate`, `chain`, `chain.from_iterable`, `compress`, `dropwhile`, `filterfalse`, `groupby`, `islice`, `starmap`, `takewhile`, `tee`, `zip_longest`
+- Combinatoric: `product`, `permutations`, `combinations`, `combinations_with_replacement`
 
 #### Use cases
 
@@ -663,8 +664,7 @@ For instance, let's say you want to generate all permutations in the order of ca
 
 #### Further reading
 
-* Python docs, [itertools](https://docs.python.org/3/library/itertools.html)
-
+- Python docs, [itertools](https://docs.python.org/3/library/itertools.html)
 
 ## Object Oriented Programming
 
@@ -692,7 +692,7 @@ Classes are instances of `type`:
 True
 ```
 
-The builtin function `type` can be also used to create new classes on the fly.  The first argument is the class name, the second one the base classes, the last one the class attributes.
+The builtin function `type` can be also used to create new classes on the fly. The first argument is the class name, the second one the base classes, the last one the class attributes.
 
 ```python-repl
 >>> LaClasse = type("LaClasse", (object, ), {})
@@ -731,13 +731,13 @@ AttributeError: type object 'Toaster' has no attribute 'color'
 
 As Tim Peters puts it, "Metaclasses are deeper magic than 99% of users should ever worry about. If you wonder whether you need them, you don't." That being said, there's some very legitimate use cases for metaclasses:
 
-* Use the class as a way for developer to configure something. This is how ORM such as SQLAlchemy allow you to use a class to define the table, the mapper and the class all at one (see the documentation about its [declarative extension](http://docs.sqlalchemy.org/en/rel_0_9/orm/extensions/declarative.html)).
-* Add some logic after a class has been defined: verify that some methods/attributes are present, automatically apply decorators, etc.
+- Use the class as a way for developer to configure something. This is how ORM such as SQLAlchemy allow you to use a class to define the table, the mapper and the class all at one (see the documentation about its [declarative extension](http://docs.sqlalchemy.org/en/rel_0_9/orm/extensions/declarative.html)).
+- Add some logic after a class has been defined: verify that some methods/attributes are present, automatically apply decorators, etc.
 
 #### Further reading
 
-* StackOverflow, [What is a metaclass in Python](http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python)
-* Python Docs, [Customizing class creation](http://docs.python.org/3.3/reference/datamodel.html#customizing-class-creation)
+- StackOverflow, [What is a metaclass in Python](http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python)
+- Python Docs, [Customizing class creation](http://docs.python.org/3.3/reference/datamodel.html#customizing-class-creation)
 
 ### Special methods
 
@@ -762,16 +762,16 @@ Pretty much every operation can be redefined. Object identity (`is`) cannot be o
 
 Here's a list of the main operations:
 
-* `__repr__`: official string representation of an object. Typically used to ease debugging.
-* `__lt__`, `__le__`, `__eq__`...: rich comparison methods. Note that you can use `functools.total_ordering` so that you don't have to define all of them to allow all the possible rich comparison operations.
-* `__bool__`: when doing truth value testing.
-* `__getattr__`, `__setattr__`, `__delattr__`: respectively used for attribute lookup, assignment and deletion.
-* `__call__`: called when the instance is called as a function.
-* Container type emulation
-  * `__len__`: called with `len()`
-  * `__getitem__`, `__setitem__`, `__delitem__`: respectively used for evaluation, assignment and deletion of `self[key]`.
-  * `__contains__`: called with `item in self`.
-* Numeric types emulation: `__add__`, `__sub__`, `__mul__`... Also includes the augmented arithmetic assignments (`+=`, `-=`...): `__iadd__`, `__isub__`...)
+- `__repr__`: official string representation of an object. Typically used to ease debugging.
+- `__lt__`, `__le__`, `__eq__`...: rich comparison methods. Note that you can use `functools.total_ordering` so that you don't have to define all of them to allow all the possible rich comparison operations.
+- `__bool__`: when doing truth value testing.
+- `__getattr__`, `__setattr__`, `__delattr__`: respectively used for attribute lookup, assignment and deletion.
+- `__call__`: called when the instance is called as a function.
+- Container type emulation
+  - `__len__`: called with `len()`
+  - `__getitem__`, `__setitem__`, `__delitem__`: respectively used for evaluation, assignment and deletion of `self[key]`.
+  - `__contains__`: called with `item in self`.
+- Numeric types emulation: `__add__`, `__sub__`, `__mul__`... Also includes the augmented arithmetic assignments (`+=`, `-=`...): `__iadd__`, `__isub__`...)
 
 #### Use cases
 
@@ -818,8 +818,8 @@ The reason this works is that `Toaster.name` overloads the `__eq__` special meth
 
 #### Further reading
 
-* Python docs, [Data model](http://docs.python.org/3.3/reference/datamodel.html)
-* Rafe Kettler, [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
+- Python docs, [Data model](http://docs.python.org/3.3/reference/datamodel.html)
+- Rafe Kettler, [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
 
 ### Descriptors and properties
 
@@ -861,13 +861,13 @@ assert toaster.color == "blue"
 
 In this example, descriptors let us define some behavior once (i.e. where to get the data from), and reuse for two different attributes. Descriptors only work as class attribute and define one or multiple of the following methods:
 
-* `__get__(self, instance, owner)` where `instance` is the instance it's called on and can be `None` if it's called on the class, and `owner` the class.
-* `__set__(self, instance, value)` for overriding attribute assignment.
-* `__del__(self, instance)` for overriding attribute deletion (with `del`).
+- `__get__(self, instance, owner)` where `instance` is the instance it's called on and can be `None` if it's called on the class, and `owner` the class.
+- `__set__(self, instance, value)` for overriding attribute assignment.
+- `__del__(self, instance)` for overriding attribute deletion (with `del`).
 
 Properties (usually created by decorating a method with the `property` builtin function) are a simpler and more pervasive way of using descriptors. They're defined in `Objects/descrobject.c` in the CPython code.
 
-The function's signature is: `property(fget=None, fset=None, fdel=None, doc=None)`, where `fget` is the attribute getter, `fset` the setter, `fdel` the deleter and `doc` the docstring. `property` can also be used as a decorator.  Once it's applied, it exposes a `getter`, `setter` and `deleter` method that can also be used as decorators. Those two ways are completely identical:
+The function's signature is: `property(fget=None, fset=None, fdel=None, doc=None)`, where `fget` is the attribute getter, `fset` the setter, `fdel` the deleter and `doc` the docstring. `property` can also be used as a decorator. Once it's applied, it exposes a `getter`, `setter` and `deleter` method that can also be used as decorators. Those two ways are completely identical:
 
 ```python
 class Toaster(object):
@@ -939,10 +939,10 @@ Descriptors themselves are rarely used. Notable uses include SQLAlchemy's `Colum
 
 #### Further reading
 
-* Python docs, [Implementing descriptors](http://docs.python.org/3.3/reference/datamodel.html#implementing-descriptors)
-* Python docs, [property](http://docs.python.org/3.3/library/functions.html#property)
-* Chris Beaumont, [Python Descriptors Demystified](http://nbviewer.ipython.org/urls/gist.github.com/ChrisBeaumont/5758381/raw/descriptor_writeup.ipynb)
-* Alex Munroe, Fuzzy Notepad, [Python FAQ: Descriptors](http://me.veekun.com/blog/2012/05/23/python-faq-descriptors/)
+- Python docs, [Implementing descriptors](http://docs.python.org/3.3/reference/datamodel.html#implementing-descriptors)
+- Python docs, [property](http://docs.python.org/3.3/library/functions.html#property)
+- Chris Beaumont, [Python Descriptors Demystified](http://nbviewer.ipython.org/urls/gist.github.com/ChrisBeaumont/5758381/raw/descriptor_writeup.ipynb)
+- Alex Munroe, Fuzzy Notepad, [Python FAQ: Descriptors](http://me.veekun.com/blog/2012/05/23/python-faq-descriptors/)
 
 ### Context Managers
 
@@ -1035,9 +1035,9 @@ with assert_raises(ValueError):
 
 The [`contextlib`](http://docs.python.org/3/library/contextlib.html) module provides a lot of interesting use cases for context managers:
 
-* `closing`: closes something upon completion
-* `suppress`: suppresses specific exceptions
-* `redirect_stdout`
+- `closing`: closes something upon completion
+- `suppress`: suppresses specific exceptions
+- `redirect_stdout`
 
 ```python
 from contextlib import suppress
@@ -1083,6 +1083,6 @@ with redis_client.pipeline() as pipe:
 
 #### Further reading
 
-* Python docs, [The `with` statement](http://docs.python.org/3.4/reference/compound_stmts.html#with)
-* Python docs, [Context Manager Types](http://docs.python.org/3.4/library/stdtypes.html#context-manager-types)
-* Python docs, [`contextlib`](http://docs.python.org/3.4/library/contextlib.html)
+- Python docs, [The `with` statement](http://docs.python.org/3.4/reference/compound_stmts.html#with)
+- Python docs, [Context Manager Types](http://docs.python.org/3.4/library/stdtypes.html#context-manager-types)
+- Python docs, [`contextlib`](http://docs.python.org/3.4/library/contextlib.html)
