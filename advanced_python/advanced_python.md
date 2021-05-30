@@ -68,9 +68,9 @@ This article assumes knowledge of those core Python concepts:
 
 - Core syntax and programming constructs (`def`, function are objects, etc.)
 - Python execution flow
-- Basic differences between Python 2 and Python 3
 - Modules
 - Everything is an object
+- Positional arguments (`f(1, 2)`) and keyword arguments (`f(a=1, b=2)`)
 
 If you don't understand one of those concepts, or feel rusty, you should revisit it before carrying with the rest of the article.
 
@@ -79,6 +79,9 @@ If you don't understand one of those concepts, or feel rusty, you should revisit
 See [Everything is an object](../learning-python/02-the-language.md).
 
 ### Python execution flow
+
+- Python code runs from start to end
+- Function definition != function execution
 
 #### Example 1
 
@@ -114,42 +117,110 @@ What is displayed and when?
 
 ## Functional programming patterns
 
-Even though `object` are first class citizen in Python, the language can totally be used in a more functional way.
+Just because Python supports most OOP patterns does not mean it cannot be used in a functional fashion.
 
 ### Decorators
 
 #### What are they?
 
-Decorator are nothing complicated. They're just syntactic sugar.
+##### Intro
+
+Decorator are simpler to grasp if you understand that they're just syntactic sugar.
 
 ```python
+@decorate
+def function():
+    pass
+
+
+# is exactly equivalent to:
+
+
 def function():
     pass
 
 
 function = decorate(function)
-
-# is exactly equivalent to:
-
-
-@decorate
-def function():
-    pass
 ```
 
-Now what is `decorate`? Let's think about the behavior it needs to have:
+How should `decorate` behave?
 
 - It takes a function as its single argument.
-- It returns a function (or more generally a callable).
+- It returns a function.
+
+##### Writing the simplest decorator
 
 Here's the simplest possible decorator (which does not do anything:
 
 ```python
 def decorate(function):
+    print("in decorator")
     return function
+
+
+@decorate
+def my_function():
+    print("hello")
+
+
+my_function()
+my_function()
 ```
 
-Not terribly useful. Let's create a decorator that will return `None` if the function raises an exception.
+This will print:
+
+```
+in decorator
+hello
+hello
+```
+
+If it's not immediately clear why, remember that `decorate` is called only once, when `my_function` is defined.
+
+Note that you can also write a decorator using a class. This might make the distinction between **definition** (`__init__`) and **execution** (`__call__`) clearer.
+
+```python
+class Decorator:
+    def __init__(self, func):
+        print("function definition")
+        self.func = func
+
+    def __call__(self):
+        print("function execution")
+        return self.func()
+
+
+@Decorator
+def my_function():
+    print("hello from my_function")
+
+
+my_function()
+my_function()
+```
+
+This will print:
+
+```
+function definition
+function execution
+hello from my_function
+function execution
+hello from my_function
+```
+
+Note that if you `my_function` is now a `Decorator` instance:
+
+```python-repl
+>>> print(my_function)
+<__main__.Decorator object at 0x10e9940a0>
+```
+
+##### Writing your first useful decorator
+
+The previous decorator was not terribly useful. Let's create a decorator that will return `None` if the function raises an exception.
+
+Note: we use [`functools.wraps`](https://docs.python.org/3/library/functools.html#functools.wraps) which copy the docstring and function name for easier debugging on a wrapped function.
 
 ```python
 import functools
@@ -184,7 +255,9 @@ assert toast("baguette") is None
 
 That's it! Decorator lets you very easily _decorate_ (i.e. add behavior) to a function.
 
-By the way: the example above can be considered an anti-pattern. There's almost never a good reason to silence exceptions this way.
+By the way: the exception handling above can be considered an anti-pattern. There's almost never a good reason to silence exceptions this way.
+
+##### Writing a configurable decorator
 
 How would you change the decorator's behavior? You would need to write a decorator maker instead. Let's think about what kind of behavior this decorator maker will have:
 
@@ -194,19 +267,43 @@ How would you change the decorator's behavior? You would need to write a decorat
 Let's make the simplest possible decorator maker:
 
 ```python
-def decorater_maker():
+def decorator_maker():
+    print("in decorator_maker")
+
     def decorator(function):
-        return function
+        print(">in decorator")
+
+        @functools.wraps(function)
+        def wrapped():
+            print(">>in decorated")
+            return function()
+
+        return wrapped
 
     return decorator
 
 
 @decorator_maker()  # Note the function call here "()"
 def function():
-    pass
+    print(">>in function")
+
+
+function()
+function()
 ```
 
-Note that we **call** `decorator_maker`, because we need it to return the decorator. Now, let's see a more useful example:
+This will print:
+
+```
+in decorator_maker
+>in decorator
+>>in decorated
+>>in function
+>>in decorated
+>>in function
+```
+
+Note that we **call** `decorator_maker`, because we need it to return the decorator. Now, let's see a more useful example (similar to what standard library's `contextlib.suppress` does):
 
 ```python
 # This the decorator factory. It returns a decorator.
@@ -251,33 +348,12 @@ def toast(bread):
 
 assert toast("croissant") == "toasted"
 assert toast("baguette") is None
-with assert_raises(TypeError):
-    toast(Champagne())
+
+# raises TypeError
+toast(Champagne())
 ```
 
-Note that this is effectively reinventing `contextlib`'s simpler `suppress` context manager:
-
-```python
-class suppress:
-    """Context manager to suppress specified exceptions
-
-    After the exception is suppressed, execution proceeds with the next
-    statement following the with statement.
-
-         with suppress(FileNotFoundError):
-             os.remove(somefile)
-         # Execution still resumes here if the file was already removed
-    """
-
-    def __init__(self, *exceptions):
-        self._exceptions = exceptions
-
-    def __enter__(self):
-        pass
-
-    def __exit__(self, exctype, excinst, exctb):
-        return exctype is not None and issubclass(exctype, self._exceptions)
-```
+##### Applying a decorator to a class
 
 Decorators can also be applied to class. There's not much difference in the behavior:
 
@@ -285,11 +361,11 @@ Decorators can also be applied to class. There's not much difference in the beha
 @decorator
 class Foo:
     pass
-```
 
-Is equivalent to:
 
-```python
+# is equivalent to:
+
+
 class Foo:
     pass
 
@@ -297,22 +373,88 @@ class Foo:
 Foo = decorator(Foo)
 ```
 
-Since the class object `Foo` is just an object, I'll let as an exercise to the reader to imagine what you can do with a class decorator.
+That being said, there are much fewer use cases with applying decorator to class. Writing a fully-fledged class decorator is left as an exercise to the reader.
+
+##### Applying decorators to method
+
+You might now a few of the standard library's decorators: `@property`, `@classmethod`, `@staticmethod`.
+
+#### Gotchas
+
+Can you identify the issues there?
+
+##### TypeError: wrapped() takes 0 positional arguments but 1 was given
+
+```python
+def decorator(func):
+    @functools.wraps(func)
+    def wrapped():
+        return func()
+
+    return wrapped
+
+
+@decorator
+def my_function(name: str) -> None:
+    print(f"Hello {name}")
+
+
+my_function("Michelle")
+```
+
+##### Missing return value
+
+```python
+def decorator(func):
+    @functools.wraps(func)
+    def wrapped():
+        func()
+
+    return wrapped
+
+
+@decorator
+def my_function() -> None:
+    return 1
+
+
+r = my_function()
+if r != 1:
+    raise ValueError(f"Expected 1, got {r} instead")
+```
+
+##### Other gotchas
+
+- Decorator order
+- Stateful decorators
+- Attaching properties to the decorated function
 
 #### Use cases
 
-Decorators are an extremely versatile tool. Here's some examples:
+Decorators are an extremely versatile tool. Here are some examples:
 
 - [`functools.cache`](https://docs.python.org/3/library/functools.html#functools.cache) is a simple unbounded memoize function.
-- Celery uses them to define tasks from Python functions.
-- Microframeworks such as Flask and fastapi use them to attach routing metadata (such as method and URL) to Python functions.
+- [Celery](https://docs.celeryproject.org/) uses them to define tasks from Python functions.
+- Microframeworks such as [Flask](https://flask.palletsprojects.com/) and [fastapi](https://fastapi.tiangolo.com/) use them to attach routing metadata (such as method and URL) to Python functions.
 - `unittest.mock` uses them to define the context in which a specific object will be mocked.
-- SQLAlchemy uses them for all sorts of different use. One of the most interesting one is `hybrid_attribute`, which basically lets you define an attribute once that can be used both as a class attribute and as an instance attribute.
+- [SQLAlchemy](https://www.sqlalchemy.org/docs/latest/) uses them for all sorts of different use. One of the most interesting one is `hybrid_attribute`, which basically lets you define an attribute once that can be used both as a class attribute and as an instance attribute.
+- [tenacity](https://github.com/jd/tenacity) is a decorator-based library that manages retries.
+- [pytest](https://docs.pytest.org/) uses decorator extensively for fixtures for instance.
+- Register plugins.
+- Implement access control
+
+#### Exercises
+
+- Write a decorator that caches a function's result to the filesystem.
+- Write a decorator that times a function and logs its latency.
+- Write a decorator that returns a 403 if the user is not logged in.
 
 #### Further reading
 
 - Python docs, [Function definitions](http://docs.python.org/3/reference/compound_stmts.html#function-definitions)
+- [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/), Real Python
 - StackOverflow, [How can I make a chain of function decorators in Python?](http://stackoverflow.com/questions/739654/how-can-i-make-a-chain-of-function-decorators-in-python/1594484#1594484)
+- [micheles/decorator](https://github.com/micheles/decorator): a library that makes it easier to write decorators.
 
 ### List, dict, set comprehensions
 
@@ -329,7 +471,7 @@ Just a simpler way to define list/dict/set:
 {0, 1}
 ```
 
-Note that they can be nested as well:
+Note that they can be nested:
 
 ```python-repl
 >>> [[(i, j) for i in range(2)] for j in range(2)]
