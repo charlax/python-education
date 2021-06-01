@@ -22,19 +22,17 @@
 
 <!--TOC-->
 
-The goal of this article is to broaden your knowledge of Python, exploring some concepts and techniques you might have never heard about. I won't go into too much detail, the goal is only to inspire you to research those features and patterns.
-
-_Note: all examples are run with Python 3_
+The goal of this article is to broaden your knowledge of Python. I won't go into too much detail, the goal is only to inspire you to research those features and patterns.
 
 ## Presentation
 
-This is also available as a [presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python). The source of this presentation can be found in this repo.
+This is also available as a [slightly outdated presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python). The source of this presentation can be found in this repo.
 
 ## Introduction
 
 Python's elegance can be attributed to the language's uncompromising focus on _readability_. Most of the design choices are discussed based on the fundamental premise that a programming language is first made to be read by human beings. That's probably why writing Python sometimes feels like writing English.
 
-That's also the raison d'être behind a lot of the advanced Python concepts introduced here - you should use them when they objectively make the code more readable. You should definitely not use them "when you feel like it". Metaclasses, decorators, context, iterators... should be conscious choices that improve the code's readability.
+That's also the raison d'être behind a lot of the advanced Python concepts introduced here - you should use them when they make the code more readable. You should definitely not use them "when you feel like it". Metaclasses, decorators, context, iterators... should be conscious choices that improve the code's readability.
 
 For a refresher of Python's design principles, run `import this` in the Python interpreter:
 
@@ -66,10 +64,10 @@ For a refresher of Python's design principles, run `import this` in the Python i
 
 This article assumes knowledge of those core Python concepts:
 
-- Core syntax and programming constructs (`def`, function are objects, etc.)
+- Core syntax and programming constructs (`def`, `with`, etc.)
 - Python execution flow
 - Modules
-- Everything is an object
+- Almost everything (including functions) is an object
 - Positional arguments (`f(1, 2)`) and keyword arguments (`f(a=1, b=2)`)
 
 If you don't understand one of those concepts, or feel rusty, you should revisit it before carrying with the rest of the article.
@@ -271,11 +269,11 @@ def decorator_maker():
     print("in decorator_maker")
 
     def decorator(function):
-        print(">in decorator")
+        print("> in decorator")
 
         @functools.wraps(function)
         def wrapped():
-            print(">>in decorated")
+            print(">> in decorated")
             return function()
 
         return wrapped
@@ -285,7 +283,7 @@ def decorator_maker():
 
 @decorator_maker()  # Note the function call here "()"
 def function():
-    print(">>in function")
+    print(">> in function")
 
 
 function()
@@ -296,11 +294,11 @@ This will print:
 
 ```
 in decorator_maker
->in decorator
->>in decorated
->>in function
->>in decorated
->>in function
+> in decorator
+>> in decorated
+>> in function
+>> in decorated
+>> in function
 ```
 
 Note that we **call** `decorator_maker`, because we need it to return the decorator. Now, let's see a more useful example (similar to what standard library's `contextlib.suppress` does):
@@ -445,6 +443,7 @@ Decorators are an extremely versatile tool. Here are some examples:
 
 #### Exercises
 
+- See [`exercises/decorator_1.py`](./exercises/decorator_1.py)
 - Write a decorator that caches a function's result to the filesystem.
 - Write a decorator that times a function and logs its latency.
 - Write a decorator that returns a 403 if the user is not logged in.
@@ -620,7 +619,7 @@ They're also useful for unbounded sets of results (where, by definition, you can
 
 #### What are they?
 
-To simplify, they're just a simple way to create an iterator using a function instead of a class.
+Generators allow you to pause execution of a function and restart it from where it left off. When the `yield` keywords appear in a `def` block, it's a generator.
 
 If we were to re-implement the `ApiResources` class from above, we could it do this way:
 
