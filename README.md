@@ -196,7 +196,8 @@ where the tickets are not too involved, and where the community is still alive
 
 ### My exercises
 
-Check them out in [learning-python/exercises](./learning-python/exercises/).
+- Check [intro-to-python/exercises](./intro-to-python/exercises/).
+- Check [advanced-python/exercises](./advanced-python/exercises/).
 
 ## Topics
 

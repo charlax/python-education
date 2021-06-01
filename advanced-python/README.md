@@ -74,7 +74,7 @@ If you don't understand one of those concepts, or feel rusty, you should revisit
 
 ### Everything is an object
 
-See [Everything is an object](../learning-python/02-the-language.md).
+See [Everything is an object](../intro-to-python/02-the-language.md).
 
 ### Python execution flow
 

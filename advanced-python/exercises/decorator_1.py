@@ -7,7 +7,7 @@ To test your solution, run `pytest -s` on it.
 
 To go further:
 
-- Allow registering a function using an alias to allow (+ 1 2)
+- Allow registering a function using an alias to allow "(+ 1 2)"
 """
 
 
