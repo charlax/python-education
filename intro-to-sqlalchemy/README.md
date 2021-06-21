@@ -22,7 +22,7 @@ We will be using the SQLAlchemy 2.0 style which is quite different from 1.x.
 
 ## Intro
 
-SQLAlchemy was started in 2005.
+SQLAlchemy was started in 2005. While it is often categorized as an ORM, it is much more than that, and its goals are pretty unique in the ORM/db integration space:
 
     Goals:
 
@@ -32,6 +32,12 @@ SQLAlchemy was started in 2005.
     - Act as the foundation for any number of third party or in-house tools
 
 Source: [Introduction to SQLAlchemy](https://speakerdeck.com/zzzeek/introduction-to-sqlalchemy-pycon-2013)
+
+### How to approach SQLAlchemy
+
+SQLAlchemy has a relatively steep learning curve. If you try to jump right into the code of somebody pretty experienced with it, you might get lost.
+
+There is no way around it: you have to follow the tutorial from cover to cover. It is very well written and I'm sure you'll learn a ton of things and save you lots of headache.
 
 ## Concepts
 
@@ -98,6 +104,10 @@ See [simplest_example.py](./simplest_example.py)
 
 - Inserting records
 - Showing the generated SQL (print the query)
+
+Exercises:
+
+- Writing a SQLAlchemy query. Method: first write it as plain SQL, then write it in Python. You can skip the first step once you have some experience.
 
 ### Relationship example
 
