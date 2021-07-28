@@ -221,7 +221,7 @@ Celery is a distributed async tasks runner.
 ### Code Architecture
 
 - [The clean architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
-- [python-clean-architecture(https://github.com/pcah/python-clean-architecture)
+- [python-clean-architecture](https://github.com/pcah/python-clean-architecture)
 
 ### Configuration
 
