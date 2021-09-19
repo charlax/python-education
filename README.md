@@ -14,10 +14,12 @@
   - [Best Practices](#best-practices)
   - [Celery](#celery)
   - [Code Architecture](#code-architecture)
+  - [Concurrency](#concurrency)
   - [Configuration](#configuration)
   - [Debugging](#debugging)
   - [Deployment](#deployment)
   - [Design patterns](#design-patterns)
+  - [Example, inspiration and template packages](#example-inspiration-and-template-packages)
   - [File organisation (monorepo, folders, etc.)](#file-organisation-monorepo-folders-etc)
   - [Functional code](#functional-code)
   - [Internals](#internals)
@@ -81,7 +83,8 @@ Other resources include (prefer the one listed above):
 
 I wrote some introductory material to advanced Python:
 
-- [Introduction to advanced Python](advanced_python/advanced_python.md) (article). [Advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) (Slideshare).
+- [Introduction to advanced Python](advanced_python/advanced_python.md) (article).
+- [Advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) (Slideshare).
 
 #### Articles, videos and presentations
 
@@ -223,6 +226,10 @@ Celery is a distributed async tasks runner.
 - [The clean architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
 - [python-clean-architecture](https://github.com/pcah/python-clean-architecture)
 
+### Concurrency
+
+- [Concurrency with Python](https://bytes.yingw787.com/posts/2019/01/11/concurrency_with_python_why/): a pretty complete series of articles that goes into threads, functional programming, actor models, CSP, coroutines and data intensive architectures.
+
 ### Configuration
 
 - [Best Practices for Working with Configuration in Python Applications](https://tech.preferred.jp/en/blog/working-with-configuration-in-python/)
@@ -255,6 +262,10 @@ Celery is a distributed async tasks runner.
 - [faif/python-patterns](https://github.com/faif/python-patterns): a collection of design patterns and idioms in Python.
 
 I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
+
+### Example, inspiration and template packages
+
+- [charlax/cookiecutter-python-api: a cookiecutter template for an HTTP API](https://github.com/charlax/cookiecutter-python-api) with lots of best practices: mypy, flake8, isort, black, Makefile, fastapi, DDD pattern, file organization, etc.
 
 ### File organisation (monorepo, folders, etc.)
 
