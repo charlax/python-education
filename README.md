@@ -1,5 +1,6 @@
 <!--TOC-->
 
+- [About this list](#about-this-list)
 - [Learning the language](#learning-the-language)
   - [Beginner](#beginner)
   - [Intermediate](#intermediate)
@@ -21,15 +22,17 @@
   - [Design patterns](#design-patterns)
   - [Example, inspiration and template packages](#example-inspiration-and-template-packages)
   - [File organisation (monorepo, folders, etc.)](#file-organisation-monorepo-folders-etc)
-  - [Functional code](#functional-code)
+  - [Functional programming](#functional-programming)
   - [Internals](#internals)
   - [Magic methods](#magic-methods)
   - [Open source Python apps](#open-source-python-apps)
   - [Packages (finding them)](#packages-finding-them)
   - [Packaging & pip](#packaging--pip)
   - [Performance optimization](#performance-optimization)
+  - [Preparing for interviews](#preparing-for-interviews)
   - [Python and beyond](#python-and-beyond)
   - [Quirks and gotchas](#quirks-and-gotchas)
+  - [Security](#security)
   - [SQLAlchemy](#sqlalchemy)
   - [Static analysis of code](#static-analysis-of-code)
   - [Tests](#tests)
@@ -40,6 +43,16 @@
 - [Non-Python professional coding education](#non-python-professional-coding-education)
 
 <!--TOC-->
+
+## About this list
+
+Items:
+
+- 🧰 : list of resources
+- 📖 : book
+- 🎞 : video/movie extract/movie
+- 🎤 : slides/presentation
+- 🎧 : podcast
 
 The goal of this documentation is to help you become a productive Python developer.
 
@@ -78,6 +91,7 @@ Other resources include (prefer the one listed above):
 - [Crash into Python](https://stephensugden.com/crash_into_python/): for experienced programmers
 - [Full Stack Python](https://www.fullstackpython.com/)
 - [Learn Computer Science](https://hyperskill.org/onboarding/tracks/2) with Python, from JetBrains
+- [How to Use Python: Your First Steps](https://realpython.com/python-first-steps/) (RealPython)
 
 ### Intermediate
 
@@ -214,6 +228,14 @@ where the tickets are not too involved, and where the community is still alive
 - [When Python Practices Go Wrong](https://rhodesmill.org/brandon/slides/2019-11-codedive/): a pretty opinionated presentation that can be too concise at times, but nonetheless very interesting for somebody looking to constrain their creativity with Python constructs.
 - [Stop naming your python modules "utils"](https://breadcrumbscollector.tech/stop-naming-your-python-modules-utils/)
 - [zedr/clean-code-python](https://github.com/zedr/clean-code-python): Clean Code concepts adapted for Python
+- [Django for Startup Founders: A better software architecture for SaaS startups and consumer apps](https://alexkrupp.typepad.com/sensemaking/2021/06/django-for-startup-founders-a-better-software-architecture-for-saas-startups-and-consumer-apps.html): I strongly disagree with some of the points, but there's definitely some inspiration to take.
+  - Keep business logic in services
+  - Make services the locus of reusability
+  - Use functions, not classes
+  - There are exactly 4 types of errors
+  - Use serializers responsibly, or not at all
+  - Write admin functionality as API endpoints
+  - Keep logic out of the front end
 
 ### Celery
 
@@ -225,6 +247,11 @@ Celery is a distributed async tasks runner.
 
 - [The clean architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
 - [python-clean-architecture](https://github.com/pcah/python-clean-architecture)
+- 📖 [Cosmic Python](https://www.cosmicpython.com/): simple patterns for building complex Python application (free)
+  - Domain modeling and DDD
+  - Repository, Service Layer, and Unit of Work patterns
+  - Event-driven architecture
+  - Command-query responsibility segregation
 
 ### Concurrency
 
@@ -251,6 +278,13 @@ Celery is a distributed async tasks runner.
 ### Deployment
 
 - [Production-ready Docker packaging for Python developers](https://pythonspeed.com/docker/)
+- [Best Practices Around Production Ready Web Apps with Docker Compose](https://nickjanetakis.com/blog/best-practices-around-production-ready-web-apps-with-docker-compose)
+  - Avoiding 2 Compose Files for Dev and Prod with an Override File
+  - Reducing Service Duplication with Aliases and Anchors
+  - Defining your HEALTHCHECK in Docker Compose not your Dockerfile
+  - Making the most of environment variables
+  - Using Multi-stage builds to optimize image size
+  - Running your container as a non-root user
 
 ### Design patterns
 
@@ -270,17 +304,22 @@ I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
 ### File organisation (monorepo, folders, etc.)
 
 - [Our Python Monorepo](https://medium.com/opendoor-labs/our-python-monorepo-d34028f2b6fa), OpenDoor
+- [Atlas: Our journey from a Python monolith to a managed platform](https://dropbox.tech/infrastructure/atlas--our-journey-from-a-python-monolith-to-a-managed-platform) (Dropbox)
 
-### Functional code
+### Functional programming
 
 - [Python Partials are Fun!](http://www.pydanny.com/python-partials-are-fun.html)
 - [sfermigier/awesome-functional-python](https://github.com/sfermigier/awesome-functional-python)
+- [Functools - The Power of Higher-Order Functions in Python](https://martinheinz.dev/blog/52)
 
 ### Internals
 
 - [Why Python is Slow: Looking Under the Hood](http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/)
 - [The internals of Python string interning](http://guilload.com/python-string-interning/)
 - [Python Data structures](http://rhodesmill.org/brandon/slides/2014-04-pycon/data-structures/)
+- [Python’s Innards: Introduction](https://tech.blog.aknin.name/2010/04/02/pythons-innards-introduction/)
+- [Python behind the scenes #11: how the Python import system works](https://tenthousandmeters.com/blog/python-behind-the-scenes-11-how-the-python-import-system-works/)
+- [Python behind the scenes #10: how Python dictionaries work](https://tenthousandmeters.com/blog/python-behind-the-scenes-10-how-python-dictionaries-work/)
 
 ### Magic methods
 
@@ -295,6 +334,7 @@ It's often a good idea to read the Python source code of well-written applicatio
 ### Packages (finding them)
 
 - [Awesome Python](https://github.com/vinta/awesome-python) provides a great list of third party libraries.
+- [ml-tooling/best-of-web-python: 🏆 A ranked list of awesome python libraries for web development. Updated weekly.](https://github.com/ml-tooling/best-of-web-python)
 
 ### Packaging & pip
 
@@ -304,6 +344,9 @@ It's often a good idea to read the Python source code of well-written applicatio
 - [Pipfile](https://github.com/pypa/pipfile): a `Pipfile`, and its related `Pipfile.lock`, are a new (and much better!) replacement for pip's requirements.txt files.
 - [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools)
 - [Virtual Environments Demystified](https://meribold.org/python/2018/02/13/virtual-environments-9487/)
+- [Tips for your Makefile with Python](https://blog.mathieu-leplatre.info/tips-for-your-makefile-with-python.html)
+  - Environment variables with default
+  - Full Example with Poetry
 
 ### Performance optimization
 
@@ -319,6 +362,10 @@ It's often a good idea to read the Python source code of well-written applicatio
   viewer for the output of Python’s cProfile module.
 - [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
 
+### Preparing for interviews
+
+- [donnemartin/interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges): 120+ interactive Python coding interview challenges (algorithms and data structures). Includes Anki flashcards.
+
 ### Python and beyond
 
 - [27 languages to improve your Python](http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html)
@@ -331,6 +378,10 @@ It's often a good idea to read the Python source code of well-written applicatio
 - [A collection of Python "wat" moments](http://www.b-list.org/weblog/2015/oct/13/wats-doc/)
 - [satwikkansal/wtfpython: a collection of interesting, subtle, and tricky Python snippets](https://github.com/satwikkansal/wtfpython)
 - Ned Batchelder, [Facts and myths about Python names and values](https://nedbatchelder.com/text/names.html)
+
+### Security
+
+- [Never Run ‘python’ In Your Downloads Folder](https://glyph.twistedmatrix.com/2020/08/never-run-python-in-your-downloads-folder.html)
 
 ### SQLAlchemy
 
@@ -367,9 +418,7 @@ Fowler).
 
 Then, read some of those articles:
 
-- [Mock yourself, not your
-  tests](http://hernantz.github.io/mock-yourself-not-your-tests.html): great
-  articles about the danger of mocking, and better unit testing strategies.
+- [Mock yourself, not your tests](http://hernantz.github.io/mock-yourself-not-your-tests.html): great articles about the danger of mocking, and better unit testing strategies.
 - [Building Good Tests](https://salmonmode.github.io//2019/03/29/building-good-tests.html), Chris NeJame
   - 1 assert per test function/method and nothing else
   - Use standard assert statements, instead of the unittest.TestCase assert methods
@@ -381,8 +430,16 @@ Then, read some of those articles:
   - Try to avoid mocking things whenever possible.
   - Test coverage is not a metric for what was tested; it’s a metric for what code your tests managed to hit
   - The code should be easy to test \* Make your test code succinct and idiomatic
-- [pytest](http://pytest.org/latest/) is a test framework. It's very elegant
-  and allows to quickly write very maintainable tests.
+- [pytest](http://pytest.org/latest/) is a test framework. It's very elegant and allows to quickly write very maintainable tests.
+- [My Python testing style guide](https://blog.thea.codes/my-python-testing-style-guide/)
+  - Assert results and outcome, not the steps needed to get there
+  - Use real objects for collaborators whenever possible
+  - A mock must always have a spec
+  - Consider using a stub or fake
+  - Consider using a spy
+  - Don't give mock/stubs/fakes special names
+  - Use factory helpers to create complex collaborators
+  - Use fixtures sparingly
 
 ### Types
 
