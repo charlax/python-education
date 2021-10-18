@@ -277,14 +277,9 @@ Celery is a distributed async tasks runner.
 
 ### Deployment
 
+See also the more generic Docker section in [charlax/professional-programming](https://github.com/charlax/professional-programming#docker).
+
 - [Production-ready Docker packaging for Python developers](https://pythonspeed.com/docker/)
-- [Best Practices Around Production Ready Web Apps with Docker Compose](https://nickjanetakis.com/blog/best-practices-around-production-ready-web-apps-with-docker-compose)
-  - Avoiding 2 Compose Files for Dev and Prod with an Override File
-  - Reducing Service Duplication with Aliases and Anchors
-  - Defining your HEALTHCHECK in Docker Compose not your Dockerfile
-  - Making the most of environment variables
-  - Using Multi-stage builds to optimize image size
-  - Running your container as a non-root user
 
 ### Design patterns
 
