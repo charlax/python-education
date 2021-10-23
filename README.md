@@ -306,6 +306,7 @@ I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
 - [Python Partials are Fun!](http://www.pydanny.com/python-partials-are-fun.html)
 - [sfermigier/awesome-functional-python](https://github.com/sfermigier/awesome-functional-python)
 - [Functools - The Power of Higher-Order Functions in Python](https://martinheinz.dev/blog/52)
+- [Functors, Applicatives, And Monads In Pictures](https://github.com/dbrattli/OSlash/wiki/Functors,-Applicatives,-And-Monads-In-Pictures)
 
 ### Internals
 
