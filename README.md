@@ -97,7 +97,7 @@ Other resources include (prefer the one listed above):
 
 I wrote some introductory material to advanced Python:
 
-- [Introduction to advanced Python](advanced_python/advanced_python.md) (article).
+- [Introduction to advanced Python](advanced-python/README.md) (article).
 - [Advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) (Slideshare).
 
 #### Articles, videos and presentations
