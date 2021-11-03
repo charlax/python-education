@@ -117,7 +117,7 @@ Lists of books:
 
 ## Writing idiomatic Python
 
-First things first, let's get **code style** out of the way. Make sure you've read and memorized [PEP8](https://www.python.org/dev/peps/pep-0008/) (code style, [more readable version here](http://pep8.org/)) and [PEP257](https://www.python.org/dev/peps/pep-0257/) (docstring style). Those two code styles are applied by almost all major Python applications and libraries. Use flake8, autopep8 and black to ensure they are applied.
+First things first, let's get **code style** out of the way. Make sure you've read and memorized [PEP8](https://www.python.org/dev/peps/pep-0008/) (code style, [more readable version here](http://pep8.org/)) and [PEP257](https://www.python.org/dev/peps/pep-0257/) (docstring style). Those two code styles are applied by almost all major Python applications and libraries. Use flake8, pydocstyle and black to ensure they are applied (check other linters and autofixers below).
 
 What is called "idiomatic Python" might feel magical at first, especially if you don't know Python. I'd recommend getting your hands dirty with some real world Python code. Try to wander around the code, opening random files. Run the tutorial with a debugger to follow the flow and understand what's going on.
 
@@ -298,7 +298,7 @@ I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
 
 ### File organisation (monorepo, folders, etc.)
 
-- [Our Python Monorepo](https://medium.com/opendoor-labs/our-python-monorepo-d34028f2b6fa), OpenDoor
+- [OpenDoor's Python Monorepo](https://medium.com/opendoor-labs/our-python-monorepo-d34028f2b6fa)
 - [Atlas: Our journey from a Python monolith to a managed platform](https://dropbox.tech/infrastructure/atlas--our-journey-from-a-python-monolith-to-a-managed-platform) (Dropbox)
 
 ### Functional programming
@@ -337,9 +337,9 @@ It's often a good idea to read the Python source code of well-written applicatio
 - [Packaging guide](https://packaging.python.org/)
 - [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
 - [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
-- [Pipfile](https://github.com/pypa/pipfile): a `Pipfile`, and its related `Pipfile.lock`, are a new (and much better!) replacement for pip's requirements.txt files.
 - [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools)
 - [Virtual Environments Demystified](https://meribold.org/python/2018/02/13/virtual-environments-9487/)
+- [Commit your `poetry.lock` file to version control](https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control)
 - [Tips for your Makefile with Python](https://blog.mathieu-leplatre.info/tips-for-your-makefile-with-python.html)
   - Environment variables with default
   - Full Example with Poetry
@@ -374,6 +374,7 @@ It's often a good idea to read the Python source code of well-written applicatio
 - [A collection of Python "wat" moments](http://www.b-list.org/weblog/2015/oct/13/wats-doc/)
 - [satwikkansal/wtfpython: a collection of interesting, subtle, and tricky Python snippets](https://github.com/satwikkansal/wtfpython)
 - Ned Batchelder, [Facts and myths about Python names and values](https://nedbatchelder.com/text/names.html)
+- [Floating Point Arithmetic: Issues and Limitations](https://docs.python.org/3/tutorial/floatingpoint.html), Python Docs
 
 ### Security
 
