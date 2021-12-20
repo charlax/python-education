@@ -27,6 +27,7 @@
   - [Magic methods](#magic-methods)
   - [Open source Python apps](#open-source-python-apps)
   - [Packages (finding them)](#packages-finding-them)
+  - [Packages (opinionated list)](#packages-opinionated-list)
   - [Packaging & pip](#packaging--pip)
   - [Performance optimization](#performance-optimization)
   - [Preparing for interviews](#preparing-for-interviews)
@@ -34,6 +35,7 @@
   - [Quirks and gotchas](#quirks-and-gotchas)
   - [Security](#security)
   - [SQLAlchemy](#sqlalchemy)
+  - [Standard library modules](#standard-library-modules)
   - [Static analysis of code](#static-analysis-of-code)
   - [Tests](#tests)
   - [Types](#types)
@@ -332,6 +334,14 @@ It's often a good idea to read the Python source code of well-written applicatio
 - [Awesome Python](https://github.com/vinta/awesome-python) provides a great list of third party libraries.
 - [ml-tooling/best-of-web-python: 🏆 A ranked list of awesome python libraries for web development. Updated weekly.](https://github.com/ml-tooling/best-of-web-python)
 
+### Packages (opinionated list)
+
+Here's a short list of great packages:
+
+- [willmcgugan/rich](https://github.com/willmcgugan/rich): rich text and beautiful formatting in the terminal
+- [tqdm](https://tqdm.github.io/): wrap any iterable and show a smart progress meter
+- [tomerfiliba/plumbum](https://github.com/tomerfiliba/plumbum): shell combinators
+
 ### Packaging & pip
 
 - [Packaging guide](https://packaging.python.org/)
@@ -346,17 +356,14 @@ It's often a good idea to read the Python source code of well-written applicatio
 
 ### Performance optimization
 
-- [Profiling Python using cProfile: a concrete
-  case](https://julien.danjou.info/blog/2015/guide-to-python-profiling-cprofile-concrete-case-carbonara)
+- [Profiling Python using cProfile: a concrete case](https://julien.danjou.info/blog/2015/guide-to-python-profiling-cprofile-concrete-case-carbonara)
 - [cProfile module documentation](https://docs.python.org/3/library/profile.html)
 - [Example cProfile session](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
 - [A guide to analyzing Python performance](http://www.huyng.com/posts/python-performance-analysis/)
-- [RunSnakeRun](http://www.vrplumber.com/programming/runsnakerun/) is a small
-  GUI utility that allows you to view (Python) cProfile or Profile profiler
-  dumps in a sortable GUI view.
-- [SnakeViz](http://jiffyclub.github.io/snakeviz/) is a browser based graphical
-  viewer for the output of Python’s cProfile module.
+- [RunSnakeRun](http://www.vrplumber.com/programming/runsnakerun/) is a small GUI utility that allows you to view (Python) cProfile or Profile profiler dumps in a sortable GUI view.
+- [SnakeViz](http://jiffyclub.github.io/snakeviz/) is a browser based graphical viewer for the output of Python’s cProfile module.
 - [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
+- [plasma-umass/scalene](https://github.com/plasma-umass/scalene): a high-performance, high-precision CPU, GPU, and memory profiler
 
 ### Preparing for interviews
 
@@ -382,21 +389,19 @@ It's often a good idea to read the Python source code of well-written applicatio
 
 ### SQLAlchemy
 
-SQLAlchemy is the de facto standard ORM for Python. It has a unique approach:
-contrary to most ORM, it tries very hard not to hide the SQL implementation
-details from you. This is great because it forces you to really understand the
-underlying DB.
+SQLAlchemy is the de facto standard ORM for Python. It has a unique approach: contrary to most ORM, it tries very hard not to hide the SQL implementation details from you. This is great because it forces you to really understand the underlying DB.
 
-Here is some slightly outdated content that is super useful to fully leverage
-the library:
+Here is some slightly outdated content that is super useful to fully leverage the library:
 
-- Watch the [SQLAlchemy introduction
-  video](https://www.youtube.com/watch?v=P141KRbxVKc). It lasts 3 hours but is
-  extremely insightful, and introduces to some great object oriented patterns.
+- Watch the [SQLAlchemy introduction video](https://www.youtube.com/watch?v=sO7FFPNvX2s&ab_channel=SixFeetUpCorp). It lasts 3 hours but is extremely insightful, and introduces to some great object oriented patterns.
 - [Handcoded application with SQLAlchemy](http://pyvideo.org/video/665/hand-coded-applications-with-sqlalchemy)
-- [Alembic](http://alembic.readthedocs.org/en/latest/) is a lightweight
-  database migration tool for usage with the SQLAlchemy Database Toolkit for
-  Python.
+- [Alembic](http://alembic.readthedocs.org/en/latest/) is a lightweight database migration tool for usage with the SQLAlchemy Database Toolkit for Python.
+
+### Standard library modules
+
+Some little known standard library modules:
+
+- [shelve](https://docs.python.org/3/library/shelve.html): Python object persistence
 
 ### Static analysis of code
 
@@ -404,14 +409,9 @@ the library:
 
 ### Tests
 
-Half of coding time is usually spent writing tests. Yet how to write tests
-efficiently is very rarely taught at school - even though it came make a huge
-difference in engineering productivity and quality.
+Half of coding time is usually spent writing tests. Yet how to write tests efficiently is very rarely taught at school - even though it came make a huge difference in engineering productivity and quality.
 
-First, make sure you're familiar with the different kind of testing strategies
-laid out in [Testing Strategies in a Microservices
-Architecture](http://martinfowler.com/articles/microservice-testing/) (Martin
-Fowler).
+First, make sure you're familiar with the different kind of testing strategies laid out in [Testing Strategies in a Microservices Architecture](http://martinfowler.com/articles/microservice-testing/) (Martin Fowler).
 
 Then, read some of those articles:
 
