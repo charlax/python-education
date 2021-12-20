@@ -26,9 +26,9 @@
   - [Internals](#internals)
   - [Magic methods](#magic-methods)
   - [Open source Python apps](#open-source-python-apps)
-  - [Packages (finding them)](#packages-finding-them)
+  - [Packages (finding and using them)](#packages-finding-and-using-them)
   - [Packages (opinionated list)](#packages-opinionated-list)
-  - [Packaging & pip](#packaging--pip)
+  - [Packaging (creating your own package)](#packaging-creating-your-own-package)
   - [Performance optimization](#performance-optimization)
   - [Preparing for interviews](#preparing-for-interviews)
   - [Python and beyond](#python-and-beyond)
@@ -55,6 +55,7 @@ Items:
 - 🎞 : video/movie extract/movie
 - 🎤 : slides/presentation
 - 🎧 : podcast
+- 🔧 : tool
 
 The goal of this documentation is to help you become a productive Python developer.
 
@@ -329,10 +330,19 @@ It's often a good idea to read the Python source code of well-written applicatio
 
 - [mahmoud/awesome-python-applications](https://github.com/mahmoud/awesome-python-applications): free software that works great, and also happens to be open-source Python
 
-### Packages (finding them)
+### Packages (finding and using them)
+
+How to use:
+
+- [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
+- [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools)
+- [Virtual Environments Demystified](https://meribold.org/python/2018/02/13/virtual-environments-9487/)
+- [Commit your `poetry.lock` file to version control](https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control)
+
+Lists:
 
 - [Awesome Python](https://github.com/vinta/awesome-python) provides a great list of third party libraries.
-- [ml-tooling/best-of-web-python: 🏆 A ranked list of awesome python libraries for web development. Updated weekly.](https://github.com/ml-tooling/best-of-web-python)
+- [ml-tooling/best-of-web-python](https://github.com/ml-tooling/best-of-web-python): awesome Python libraries for web development
 
 ### Packages (opinionated list)
 
@@ -342,17 +352,14 @@ Here's a short list of great packages:
 - [tqdm](https://tqdm.github.io/): wrap any iterable and show a smart progress meter
 - [tomerfiliba/plumbum](https://github.com/tomerfiliba/plumbum): shell combinators
 
-### Packaging & pip
+### Packaging (creating your own package)
 
 - [Packaging guide](https://packaging.python.org/)
-- [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
 - [Open Sourcing a Python Project the Right Way](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
-- [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools)
-- [Virtual Environments Demystified](https://meribold.org/python/2018/02/13/virtual-environments-9487/)
-- [Commit your `poetry.lock` file to version control](https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control)
 - [Tips for your Makefile with Python](https://blog.mathieu-leplatre.info/tips-for-your-makefile-with-python.html)
   - Environment variables with default
   - Full Example with Poetry
+- 🔧 [commitizen-tools/commitizen](https://github.com/commitizen-tools/commitizen): create committing rules for projects, auto bump versions and auto changelog generation
 
 ### Performance optimization
 
