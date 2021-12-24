@@ -348,9 +348,9 @@ Lists:
 
 Here's a short list of great packages:
 
-- [willmcgugan/rich](https://github.com/willmcgugan/rich): rich text and beautiful formatting in the terminal
-- [tqdm](https://tqdm.github.io/): wrap any iterable and show a smart progress meter
-- [tomerfiliba/plumbum](https://github.com/tomerfiliba/plumbum): shell combinators
+- 🔧 [willmcgugan/rich](https://github.com/willmcgugan/rich): rich text and beautiful formatting in the terminal
+- 🔧 [tqdm](https://tqdm.github.io/): wrap any iterable and show a smart progress meter
+- 🔧 [tomerfiliba/plumbum](https://github.com/tomerfiliba/plumbum): shell combinators
 
 ### Packaging (creating your own package)
 
@@ -367,10 +367,11 @@ Here's a short list of great packages:
 - [cProfile module documentation](https://docs.python.org/3/library/profile.html)
 - [Example cProfile session](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
 - [A guide to analyzing Python performance](http://www.huyng.com/posts/python-performance-analysis/)
-- [RunSnakeRun](http://www.vrplumber.com/programming/runsnakerun/) is a small GUI utility that allows you to view (Python) cProfile or Profile profiler dumps in a sortable GUI view.
+- 🔧 [RunSnakeRun](http://www.vrplumber.com/programming/runsnakerun/) is a small GUI utility that allows you to view (Python) cProfile or Profile profiler dumps in a sortable GUI view.
 - [SnakeViz](http://jiffyclub.github.io/snakeviz/) is a browser based graphical viewer for the output of Python’s cProfile module.
 - [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
-- [plasma-umass/scalene](https://github.com/plasma-umass/scalene): a high-performance, high-precision CPU, GPU, and memory profiler
+- 🔧 [plasma-umass/scalene](https://github.com/plasma-umass/scalene): a high-performance, high-precision CPU, GPU, and memory profiler
+- 🔧 [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/stable/)
 
 ### Preparing for interviews
 
