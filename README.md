@@ -93,6 +93,7 @@ Other resources include (prefer the one listed above):
 - [Learning Python — The Hitchhiker's Guide to Python](https://docs.python-guide.org/intro/learning/)
 - [Crash into Python](https://stephensugden.com/crash_into_python/): for experienced programmers
 - [Full Stack Python](https://www.fullstackpython.com/)
+- [Learn Python - Scaler](https://www.scaler.com/topics/python/): for beginners and experienced programmers
 - [Learn Computer Science](https://hyperskill.org/onboarding/tracks/2) with Python, from JetBrains
 - [How to Use Python: Your First Steps](https://realpython.com/python-first-steps/) (RealPython)
 
