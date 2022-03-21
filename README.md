@@ -38,6 +38,7 @@
   - [Standard library modules](#standard-library-modules)
   - [Static analysis of code](#static-analysis-of-code)
   - [Tests](#tests)
+  - [Tools built with Python](#tools-built-with-python)
   - [Types](#types)
   - [Unicode](#unicode)
 - [Reference and other lists](#reference-and-other-lists)
@@ -56,6 +57,7 @@ Items:
 - 🎤 : slides/presentation
 - 🎧 : podcast
 - 🔧 : tool
+- ⭐️ : must-read
 
 The goal of this documentation is to help you become a productive Python developer.
 
@@ -364,14 +366,21 @@ Here's a short list of great packages:
 ### Performance optimization
 
 - [Profiling Python using cProfile: a concrete case](https://julien.danjou.info/blog/2015/guide-to-python-profiling-cprofile-concrete-case-carbonara)
-- [cProfile module documentation](https://docs.python.org/3/library/profile.html)
 - [Example cProfile session](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
 - [A guide to analyzing Python performance](http://www.huyng.com/posts/python-performance-analysis/)
-- 🔧 [RunSnakeRun](http://www.vrplumber.com/programming/runsnakerun/) is a small GUI utility that allows you to view (Python) cProfile or Profile profiler dumps in a sortable GUI view.
-- [SnakeViz](http://jiffyclub.github.io/snakeviz/) is a browser based graphical viewer for the output of Python’s cProfile module.
+- [cProfile module documentation](https://docs.python.org/3/library/profile.html)
 - [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
+- ⭐️ [Process large datasets without running out of memory](https://pythonspeed.com/memory/)
+  - [Measuring memory usage in Python: it’s tricky!](https://pythonspeed.com/articles/measuring-memory-python/)
+
+Tools:
+
+- 🔧 [SnakeViz](http://jiffyclub.github.io/snakeviz/) is a browser based graphical viewer for the output of Python’s cProfile module.
+- 🔧 [RunSnakeRun](http://www.vrplumber.com/programming/runsnakerun/) is a small GUI utility that allows you to view (Python) cProfile or Profile profiler dumps in a sortable GUI view.
 - 🔧 [plasma-umass/scalene](https://github.com/plasma-umass/scalene): a high-performance, high-precision CPU, GPU, and memory profiler
 - 🔧 [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/stable/)
+- 🔧 [benfred/py-spy](https://github.com/benfred/py-spy): sampling CPU profiler written in Rust for low overhead
+- 🔧 [pythonspeed/filprofiler](https://github.com/pythonspeed/filprofiler): memory profiler for data processing and scientific computing applications
 
 ### Preparing for interviews
 
@@ -406,6 +415,8 @@ Here is some slightly outdated content that is super useful to fully leverage th
 - [Alembic](http://alembic.readthedocs.org/en/latest/) is a lightweight database migration tool for usage with the SQLAlchemy Database Toolkit for Python.
 
 ### Standard library modules
+
+- [Python built-in functions to know](https://treyhunner.com/2019/05/python-builtins-worth-learning/)
 
 Some little known standard library modules:
 
@@ -445,6 +456,10 @@ Then, read some of those articles:
   - Don't give mock/stubs/fakes special names
   - Use factory helpers to create complex collaborators
   - Use fixtures sparingly
+
+### Tools built with Python
+
+- [pz](https://github.com/CZ-NIC/pz): easily handle day to day CLI operation via Python instead of regular Bash programs.
 
 ### Types
 
