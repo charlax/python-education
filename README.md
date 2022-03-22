@@ -29,10 +29,12 @@
   - [Packages (finding and using them)](#packages-finding-and-using-them)
   - [Packages (opinionated list)](#packages-opinionated-list)
   - [Packaging (creating your own package)](#packaging-creating-your-own-package)
+  - [Parsing](#parsing)
   - [Performance optimization](#performance-optimization)
   - [Preparing for interviews](#preparing-for-interviews)
   - [Python and beyond](#python-and-beyond)
   - [Quirks and gotchas](#quirks-and-gotchas)
+  - [Regular expressions (regex)](#regular-expressions-regex)
   - [Security](#security)
   - [SQLAlchemy](#sqlalchemy)
   - [Standard library modules](#standard-library-modules)
@@ -107,7 +109,8 @@ I wrote some introductory material to advanced Python:
 
 #### Articles, videos and presentations
 
-- [py-must-watch](https://github.com/s16h/py-must-watch)
+- 🎞 [py-must-watch](https://github.com/s16h/py-must-watch)
+- 🎞 [calmcode.io](https://calmcode.io/)
 
 #### Books
 
@@ -294,6 +297,8 @@ See also the more generic Docker section in [charlax/professional-programming](h
 - [Design pattern templates in Python](https://github.com/tylerlaberge/PyPattyrn) (Github)
 - [Python Design Patterns Guide](https://www.toptal.com/python/python-design-patterns): a nice intro to design patterns in Python
 - [faif/python-patterns](https://github.com/faif/python-patterns): a collection of design patterns and idioms in Python.
+- [Python Design Patterns](https://python-patterns.guide/)
+  - [The Composition Over Inheritance Principle](https://python-patterns.guide/gang-of-four/composition-over-inheritance/)
 
 I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
 
@@ -312,6 +317,7 @@ I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
 - [sfermigier/awesome-functional-python](https://github.com/sfermigier/awesome-functional-python)
 - [Functools - The Power of Higher-Order Functions in Python](https://martinheinz.dev/blog/52)
 - [Functors, Applicatives, And Monads In Pictures](https://github.com/dbrattli/OSlash/wiki/Functors,-Applicatives,-And-Monads-In-Pictures)
+- [Monads in 15 minutes](https://nikgrozev.com/2013/12/10/monads-in-15-minutes/)
 
 ### Internals
 
@@ -319,8 +325,13 @@ I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
 - [The internals of Python string interning](http://guilload.com/python-string-interning/)
 - [Python Data structures](http://rhodesmill.org/brandon/slides/2014-04-pycon/data-structures/)
 - [Python’s Innards: Introduction](https://tech.blog.aknin.name/2010/04/02/pythons-innards-introduction/)
+- [15. Floating Point Arithmetic: Issues and Limitations](https://docs.python.org/3/tutorial/floatingpoint.html)
+
+Python behind the scenes series:
+
 - [Python behind the scenes #11: how the Python import system works](https://tenthousandmeters.com/blog/python-behind-the-scenes-11-how-the-python-import-system-works/)
 - [Python behind the scenes #10: how Python dictionaries work](https://tenthousandmeters.com/blog/python-behind-the-scenes-10-how-python-dictionaries-work/)
+- [Python behind the scenes #13: the GIL and its effects on Python multithreading](https://tenthousandmeters.com/blog/python-behind-the-scenes-13-the-gil-and-its-effects-on-python-multithreading/)
 
 ### Magic methods
 
@@ -363,6 +374,10 @@ Here's a short list of great packages:
   - Full Example with Poetry
 - 🔧 [commitizen-tools/commitizen](https://github.com/commitizen-tools/commitizen): create committing rules for projects, auto bump versions and auto changelog generation
 
+### Parsing
+
+- [Learn Python ASTs, by building your own linter](https://sadh.life/post/ast/)
+
 ### Performance optimization
 
 - [Profiling Python using cProfile: a concrete case](https://julien.danjou.info/blog/2015/guide-to-python-profiling-cprofile-concrete-case-carbonara)
@@ -372,6 +387,7 @@ Here's a short list of great packages:
 - [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
 - ⭐️ [Process large datasets without running out of memory](https://pythonspeed.com/memory/)
   - [Measuring memory usage in Python: it’s tricky!](https://pythonspeed.com/articles/measuring-memory-python/)
+- [How vectorization speeds up your Python code](https://pythonspeed.com/articles/vectorization-python/)
 
 Tools:
 
@@ -400,6 +416,10 @@ Tools:
 - Ned Batchelder, [Facts and myths about Python names and values](https://nedbatchelder.com/text/names.html)
 - [Floating Point Arithmetic: Issues and Limitations](https://docs.python.org/3/tutorial/floatingpoint.html), Python Docs
 
+### Regular expressions (regex)
+
+- [Interactive regex exercises](https://github.com/learnbyexample/py_regular_expressions/tree/master/interactive_exercises)
+
 ### Security
 
 - [Never Run ‘python’ In Your Downloads Folder](https://glyph.twistedmatrix.com/2020/08/never-run-python-in-your-downloads-folder.html)
@@ -417,6 +437,7 @@ Here is some slightly outdated content that is super useful to fully leverage th
 ### Standard library modules
 
 - [Python built-in functions to know](https://treyhunner.com/2019/05/python-builtins-worth-learning/)
+- [Understanding all of Python, through its builtins](https://sadh.life/post/builtins/)
 
 Some little known standard library modules:
 
@@ -464,6 +485,8 @@ Then, read some of those articles:
 ### Types
 
 - [The state of type hints in Python](https://www.bernat.tech/the-state-of-type-hints-in-python/): a good summary of typing in Python and its gotchas.
+- [Static Typing Python Decorators](https://rednafi.github.io/reflections/static-typing-python-decorators.html)
+- [Static Duck Typing in Python with Protocols](https://www.daan.fyi/writings/python-protocols)
 
 ### Unicode
 
