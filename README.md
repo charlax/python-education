@@ -20,6 +20,7 @@
   - [Debugging](#debugging)
   - [Deployment](#deployment)
   - [Design patterns](#design-patterns)
+  - [Documentation](#documentation)
   - [Example, inspiration and template packages](#example-inspiration-and-template-packages)
   - [File organisation (monorepo, folders, etc.)](#file-organisation-monorepo-folders-etc)
   - [Functional programming](#functional-programming)
@@ -301,6 +302,11 @@ See also the more generic Docker section in [charlax/professional-programming](h
   - [The Composition Over Inheritance Principle](https://python-patterns.guide/gang-of-four/composition-over-inheritance/)
 
 I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
+
+### Documentation
+
+- [pandas](https://github.com/pandas-dev/pandas/blob/main/doc) is a great example to follow (using Sphinx, separating into quickstart, user guide, API reference).
+- [Example NumPy Style Python Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html)
 
 ### Example, inspiration and template packages
 
