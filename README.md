@@ -169,6 +169,7 @@ Learning idiomatic Python:
 - [What the heck does “pythonic” mean?](http://halitalptekin.tumblr.com/post/30028271874/pythonic-syntax)
 - [Elements of Python style](https://github.com/amontalenti/elements-of-python-style)
 - [Meditations on the Zen of Python](https://orbifold.xyz/zen-of-python.html)
+- [3 Tips For Writing Pythonic Code](https://davidamos.dev/3-tips-for-writing-pythonic-code/)
 
 List of books:
 
@@ -386,14 +387,20 @@ Here's a short list of great packages:
 
 ### Performance optimization
 
-- [Profiling Python using cProfile: a concrete case](https://julien.danjou.info/blog/2015/guide-to-python-profiling-cprofile-concrete-case-carbonara)
-- [Example cProfile session](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
+- ⭐️ [Process large datasets without running out of memory](https://pythonspeed.com/memory/)
+  - [Measuring memory usage in Python: it’s tricky!](https://pythonspeed.com/articles/measuring-memory-python/)
 - [A guide to analyzing Python performance](http://www.huyng.com/posts/python-performance-analysis/)
 - [cProfile module documentation](https://docs.python.org/3/library/profile.html)
 - [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
-- ⭐️ [Process large datasets without running out of memory](https://pythonspeed.com/memory/)
-  - [Measuring memory usage in Python: it’s tricky!](https://pythonspeed.com/articles/measuring-memory-python/)
 - [How vectorization speeds up your Python code](https://pythonspeed.com/articles/vectorization-python/)
+- [You Should Compile Your Python And Here’s Why](https://glyph.twistedmatrix.com/2022/04/you-should-compile-your-python-and-heres-why.html)
+
+Stories:
+
+- [Profiling Python using cProfile: a concrete case](https://julien.danjou.info/blog/2015/guide-to-python-profiling-cprofile-concrete-case-carbonara)
+- [Example cProfile session](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
+- [How we optimized Python API server code 100x](https://towardsdatascience.com/how-we-optimized-python-api-server-code-100x-9da94aa883c5)
+- [An optimization story](https://tinkering.xyz/fmo-optimization-story/)
 
 Tools:
 
