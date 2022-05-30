@@ -22,6 +22,7 @@
   - [Design patterns](#design-patterns)
   - [Documentation](#documentation)
   - [Example, inspiration and template packages](#example-inspiration-and-template-packages)
+  - [Exception](#exception)
   - [File organisation (monorepo, folders, etc.)](#file-organisation-monorepo-folders-etc)
   - [Functional programming](#functional-programming)
   - [Internals](#internals)
@@ -313,6 +314,10 @@ I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
 
 - [charlax/cookiecutter-python-api: a cookiecutter template for an HTTP API](https://github.com/charlax/cookiecutter-python-api) with lots of best practices: mypy, flake8, isort, black, Makefile, fastapi, DDD pattern, file organization, etc.
 
+### Exception
+
+- [The Most Diabolical Python Antipattern](https://realpython.com/the-most-diabolical-python-antipattern/)
+
 ### File organisation (monorepo, folders, etc.)
 
 - [OpenDoor's Python Monorepo](https://medium.com/opendoor-labs/our-python-monorepo-d34028f2b6fa)
@@ -432,6 +437,7 @@ Tools:
 ### Regular expressions (regex)
 
 - [Interactive regex exercises](https://github.com/learnbyexample/py_regular_expressions/tree/master/interactive_exercises)
+- [The unreasonable effectiveness of f-strings and re.VERBOSE](https://death.andgravity.com/f-re)
 
 ### Security
 
