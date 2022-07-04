@@ -314,6 +314,10 @@ I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
 
 - [charlax/cookiecutter-python-api: a cookiecutter template for an HTTP API](https://github.com/charlax/cookiecutter-python-api) with lots of best practices: mypy, flake8, isort, black, Makefile, fastapi, DDD pattern, file organization, etc.
 
+By topics:
+
+- Authorization: [holinnn/deny](https://github.com/holinnn/deny)
+
 ### Exception
 
 - [The Most Diabolical Python Antipattern](https://realpython.com/the-most-diabolical-python-antipattern/)
@@ -442,6 +446,7 @@ Tools:
 ### Security
 
 - [Never Run ‘python’ In Your Downloads Folder](https://glyph.twistedmatrix.com/2020/08/never-run-python-in-your-downloads-folder.html)
+- [ossillate-inc/packj: The vetting tool 🚀 behind our large-scale security analysis platform to detect malicious/risky open-source packages](https://github.com/ossillate-inc/packj)
 
 ### SQLAlchemy
 
