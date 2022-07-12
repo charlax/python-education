@@ -334,6 +334,7 @@ By topics:
 - [Functools - The Power of Higher-Order Functions in Python](https://martinheinz.dev/blog/52)
 - [Functors, Applicatives, And Monads In Pictures](https://github.com/dbrattli/OSlash/wiki/Functors,-Applicatives,-And-Monads-In-Pictures)
 - [Monads in 15 minutes](https://nikgrozev.com/2013/12/10/monads-in-15-minutes/)
+- [more-itertools/more-itertools](https://github.com/more-itertools/more-itertools): more routines for operating on iterables, beyond itertools
 
 ### Internals
 
