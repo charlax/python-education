@@ -329,12 +329,15 @@ By topics:
 
 ### Functional programming
 
+Consider checking out the same section on my [charlax/professional-programming](https://github.com/charlax/professional-programming#functional-programming-fp) repo.
+
 - [Python Partials are Fun!](http://www.pydanny.com/python-partials-are-fun.html)
 - [sfermigier/awesome-functional-python](https://github.com/sfermigier/awesome-functional-python)
 - [Functools - The Power of Higher-Order Functions in Python](https://martinheinz.dev/blog/52)
 - [Functors, Applicatives, And Monads In Pictures](https://github.com/dbrattli/OSlash/wiki/Functors,-Applicatives,-And-Monads-In-Pictures)
 - [Monads in 15 minutes](https://nikgrozev.com/2013/12/10/monads-in-15-minutes/)
 - [more-itertools/more-itertools](https://github.com/more-itertools/more-itertools): more routines for operating on iterables, beyond itertools
+- [jmesyou/functional-programming-jargon.py](https://github.com/jmesyou/functional-programming-jargon.py): jargon from the functional programming world in simple terms
 
 ### Internals
 
