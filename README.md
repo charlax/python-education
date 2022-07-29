@@ -14,6 +14,7 @@
   - [Algorithms](#algorithms)
   - [Best Practices](#best-practices)
   - [Celery](#celery)
+  - [CLI](#cli)
   - [Code Architecture](#code-architecture)
   - [Concurrency](#concurrency)
   - [Configuration](#configuration)
@@ -254,6 +255,12 @@ Celery is a distributed async tasks runner.
 
 - [Celery best practices](https://blog.balthazar-rouberol.com/celery-best-practices), Balthazar
 
+### CLI
+
+Building command line interfaces.
+
+- [Building an authenticated Python CLI](https://www.notia.ai/articles/building-an-authenticated-python-cli)
+
 ### Code Architecture
 
 - [The clean architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/)
@@ -393,6 +400,7 @@ Here's a short list of great packages:
   - Environment variables with default
   - Full Example with Poetry
 - 🔧 [commitizen-tools/commitizen](https://github.com/commitizen-tools/commitizen): create committing rules for projects, auto bump versions and auto changelog generation
+- 🔧 [nedbat/scriv](https://github.com/nedbat/scriv): changelog management tool
 
 ### Parsing
 
