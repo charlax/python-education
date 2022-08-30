@@ -12,6 +12,7 @@
   - [Using `is` to compare objects](#using-is-to-compare-objects)
   - [Instantiating exception with a dict](#instantiating-exception-with-a-dict)
   - [Not strictly pinning all packages](#not-strictly-pinning-all-packages)
+  - [Looping over something and appending](#looping-over-something-and-appending)
   - [Reference](#reference)
 
 <!--TOC-->
@@ -233,11 +234,62 @@ The proper way to update a package and its dependency is to use another tool, fo
 
 - [Pin Your Packages](http://nvie.com/posts/pin-your-packages/)
 
+## Looping over something and appending
+
+❌ don't do this:
+
+```python
+def get_list(foo: list[int]) -> list[int]:
+    returned = []
+
+    for i in foo:
+        if ...:
+            stuff = ...
+            returned.append(stuff)
+        else:
+            other_stuff = ...
+            returned.append(other_stuff)
+
+    return returned
+
+
+get_list([1, 2, 3])
+```
+
+Why?
+
+- 👎 Testing each branch of the `if... else...` is tricky.
+- 👎 It's not immediately obvious that `get_list` returns the same number of items than its input `foo`.
+- 👎 3 levels of indentation (a good measure for complexity).
+
+This has clearer guarantees:
+
+```python
+def get_list(foo: list[int]) -> list[int]:
+    # or return list(map(get_item, foo))
+    return [get_item(i) for i in foo]
+
+
+def get_item(item: int) -> int:
+    if ...:
+        stuff = ...
+        return stuff
+
+    other_stuff = ...
+    return other_stuff
+
+
+c = [get_stuff(i) for i in ...]
+```
+
+- 👍 You can now very easily test `get_item`
+- 👍 No more `else`
+- 👍 Usage of list comprehension in `get_list` makes immediately clear that it returns the same number of items.
+- 👍 Enables usage of `map` and other functional patterns for added benefits (e.g. return a generator instead of instantiating the whole list).
+
 ## Reference
 
 - [Pythonic Pitfalls](http://nafiulis.me/potential-pythonic-pitfalls.html)
 - [Python Patterns](https://github.com/faif/python-patterns)
-- [The Little Book of Python
-  Anti-Patterns](http://docs.quantifiedcode.com/python-anti-patterns/)
-- [How to make mistakes in
-  Python](http://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
+- [The Little Book of Python Anti-Patterns](http://docs.quantifiedcode.com/python-anti-patterns/)
+- [How to make mistakes in Python](http://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
