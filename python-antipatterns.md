@@ -260,7 +260,8 @@ Why?
 
 - 👎 Testing each branch of the `if... else...` is tricky.
 - 👎 It's not immediately obvious that `get_list` returns the same number of items than its input `foo`.
-- 👎 3 levels of indentation (a good measure for complexity).
+- 👎 There are three levels of indentation (a good measure for complexity).
+- 👎 As the `for` loop body gets bigger, the amount of cognitive load increases very rapidly.
 
 This has clearer guarantees:
 
