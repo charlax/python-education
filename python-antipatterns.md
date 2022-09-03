@@ -13,6 +13,7 @@
   - [Instantiating exception with a dict](#instantiating-exception-with-a-dict)
   - [Not strictly pinning all packages](#not-strictly-pinning-all-packages)
   - [Looping over something and appending](#looping-over-something-and-appending)
+  - [Too long variable names](#too-long-variable-names)
   - [Reference](#reference)
 
 <!--TOC-->
@@ -287,6 +288,22 @@ c = [get_stuff(i) for i in ...]
 - 👍 No more `else`
 - 👍 Usage of list comprehension in `get_list` makes immediately clear that it returns the same number of items.
 - 👍 Enables usage of `map` and other functional patterns for added benefits (e.g. return a generator instead of instantiating the whole list).
+
+## Too long variable names
+
+Variable names that are too long:
+
+- 👎 Create unnecessary extra typing.
+- 👎 Induce cognitive load.
+
+This is too long:
+
+- ❌ `api.lib.encryption:verify_encryption_key_is_valid`
+  - 👎 `verify` implies `is_valid`.
+  - 👎 `encryption` is redundant given the module name. `key` is pretty clear in this context.
+  - 👎 we could want to verify more things than "validity" e.g. key length. The function name is unnecessarily coupled with the current implementation.
+  - ✅ `api.lib.encryption:verify_key` should be preferred
+  - ✅ `api.lib.encryption:check_key` is even shorter.
 
 ## Reference
 
