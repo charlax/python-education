@@ -110,6 +110,10 @@ I wrote some introductory material to advanced Python:
 - [Introduction to advanced Python](advanced-python/README.md) (article).
 - [Advanced Python presentation](http://www.slideshare.net/charlax/introduction-to-advanced-python) (Slideshare).
 
+Some other resources:
+
+- [The power of Python descriptors](https://piccolo-orm.com/blog/the-power-of-python-descriptors/)
+
 #### Articles, videos and presentations
 
 - 🎞 [py-must-watch](https://github.com/s16h/py-must-watch)
