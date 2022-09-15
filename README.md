@@ -13,6 +13,7 @@
 - [Topics](#topics)
   - [Algorithms](#algorithms)
   - [Best Practices](#best-practices)
+  - [Beyond Python (other programming languages)](#beyond-python-other-programming-languages)
   - [Celery](#celery)
   - [CLI](#cli)
   - [Code Architecture](#code-architecture)
@@ -33,9 +34,8 @@
   - [Packages (opinionated list)](#packages-opinionated-list)
   - [Packaging (creating your own package)](#packaging-creating-your-own-package)
   - [Parsing](#parsing)
-  - [Performance optimization](#performance-optimization)
+  - [Performance](#performance)
   - [Preparing for interviews](#preparing-for-interviews)
-  - [Python and beyond](#python-and-beyond)
   - [Quirks and gotchas](#quirks-and-gotchas)
   - [Regular expressions (regex)](#regular-expressions-regex)
   - [Security](#security)
@@ -253,6 +253,12 @@ where the tickets are not too involved, and where the community is still alive
   - Write admin functionality as API endpoints
   - Keep logic out of the front end
 
+### Beyond Python (other programming languages)
+
+- [27 languages to improve your Python](http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html)
+- [List of languages that compile to Python](https://github.com/vindarel/languages-that-compile-to-python)
+- [Rust for Python Programmers](https://lucumr.pocoo.org/2015/5/27/rust-for-pythonistas/), Armin Ronacher
+
 ### Celery
 
 Celery is a distributed async tasks runner.
@@ -274,6 +280,7 @@ Building command line interfaces.
   - Repository, Service Layer, and Unit of Work patterns
   - Event-driven architecture
   - Command-query responsibility segregation
+- [Arc Note: Datasette](https://architecturenotes.co/datasette-simon-willison/)
 
 ### Concurrency
 
@@ -313,6 +320,7 @@ See also the more generic Docker section in [charlax/professional-programming](h
 - [faif/python-patterns](https://github.com/faif/python-patterns): a collection of design patterns and idioms in Python.
 - [Python Design Patterns](https://python-patterns.guide/)
   - [The Composition Over Inheritance Principle](https://python-patterns.guide/gang-of-four/composition-over-inheritance/)
+- [Design Patterns in Machine Learning Code and Systems](https://eugeneyan.com/writing/design-patterns/)
 
 I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
 
@@ -410,7 +418,7 @@ Here's a short list of great packages:
 
 - [Learn Python ASTs, by building your own linter](https://sadh.life/post/ast/)
 
-### Performance optimization
+### Performance
 
 - ⭐️ [Process large datasets without running out of memory](https://pythonspeed.com/memory/)
   - [Measuring memory usage in Python: it’s tricky!](https://pythonspeed.com/articles/measuring-memory-python/)
@@ -419,6 +427,17 @@ Here's a short list of great packages:
 - [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
 - [How vectorization speeds up your Python code](https://pythonspeed.com/articles/vectorization-python/)
 - [You Should Compile Your Python And Here’s Why](https://glyph.twistedmatrix.com/2022/04/you-should-compile-your-python-and-heres-why.html)
+- [When Python can’t thread: a deep-dive into the GIL’s impact](https://pythonspeed.com/articles/python-gil/), PythonSpeed
+  - When does a Python thread need to hold the GIL?
+  - The parallelism implications of the GIL
+  - The good scenario: Long-running C APIs that release the GIL
+  - Bad scenario #1: “pure” Python code
+  - Bad scenario #2: Long-running C/Rust APIs, but author forgot to release GIL
+  - Bad scenario #3: Low-level code with pervasive Python C API usage
+- [CI for performance: Reliable benchmarking in noisy environments](https://pythonspeed.com/articles/consistent-benchmarking-in-ci/), PythonSpeed
+  - Problem #1: Inconsistent results on a single machine
+  - Problem #2: Inconsistent results across machines
+  - Use Cachegrind
 
 Stories:
 
@@ -439,11 +458,6 @@ Tools:
 ### Preparing for interviews
 
 - [donnemartin/interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges): 120+ interactive Python coding interview challenges (algorithms and data structures). Includes Anki flashcards.
-
-### Python and beyond
-
-- [27 languages to improve your Python](http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html)
-- [List of languages that compile to Python](https://github.com/vindarel/languages-that-compile-to-python)
 
 ### Quirks and gotchas
 
