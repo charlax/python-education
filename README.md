@@ -404,6 +404,10 @@ Here's a short list of great packages:
 - 🔧 [tqdm](https://tqdm.github.io/): wrap any iterable and show a smart progress meter
 - 🔧 [tomerfiliba/plumbum](https://github.com/tomerfiliba/plumbum): shell combinators
 
+Some other cool packages:
+
+- [Acreom/quickadd: parse natural language time and date expressions](https://github.com/Acreom/quickadd)
+
 ### Packaging (creating your own package)
 
 - [Packaging guide](https://packaging.python.org/)
