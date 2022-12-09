@@ -122,7 +122,7 @@ Some other resources:
 #### Books
 
 - Muhammad Yasoob Ullah Khalid, [Intermediate Python](http://book.pythontips.com/en/latest/)
-- Luciano Ramalho, [Fluent Python](http://www.amazon.com/gp/product/1491946008/)
+- Luciano Ramalho, [Fluent Python](https://www.amazon.com/gp/product/1492056359/)
 - Dusty Phillips, [Python 3 Object-Oriented Programming](http://www.amazon.com/gp/product/1784398780/)
 - Brett Slatkin, [Effective Python: 59 Specific Ways to Write Better Python](http://www.amazon.com/gp/product/0134034287/)
 
