@@ -130,6 +130,13 @@ Lists of books:
 
 - [Legally Free Python Books List](https://www.pythonkitchen.com/legally-free-python-books-list/)
 
+#### Podcasts
+
+- [Talk Python To Me podcast](https://talkpython.fm/) In-depth interviews and topics.
+- [Python Bytes](https://pythonbytes.fm/) Weekly python news and discussion
+- [Podcast.init](https://www.pythonpodcast.com/) Data engineering, data science and DevOps
+- [Real Python Podcast](https://realpython.com/podcasts/rpp/) Python news and education
+
 ## Writing idiomatic Python
 
 First things first, let's get **code style** out of the way. Make sure you've read and memorized [PEP8](https://www.python.org/dev/peps/pep-0008/) (code style, [more readable version here](http://pep8.org/)) and [PEP257](https://www.python.org/dev/peps/pep-0257/) (docstring style). Those two code styles are applied by almost all major Python applications and libraries. Use flake8, pydocstyle and black to ensure they are applied (check other linters and autofixers below).
