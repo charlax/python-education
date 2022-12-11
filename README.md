@@ -122,13 +122,20 @@ Some other resources:
 #### Books
 
 - Muhammad Yasoob Ullah Khalid, [Intermediate Python](http://book.pythontips.com/en/latest/)
-- Luciano Ramalho, [Fluent Python](http://www.amazon.com/gp/product/1491946008/)
+- Luciano Ramalho, [Fluent Python](https://www.amazon.com/gp/product/1492056359/)
 - Dusty Phillips, [Python 3 Object-Oriented Programming](http://www.amazon.com/gp/product/1784398780/)
 - Brett Slatkin, [Effective Python: 59 Specific Ways to Write Better Python](http://www.amazon.com/gp/product/0134034287/)
 
 Lists of books:
 
 - [Legally Free Python Books List](https://www.pythonkitchen.com/legally-free-python-books-list/)
+
+#### Podcasts
+
+- [Talk Python To Me podcast](https://talkpython.fm/) In-depth interviews and topics.
+- [Python Bytes](https://pythonbytes.fm/) Weekly python news and discussion
+- [Podcast.init](https://www.pythonpodcast.com/) Data engineering, data science and DevOps
+- [Real Python Podcast](https://realpython.com/podcasts/rpp/) Python news and education
 
 ## Writing idiomatic Python
 
