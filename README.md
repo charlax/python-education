@@ -580,3 +580,10 @@ You can also checkout the [Python subreddit](https://www.reddit.com/r/Python/).
 Read this up on my [professional programming doc](https://github.com/charlax/professional-programming).
 
 If you want to get in touch, checkout [my website](http://www.d3in.org/).
+
+## My other lists
+
+- [engineering-management](https://github.com/charlax/engineering-management/)
+- [entrepreneurship-resources](https://github.com/charlax/entrepreneurship-resources)
+- [professional-programming](https://github.com/charlax/professional-programming)
+- [python-education](https://github.com/charlax/python-education)
