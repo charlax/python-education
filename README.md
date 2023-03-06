@@ -74,9 +74,12 @@ If you're also interested in generic programming best practices, I've compiled a
 
 ## Learning the language
 
-### Beginner
+### Why learn Python?
 
-First, [Why Beginners Should Learn Python](http://stackabuse.com/why-beginners-should-learn-python/)
+- [Why Beginners Should Learn Python](http://stackabuse.com/why-beginners-should-learn-python/)
+- [Why Python keeps growing, explained | The GitHub Blog](https://github.blog/2023-03-02-why-python-keeps-growing-explained/)
+
+### Beginner
 
 Here are some free books:
 
@@ -102,6 +105,7 @@ Other resources include (prefer the one listed above):
 - [Full Stack Python](https://www.fullstackpython.com/)
 - [Learn Computer Science](https://hyperskill.org/onboarding/tracks/2) with Python, from JetBrains
 - [How to Use Python: Your First Steps](https://realpython.com/python-first-steps/) (RealPython)
+- [Asabeneh/30-Days-Of-Python](https://github.com/Asabeneh/30-Days-Of-Python)
 
 ### Intermediate
 
@@ -265,6 +269,14 @@ where the tickets are not too involved, and where the community is still alive
 - [27 languages to improve your Python](http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html)
 - [List of languages that compile to Python](https://github.com/vindarel/languages-that-compile-to-python)
 - [Rust for Python Programmers](https://lucumr.pocoo.org/2015/5/27/rust-for-pythonistas/), Armin Ronacher
+
+### Boilerplate
+
+- [An opinionated Python boilerplate](https://duarteocarmo.com/blog/opinionated-python-boilerplate)
+  - `pip-tools`
+  - `Makefile`
+  - `ruff`
+- [A Python project checklist](https://www.dein.fr/posts/2021-01-28-python-project-checklist)
 
 ### Celery
 
