@@ -315,6 +315,7 @@ Building command line interfaces.
 - [Doing Python Configuration Right](https://whalesalad.com/blog/doing-python-configuration-right)
 	- Static things that don't change often, or things that dramatically influence the behavior of the system should live in the code.
 	- Dynamic things that change frequently, or things that should be kept secret (API keys/credentials) should live outside the code.
+- [Use TOML for `.env` files?](https://snarky.ca/use-toml-for-env-files/)
 
 ### Debugging
 
