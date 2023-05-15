@@ -448,7 +448,7 @@ Some other cool packages:
   - [Measuring memory usage in Python: it’s tricky!](https://pythonspeed.com/articles/measuring-memory-python/)
 - [A guide to analyzing Python performance](http://www.huyng.com/posts/python-performance-analysis/)
 - [cProfile module documentation](https://docs.python.org/3/library/profile.html)
-- [Using qcachegrind to visualize profiling data](http://blog.d3in.org/post/51022123117/using-qcachegrind-to-visualize-python-profiling)
+- [Using qcachegrind to visualize profiling data](https://www.dein.fr/posts/2013-05-22-using-qcachegrind-to-visualize-python-profiling)
 - [How vectorization speeds up your Python code](https://pythonspeed.com/articles/vectorization-python/)
 - [You Should Compile Your Python And Here’s Why](https://glyph.twistedmatrix.com/2022/04/you-should-compile-your-python-and-heres-why.html)
 - [When Python can’t thread: a deep-dive into the GIL’s impact](https://pythonspeed.com/articles/python-gil/), PythonSpeed
@@ -592,7 +592,7 @@ You can also checkout the [Python subreddit](https://www.reddit.com/r/Python/).
 
 Read this up on my [professional programming doc](https://github.com/charlax/professional-programming).
 
-If you want to get in touch, checkout [my website](http://www.d3in.org/).
+If you want to get in touch, checkout [my website](https://www.dein.fr/).
 
 ## My other lists
 
