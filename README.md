@@ -348,6 +348,7 @@ I maintain a [list of antipatterns](./python-antipatterns.md) on this repo.
 
 - [pandas](https://github.com/pandas-dev/pandas/blob/main/doc) is a great example to follow (using Sphinx, separating into quickstart, user guide, API reference).
 - [Example NumPy Style Python Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html)
+- [Why you should still read the docs](https://death.andgravity.com/output)
 
 ### Example, inspiration and template packages
 
