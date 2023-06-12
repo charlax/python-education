@@ -438,6 +438,7 @@ Some other cool packages:
   - Full Example with Poetry
 - 🔧 [commitizen-tools/commitizen](https://github.com/commitizen-tools/commitizen): create committing rules for projects, auto bump versions and auto changelog generation
 - 🔧 [nedbat/scriv](https://github.com/nedbat/scriv): changelog management tool
+- [Makefile tricks for Python projects](https://ricardoanderegg.com/posts/makefile-python-project-tricks/)
 
 ### Parsing
 
