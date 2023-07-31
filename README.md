@@ -117,6 +117,7 @@ I wrote some introductory material to advanced Python:
 Some other resources:
 
 - [The power of Python descriptors](https://piccolo-orm.com/blog/the-power-of-python-descriptors/)
+- [dabeaz-course/python-mastery](https://github.com/dabeaz-course/python-mastery)
 
 #### Articles, videos and presentations
 
