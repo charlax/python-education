@@ -225,19 +225,14 @@ The best way to learn is to do.
 - Build an HTTP library.
 - Clone one of those [games](http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/)
 - Write a game using [pyarcade](https://arcade.academy/)
+- [spandanb/learndb-py](https://github.com/spandanb/learndb-py): learn database internals by implementing it from scratch.
 
 Reddit's [dailyprogrammer subreddit](https://www.reddit.com/r/dailyprogrammer)
 has some good exercises as well.
 
-Another great way to learn Python is by contributing to one of the numerous
-open source libraries. Coding is not something that is to be learn in
-isolation, and you'll learn great valuable insights from the code review you'll
-get from those communities. You can look for tickets (e.g. Github issues) for
-Python libraries you're using, or find some in the list below, or pick one of
-the libraries listed in [Awesome
-Python](https://github.com/vinta/awesome-python). Make sure you pick a library
-where the tickets are not too involved, and where the community is still alive
-(i.e. there's recent merged pull requests).
+Another great way to learn Python is by contributing to one of the numerous open source libraries. Coding is not something that is to be learn in isolation, and you'll learn great valuable insights from the code review you'll get from those communities. You can look for tickets (e.g. Github issues) for Python libraries you're using, or find some in the list below, or pick one of the libraries listed in [Awesome Python](https://github.com/vinta/awesome-python).
+
+Make sure you pick a library where the tickets are not too involved, and where the community is still alive (i.e. there's recent merged pull requests).
 
 ### My exercises
 
@@ -270,6 +265,7 @@ where the tickets are not too involved, and where the community is still alive
 - [27 languages to improve your Python](http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html)
 - [List of languages that compile to Python](https://github.com/vindarel/languages-that-compile-to-python)
 - [Rust for Python Programmers](https://lucumr.pocoo.org/2015/5/27/rust-for-pythonistas/), Armin Ronacher
+- [What learning APL taught me about Python](https://mathspp.com/blog/what-learning-apl-taught-me-about-python)
 
 ### Boilerplate
 
