@@ -363,6 +363,7 @@ By topics:
 
 - [OpenDoor's Python Monorepo](https://medium.com/opendoor-labs/our-python-monorepo-d34028f2b6fa)
 - [Atlas: Our journey from a Python monolith to a managed platform](https://dropbox.tech/infrastructure/atlas--our-journey-from-a-python-monolith-to-a-managed-platform) (Dropbox)
+- [From Chaos to Cohesion: Architecting Your Own Monorepo](https://monadical.com/posts/from-chaos-to-cohesion.html)
 
 ### Functional programming
 
