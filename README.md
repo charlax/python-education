@@ -320,6 +320,7 @@ Building command line interfaces.
   tools](http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/)
 - A better debugger: [pudb](http://heather.cs.ucdavis.edu/~matloff/pudb.html)
 - [Debugging Python Like a Boss](https://zapier.com/engineering/debugging-python-boss/)
+- [Syntax Error #11: Debugging Python](https://www.syntaxerror.tech/syntax-error-11-debugging-python/)
 
 ### Deployment
 
