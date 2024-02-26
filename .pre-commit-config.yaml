@@ -2,18 +2,18 @@ exclude: '.*\.key'
 
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.1.0
+  rev: v4.5.0
   hooks:
   - id: trailing-whitespace
   - id: end-of-file-fixer
   - id: check-yaml
 - repo: https://github.com/frnmst/md-toc
-  rev: 8.1.1  # or a specific git tag from md-toc
+  rev: 8.2.3  # or a specific git tag from md-toc
   hooks:
   - id: md-toc
     args: [-p, github]
 - repo: https://github.com/asottile/blacken-docs
-  rev: v1.12.1
+  rev: 1.16.0
   hooks:
   - id: blacken-docs
 
