@@ -2,6 +2,7 @@
 
 - [About this list](#about-this-list)
 - [Learning the language](#learning-the-language)
+  - [Why learn Python?](#why-learn-python)
   - [Beginner](#beginner)
   - [Intermediate](#intermediate)
 - [Writing idiomatic Python](#writing-idiomatic-python)
@@ -14,6 +15,7 @@
   - [Algorithms](#algorithms)
   - [Best Practices](#best-practices)
   - [Beyond Python (other programming languages)](#beyond-python-other-programming-languages)
+  - [Boilerplate](#boilerplate)
   - [Celery](#celery)
   - [CLI](#cli)
   - [Code Architecture](#code-architecture)
@@ -49,6 +51,7 @@
 - [Reference and other lists](#reference-and-other-lists)
 - [Staying up to date](#staying-up-to-date)
 - [Non-Python professional coding education](#non-python-professional-coding-education)
+- [My other lists](#my-other-lists)
 
 <!--TOC-->
 
@@ -565,6 +568,7 @@ Then, read some of those articles:
 - [The state of type hints in Python](https://www.bernat.tech/the-state-of-type-hints-in-python/): a good summary of typing in Python and its gotchas.
 - [Static Typing Python Decorators](https://rednafi.github.io/reflections/static-typing-python-decorators.html)
 - [Static Duck Typing in Python with Protocols](https://www.daan.fyi/writings/python-protocols)
+- [Writing Python like it’s Rust](https://kobzol.github.io/rust/python/2023/05/20/writing-python-like-its-rust.html)
 
 ### Unicode
 
