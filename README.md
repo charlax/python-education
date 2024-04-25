@@ -121,6 +121,7 @@ Some other resources:
 
 - [The power of Python descriptors](https://piccolo-orm.com/blog/the-power-of-python-descriptors/)
 - [dabeaz-course/python-mastery](https://github.com/dabeaz-course/python-mastery)
+- [DjangoEx/awesome-python-roadmaps: Awesome Python roadmaps](https://github.com/DjangoEx/awesome-python-roadmaps)
 
 #### Articles, videos and presentations
 
@@ -247,6 +248,7 @@ Make sure you pick a library where the tickets are not too involved, and where t
 ### Algorithms
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python): all algorithms implemented in Python
+- [Python Big O: the time complexities of different data structures in Python](https://www.pythonmorsels.com/time-complexities/)
 
 ### Best Practices
 
@@ -262,6 +264,7 @@ Make sure you pick a library where the tickets are not too involved, and where t
   - Use serializers responsibly, or not at all
   - Write admin functionality as API endpoints
   - Keep logic out of the front end
+- [Boring Python: code quality](https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/)
 
 ### Beyond Python (other programming languages)
 
@@ -387,6 +390,7 @@ Consider checking out the same section on my [charlax/professional-programming](
 - [Python Data structures](http://rhodesmill.org/brandon/slides/2014-04-pycon/data-structures/)
 - [Python’s Innards: Introduction](https://tech.blog.aknin.name/2010/04/02/pythons-innards-introduction/)
 - [15. Floating Point Arithmetic: Issues and Limitations](https://docs.python.org/3/tutorial/floatingpoint.html)
+- [Behind "Hello World" on Linux](https://jvns.ca/blog/2023/08/03/behind--hello-world/), Julia Evans
 
 Python behind the scenes series:
 
@@ -412,6 +416,7 @@ How to use:
 - [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools)
 - [Virtual Environments Demystified](https://meribold.org/python/2018/02/13/virtual-environments-9487/)
 - [Commit your `poetry.lock` file to version control](https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control)
+- [How virtual environments work](https://snarky.ca/how-virtual-environments-work/)
 
 Lists:
 
