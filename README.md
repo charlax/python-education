@@ -94,7 +94,7 @@ Here are some free books:
 
 If you're coming from another language, read this article about the [ten myths of enterprise Python](https://medium.com/paypal-engineering/10-myths-of-enterprise-python-8302b8f21f82).
 
-If you want to review algorithms at the same time, you can use [Problem Solving with Algorithms and Data Structures using Python](http://interactivepython.org/runestone/static/pythonds/index.html) by Bradley N. Miller, David L. Ranum.
+If you want to review algorithms at the same time, you can use [Problem Solving with Algorithms and Data Structures using Python](https://runestone.academy/ns/books/published/pythonds/index.html) by Bradley N. Miller, David L. Ranum.
 
 Other resources include (prefer the one listed above):
 
