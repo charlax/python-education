@@ -265,6 +265,7 @@ Make sure you pick a library where the tickets are not too involved, and where t
   - Write admin functionality as API endpoints
   - Keep logic out of the front end
 - [Boring Python: code quality](https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/)
+- [Modern Good Practices for Python Development](https://www.stuartellis.name/articles/python-modern-practices/), 2024
 
 ### Beyond Python (other programming languages)
 
