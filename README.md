@@ -273,6 +273,7 @@ Make sure you pick a library where the tickets are not too involved, and where t
 - [List of languages that compile to Python](https://github.com/vindarel/languages-that-compile-to-python)
 - [Rust for Python Programmers](https://lucumr.pocoo.org/2015/5/27/rust-for-pythonistas/), Armin Ronacher
 - [What learning APL taught me about Python](https://mathspp.com/blog/what-learning-apl-taught-me-about-python)
+- [The Hy programming language](https://hylang.org/): a Lisp dialect in Python
 
 ### Boilerplate
 
