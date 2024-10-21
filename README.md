@@ -366,6 +366,7 @@ By topics:
 ### Exception
 
 - [The Most Diabolical Python Antipattern](https://realpython.com/the-most-diabolical-python-antipattern/)
+- [The Ultimate Guide to Error Handling in Python](https://blog.miguelgrinberg.com/post/the-ultimate-guide-to-error-handling-in-python)
 
 ### File organisation (monorepo, folders, etc.)
 
