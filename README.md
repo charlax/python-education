@@ -437,6 +437,7 @@ Here's a short list of great packages:
 Some other cool packages:
 
 - [Acreom/quickadd: parse natural language time and date expressions](https://github.com/Acreom/quickadd)
+- [mkalioby/leopards: Query your python lists](https://github.com/mkalioby/leopards)
 
 ### Packaging (creating your own package)
 
