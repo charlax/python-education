@@ -44,6 +44,7 @@
   - [SQLAlchemy](#sqlalchemy)
   - [Standard library modules](#standard-library-modules)
   - [Static analysis of code](#static-analysis-of-code)
+  - [Statistics](#statistics)
   - [Tests](#tests)
   - [Tools built with Python](#tools-built-with-python)
   - [Types](#types)
@@ -536,6 +537,10 @@ Some little known standard library modules:
 ### Static analysis of code
 
 - [Essential python tools - Quality](http://aboumrad.info/essential-python-tools-quality.html)
+
+### Statistics
+
+- [Python coding skills for statistic](https://minireference.com/blog/python-for-stats/)
 
 ### Tests
 
