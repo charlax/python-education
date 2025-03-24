@@ -29,6 +29,7 @@
   - [Exception](#exception)
   - [File organisation (monorepo, folders, etc.)](#file-organisation-monorepo-folders-etc)
   - [Functional programming](#functional-programming)
+  - [Interfaces](#interfaces)
   - [Internals](#internals)
   - [Magic methods](#magic-methods)
   - [Open source Python apps](#open-source-python-apps)
@@ -386,6 +387,10 @@ Consider checking out the same section on my [charlax/professional-programming](
 - [Monads in 15 minutes](https://nikgrozev.com/2013/12/10/monads-in-15-minutes/)
 - [more-itertools/more-itertools](https://github.com/more-itertools/more-itertools): more routines for operating on iterables, beyond itertools
 - [jmesyou/functional-programming-jargon.py](https://github.com/jmesyou/functional-programming-jargon.py): jargon from the functional programming world in simple terms
+
+### Interfaces
+
+- [The Boolean Trap](https://read.engineerscodex.com/p/the-boolean-trap)
 
 ### Internals
 
