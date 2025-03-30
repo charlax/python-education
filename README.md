@@ -307,6 +307,13 @@ Building command line interfaces.
   - Event-driven architecture
   - Command-query responsibility segregation
 - [Arc Note: Datasette](https://architecturenotes.co/datasette-simon-willison/)
+- [Cosmic Python: Simple patterns for building complex applications](https://www.cosmicpython.com/)
+  - Domain modeling and DDD
+  - Repository, Service Layer, and Unit of Work patterns
+  - Some thoughts on testing and abstractions
+  - Event-driven architecture
+  - Command-query responsibility segregation
+  - Dependency injection
 
 ### Concurrency
 
