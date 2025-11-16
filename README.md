@@ -428,11 +428,21 @@ It's often a good idea to read the Python source code of well-written applicatio
 
 How to use:
 
-- [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): this is an important gotcha for any library developer.
 - [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools)
 - [Virtual Environments Demystified](https://meribold.org/python/2018/02/13/virtual-environments-9487/)
 - [Commit your `poetry.lock` file to version control](https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control)
 - [How virtual environments work](https://snarky.ca/how-virtual-environments-work/)
+
+On the important topic of pinning dependencies:
+
+- [setup.py vs. requirements.txt](https://caremad.io/2013/07/setup-vs-requirement/): old article that explains an important gotcha for any library developer.
+  - The article distinguish between abstract and concrete dependencies.
+- [Can Poetry be used by library developers / maintainers](https://github.com/orgs/python-poetry/discussions/3757)
+- [Should I be pinning my dependencies?](https://discuss.python.org/t/should-i-be-pinning-my-dependencies/13159)
+  - Then answer is NO for a library.
+- [Semantic Versioning Will Not Save You](https://hynek.me/articles/semver-will-not-save-you/)
+- [Should You Use Upper Bound Version Constraints?](https://iscinumpy.dev/post/bound-version-constraints/)
+- [Why I don't like SemVer anymore](https://snarky.ca/why-i-dont-like-semver/)
 
 Lists:
 
