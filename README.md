@@ -284,6 +284,7 @@ Make sure you pick a library where the tickets are not too involved, and where t
   - `Makefile`
   - `ruff`
 - [A Python project checklist](https://www.dein.fr/posts/2021-01-28-python-project-checklist)
+- [Ranteck/PyStrict-strict-python](https://github.com/Ranteck/PyStrict-strict-python): uv, ruff, basedpyright...
 
 ### Celery
 
