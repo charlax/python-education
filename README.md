@@ -498,6 +498,7 @@ Some other cool packages:
   - Problem #1: Inconsistent results on a single machine
   - Problem #2: Inconsistent results across machines
   - Use Cachegrind
+- [Python Numbers Every Programmer Should Know](https://mkennedy.codes/posts/python-numbers-every-programmer-should-know/)
 
 Stories:
 
