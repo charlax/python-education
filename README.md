@@ -538,6 +538,7 @@ Tools:
 
 - [Never Run ‘python’ In Your Downloads Folder](https://glyph.twistedmatrix.com/2020/08/never-run-python-in-your-downloads-folder.html)
 - [ossillate-inc/packj: The vetting tool 🚀 behind our large-scale security analysis platform to detect malicious/risky open-source packages](https://github.com/ossillate-inc/packj)
+- [lirantal/pypi-security-best-practices](https://github.com/lirantal/pypi-security-best-practices): Collection of PyPI registry package manager Security Best Practices featuring uv and pip
 
 ### SQLAlchemy
 
