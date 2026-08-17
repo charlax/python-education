@@ -211,6 +211,7 @@ The best way to learn is to do.
 - [LeetCode](https://leetcode.com/)
 - [Codewars](https://www.codewars.com/)
 - [HackerRank](https://www.hackerrank.com/)
+- [Pythonlings](https://github.com/abhiksark/pythonlings)
 
 ### Small exercises
 
